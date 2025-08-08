@@ -1,0 +1,72 @@
+
+export const projects = [
+  {
+    title: "mikemartinmedia.com",
+    description:
+      "Mike Martin Media is an multi media production company based in St Louis, Missouri and working all around the world. When I first began working with MMM they had an old WordPress website that was not meeting their needs. Our first order of business was to stabilize the old website. After that I worked with them to design and develop a new website, custom made to fit their specific needs. The biggest challenge was working with a large amount of video content. They needed a website to showcase their work for potential clients. Video files are big and not always easy to work with. I was able to optimize the website to load quickly and display the video content in a way that was easy to navigate and view. The website is fully responsive and looks great on any device. It features a sortable video gallery, embedded video content, a blog, and a contact form. The website is integrated with Google Analytics and Google Tag Manager for running ads and monitoring site traffic. Cookie consent management is handled with Cookie Yes.",
+    technologies: [
+      "Next.js",
+      "Vercel",
+      "React",
+      "Tailwind CSS",
+      "JavaScript",
+      "CSS",
+      "Headless UI",
+      "Google Tag Manager",
+      "Google Analytics",
+      "Google Search Console",
+      "Cookie Yes"
+    ],
+    role: ["Developer"],
+    url: "https://mikemartinmedia.com",
+    gitHubRepo: "https://github.com/KLong75/mike-martin-media",
+  },
+  {
+    title: "thelongemergency.net",
+    description:
+      "The Long Emergency is a rock band in St. Louis, Missouri. They needed a website to showcase their music, shows, and merchandise. The website features a gig calendar, music player, audio downloads, merch store, blog, and contact form. The website is fully responsive and accessible. It is integrated with Vercel Analytics for monitoring site traffic. The website is built with Next.js and Tailwind CSS.",
+    technologies: [
+      "Next.js",
+      "Vercel",
+      "React",
+      "Tailwind CSS",
+      "TypeScript",
+      "CSS",
+      "Vercel Analytics",
+      "EmailJS"
+    ],
+    role: ["Developer", "Designer"],
+    url: "https://thelongemergency.net/",
+    gitHubRepo: "https://github.com/RhythmCodeStudio/the-long-emergency",
+
+  },
+  {
+    title: "WatchTV",
+    description: "React. Node. MongoDB. Express. Full stack application. Serves as a central hub for all of a user's subscription streaming accounts. Search for any TV show or movie and link to where it is available online to stream, rent, or buy. Multiple search methods enable users to find what they want to watch and where they can watch it. Users can search all sources or just the ones they are subscribed to. Save titles to a watchlist for later viewing. The watchlist can be filtered by source, type, and genre.",
+    technologies: [
+      "React",
+      "Node",
+      "MongoDB",
+      "Express",
+      "Material UI",
+      "React Router",
+      "React Context",
+      "Apollo",
+      "GraphQL",
+      "JSON web tokens",
+      "bcrypt",
+      "Mongoose",
+      "Swiperjs",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    role: "",
+    url: "https://streamhub-e4fc2af8fdfc.herokuapp.com/",
+    gitHubRepo: "https://github.com/KLong75/stream-hub",
+    guestCredentials: {
+      email: "guest@email.com",
+      password: "Guest#1"
+    }
+  },
+];
