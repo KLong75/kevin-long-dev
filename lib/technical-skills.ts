@@ -10,7 +10,7 @@ export const technicalSkills = {
   libraries: [
     "React",
     "Headless UI",
-    "Material UI",
+    "MUI",
     "Bootstrap",
     "Handlebars",
     "jQuery",

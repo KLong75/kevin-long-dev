@@ -20,10 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      {/* <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      > */}
+      <body className="flex flex-col min-h-screen antialiased">
         <Header />
-        <main className="max-w-1200 mx-auto">
+        <main className="flex-1 flex flex-col max-w-1200 ">
           {children}
         </main>
         <Footer />

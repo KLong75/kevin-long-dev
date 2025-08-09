@@ -1,7 +1,8 @@
+import PopcornIcons from "./popcorn-icons";
 export default function Footer() {
   return (
-    <footer>
-      footer
+    <footer className="">
+      <PopcornIcons />
     </footer>
   );
 }

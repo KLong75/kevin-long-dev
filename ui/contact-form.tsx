@@ -241,8 +241,8 @@ export default function ContactForm() {
           <button
             onClick={handleFormSubmit}
             type="submit"
-            className="cursor-pointer border border-2 border-black lg:border-red-600 lg:hover:border-black rounded-2xl py-2 px-6 bg-red-500 lg:bg-neutral-800 lg:hover:bg-red-600 text-white lg:text-neutral-200 lg:hover:text-white transition-colors duration-600 ease-in-out">
-            <span className="text-white text-outline">Send</span>
+            className="cursor-pointer border border-2 border-green-500 hover:border-neutral-600 rounded-2xl py-2 px-6 bg-neutral-800 hover:bg-green-500 text-green-500 hover:text-neutral-600 transition-colors duration-600 ease-in-out">
+            <span className="font-semibold tracking-wide">Send</span>
           </button>
         </div>
       </form>

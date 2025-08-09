@@ -9,14 +9,14 @@ export const navListItems = [
     href: "/about",
     htmlElement: "internalLink",
   },
+    {
+    label: "Resume",
+    href: "/resume",
+    htmlElement: "internalLink",
+  },
   {
     label: "Contact",
     href: "/contact",
     htmlElement: "internalLink",
-  },
-  {
-    label: "GitHub",
-    href: "https://github.com",
-    htmlElement: "externalLink",
   },
 ];
