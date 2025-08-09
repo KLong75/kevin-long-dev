@@ -33,3 +33,11 @@ body {
   -webkit-background-clip: text;
   -moz-background-clip: text;
 }
+
+.text-shadow-green-background-black {
+  text-shadow: 2px 2px 0 lab(70.5521 -66.5147 45.8072);
+  background-color: rgba(0, 0, 0, 1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+}

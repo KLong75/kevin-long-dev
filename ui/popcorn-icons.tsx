@@ -121,11 +121,12 @@ import {
   RiBootstrapFill,
   RiVercelFill,
   RiNpmjsFill,
-  RiGitlabFill
+  RiGitlabFill,
 } from "react-icons/ri";
-import { TbBrandTypescript } from "react-icons/tb";
-import { SiHeadlessui } from "react-icons/si";
-import { TbFileTypeSql } from "react-icons/tb";
+import { 
+  TbBrandTypescript, 
+  TbFileTypeSql, 
+} from "react-icons/tb";
 import {
   SiGit,
   SiGithub,
@@ -141,7 +142,8 @@ import {
   SiSequelize,
   SiInsomnia,
   SiHeroku,
-  SiMysql
+  SiMysql,
+  SiHeadlessui,
 } from "react-icons/si";
 import { HiOutlineCommandLine } from "react-icons/hi2";
 
@@ -175,7 +177,7 @@ const ICONS = [
   { component: SiInsomnia, color: "#5851db" },
   { component: SiHeroku, color: "#430098" },
   { component: RiGitlabFill, color: "#e24329" },
-  { component: SiMysql, color: "#4479ff" }
+  { component: SiMysql, color: "#4479ff" },
 ];
 
 const ICON_SIZE = 48;
@@ -267,9 +269,7 @@ export default function PopcornIcons() {
   }, [visibleCount]);
 
   return (
-    <div
-      ref={containerRef}
-      className="relative w-full h-full overflow-hidden">
+    <div ref={containerRef} className="relative w-full h-full overflow-hidden">
       {ICONS.map(({ component: Icon, color }, i) => (
         <div
           key={i}

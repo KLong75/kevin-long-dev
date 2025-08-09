@@ -1,9 +1,5 @@
 export const navListItems = [
-  {
-    label: "Home",
-    href: "/",
-    htmlElement: "internalLink",
-  },
+ 
   {
     label: "Projects",
     href: "/projects",

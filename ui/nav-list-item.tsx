@@ -16,11 +16,11 @@ export default function NavListItem({
   onClick?: () => void;
 }) {
   return (
-    <li className="font-semibold px-6 text-green-500 text-shadow-black-background-black">
+    <li className="font-semibold px-6 text-green-500 text-shadow-black-background-black tracking-widest">
       {label === "Contact" ? (
         <Link
           href={href}
-          className="cursor-pointer border border-2 border-green-500 hover:border-neutral-600 rounded-2xl py-2 px-6 bg-neutral-800 hover:bg-green-500 text-green-500 hover:text-white transition-colors duration-600 ease-in-out">
+          className="cursor-pointer border border-2 border-green-500 hover:border-neutral-600 rounded-2xl py-2 px-6 bg-neutral-800 hover:bg-green-500 text-green-500 hover:text-neutral-400 transition-colors duration-600 ease-in-out">
           <span onClick={onClick} className="contact-btn-label">
             {label}
           </span>
@@ -34,7 +34,7 @@ export default function NavListItem({
           href={href}
           className="flex items-center space-x-2 relative group "
         >
-          <span className="nav-link-label lg:hover:text-white transition-colors duration-600 ease-in-out" onClick={onClick}>{label}</span>
+          <span className="nav-link-label lg:hover:text-neutral-400 transition-colors duration-600 ease-in-out" onClick={onClick}>{label}</span>
           <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-[calc(100%-0.45rem)]"></span>
         </Link>
       ) : htmlElement === "externalLink" ? (

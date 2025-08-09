@@ -23,7 +23,6 @@ export default function DesktopNav({
             label={item.label}
             href={item.href}
             htmlElement={item.htmlElement}
-            
           />
         ))}
       </ul>
