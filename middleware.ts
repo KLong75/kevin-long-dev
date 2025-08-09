@@ -16,12 +16,7 @@ export function middleware(request: NextRequest) {
     frame-src 'none';
   `;
   const previewCspHeader = `
-    font-src 'self' https://vercel.live/ https://assets.vercel.com https://fonts.gstatic.com;
-    style-src 'self' 'unsafe-inline' https://vercel.live/fonts;
-    script-src 'self' 'unsafe-inline' https://vercel.live/ http://www.gstatic.com https://www.gstatic.com;
-    connect-src 'self' https://vercel.live/ https://vitals.vercel-insights.com https://*.pusher.com/ wss://*.pusher.com/ https://api.emailjs.com/;
-    img-src 'self' data: https://vercel.com/ https://vercel.live/;
-    frame-src 'self' https://vercel.live/;
+
   `;
   const productionCspHeader = `
     default-src 'self';
