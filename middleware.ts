@@ -17,13 +17,10 @@ export function middleware(request: NextRequest) {
   `;
   const previewCspHeader = `
     default-src 'self';
-    connect-src 'self' https://api.emailjs.com/ https://vercel.live
-    wss://ws-us3.pusher.com
-    https://api.iconify.design/
-    ;
-    script-src 'self' 'nonce-${nonce}' https://vercel.live/;
+    connect-src 'self' https://api.emailjs.com/ https://vercel.live;
+    script-src 'self' 'nonce-${nonce}'  https://vercel.live/ wss://ws-us3.pusher.com;
     style-src 'self' 'unsafe-inline' https://vercel.live;
-    img-src 'self' https://vercel.live https://vercel.com blob: data:;
+    img-src 'self' data: blob: https://vercel.live https://vercel.com;
     font-src 'self' https://vercel.live https://assets.vercel.com;
     object-src 'none';
     base-uri 'self';
@@ -51,7 +48,7 @@ export function middleware(request: NextRequest) {
   } else if (isPreview) {
     cspHeader = previewCspHeader;
   } else if (isProduction) {
-    cspHeader = productionCspHeader;
+    cspHeader = previewCspHeader;
   }
 
   // Replace newline characters and spaces
@@ -61,6 +58,7 @@ export function middleware(request: NextRequest) {
 
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-nonce", nonce);
+
   requestHeaders.set(
     "Content-Security-Policy",
     contentSecurityPolicyHeaderValue
@@ -82,7 +80,3 @@ export function middleware(request: NextRequest) {
 
   return response;
 }
-
-export const config = {
-  matcher: "/:path*",
-};
