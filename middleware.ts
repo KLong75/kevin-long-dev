@@ -16,7 +16,9 @@ export function middleware(request: NextRequest) {
     frame-src 'none';
   `;
   const previewCspHeader = `
-    font-src 'self' https://vercel.live/ https://assets.vercel.com ;
+    font-src 'self' https://vercel.live/ https://assets.vercel.com;
+
+    style-src 'self' https://vercel.live/fonts;
   `;
   const productionCspHeader = `
     default-src 'self';
