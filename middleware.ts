@@ -61,7 +61,6 @@ export function middleware(request: NextRequest) {
 
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-nonce", nonce);
-
   requestHeaders.set(
     "Content-Security-Policy",
     contentSecurityPolicyHeaderValue
@@ -83,3 +82,7 @@ export function middleware(request: NextRequest) {
 
   return response;
 }
+
+export const config = {
+  matcher: "/:path*",
+};
