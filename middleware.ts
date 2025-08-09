@@ -17,8 +17,11 @@ export function middleware(request: NextRequest) {
   `;
   const previewCspHeader = `
     font-src 'self' https://vercel.live/ https://assets.vercel.com;
-
-    style-src 'self' https://vercel.live/fonts;
+    style-src 'self' 'unsafe-inline' https://vercel.live;
+    script-src 'self' 'nonce-${nonce}' https://vercel.live;
+    connect-src 'self' https://vercel.live wss://ws-us3.pusher.com https://api.emailjs.com/;
+    img-src 'self' blob: data: https://vercel.live https://vercel.com;
+    frame-src https://vercel.live;
   `;
   const productionCspHeader = `
     default-src 'self';
