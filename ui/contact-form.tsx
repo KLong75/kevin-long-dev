@@ -28,14 +28,14 @@ export default function ContactForm() {
     toast.info("Thank you. We will be in touch!", {
       transition: Zoom,
       position: "top-center",
-      icon: (
-        <Image
-          src="/logos/mark-only.png"
-          alt="Shift Auto Solutions Logo"
-          width={68}
-          height={49}
-        />
-      ),
+      // icon: (
+      //   <Image
+      //     src="/logos/mark-only.png"
+      //     alt="Shift Auto Solutions Logo"
+      //     width={68}
+      //     height={49}
+      //   />
+      // ),
       closeOnClick: true,
       pauseOnHover: true,
       className: "border-2 border-neutral-400 text-white",
@@ -45,14 +45,14 @@ export default function ContactForm() {
     toast.error(msg, {
       transition: Zoom,
       position: "top-center",
-      icon: (
-        <Image
-          src="/logos/mark-only.png"
-          alt="Shift Auto Solutions Logo"
-          width={68}
-          height={49}
-        />
-      ),
+      // icon: (
+      //   <Image
+      //     src="/logos/mark-only.png"
+      //     alt="Shift Auto Solutions Logo"
+      //     width={68}
+      //     height={49}
+      //   />
+      // ),
       closeOnClick: true,
       pauseOnHover: true,
       className: "border-2 border-neutral-400 text-white",
@@ -121,8 +121,7 @@ export default function ContactForm() {
         toast.error(
           <div className="p-2">
             <p>
-              There was an error delivering your message. Please send us an
-              email.
+              There was an error delivering your message. Please send me an email.
             </p>
             <a
               href="mailto:info@shiftautosolutions.com"
@@ -135,9 +134,9 @@ export default function ContactForm() {
           {
             transition: Zoom,
             position: "top-center",
-            icon: (
-              <img src="/logos/mark-only.png" alt="Shift Auto Solutions Logo" />
-            ),
+            // icon: (
+            //   <img src="/logos/mark-only.png" alt="Shift Auto Solutions Logo" />
+            // ),
             closeOnClick: true,
             pauseOnHover: true,
             className: "border-2 border-neutral-400 text-white",
@@ -157,14 +156,14 @@ export default function ContactForm() {
       toast.error("Please fill in all required fields.", {
         transition: Zoom,
         position: "top-center",
-        icon: (
-          <Image
-            src="/logos/mark-only.png"
-            alt="Shift Auto Solutions Logo"
-            width={68}
-            height={49}
-          />
-        ),
+        // icon: (
+        //   <Image
+        //     src="/logos/mark-only.png"
+        //     alt="Shift Auto Solutions Logo"
+        //     width={68}
+        //     height={49}
+        //   />
+        // ),
         closeOnClick: true,
         pauseOnHover: true,
         className: "border-2 border-neutral-400 text-white",

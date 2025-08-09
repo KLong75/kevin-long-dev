@@ -25,7 +25,7 @@ export function middleware(request: NextRequest) {
   `;
   const productionCspHeader = `
     default-src 'self';
-    script-src 'self' 'nonce-${nonce}' 'strict-dynamic';
+    script-src 'self' 'nonce-${nonce}';
     connect-src 'self' https://stream.mux.com https://inferred.litix.io/ https://manifest-gcp-us-east1-vop1.fastly.mux.com https://chunk-gcp-us-east1-vop1.edgemv.mux.com https://manifest-gcp-us-east4-vop1.fastly.mux.com https://chunk-oci-us-ashburn-1-vop1.edgemv.mux.com https://*.mux.com https://api.emailjs.com/;
     style-src 'self' 'unsafe-inline';
     img-src 'self' blob: data:;

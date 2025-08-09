@@ -146,7 +146,7 @@ import {
 import { HiOutlineCommandLine } from "react-icons/hi2";
 
 const ICONS = [
-  { component: RiNextjsLine, color: "#000" },
+  { component: RiNextjsLine, color: "#000000" },
   { component: RiReactjsLine, color: "#61dafb" },
   { component: RiTailwindCssFill, color: "#06b6d4" },
   { component: RiJavascriptLine, color: "#f7df1e" },
@@ -157,7 +157,7 @@ const ICONS = [
   { component: SiHeadlessui, color: "#4f46e5" },
   { component: TbFileTypeSql, color: "#003b57" },
   { component: SiGit, color: "#f05032" },
-  { component: SiGithub, color: "#181717" },
+  { component: SiGithub, color: "#000000" },
   { component: SiMongodb, color: "#47a248" },
   { component: SiExpress, color: "#000000" },
   { component: HiOutlineCommandLine, color: "#f7df1e" },

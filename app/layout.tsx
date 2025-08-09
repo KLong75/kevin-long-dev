@@ -1,7 +1,7 @@
 // import from next
 import type { Metadata } from "next";
 // import fonts
-import { geistSans, geistMono } from "@/fonts";
+// import { geistSans, geistMono } from "@/fonts";
 // import css
 import "./globals.css";
 // import components
