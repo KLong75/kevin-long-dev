@@ -16,7 +16,7 @@ export default function NavListItem({
   onClick?: () => void;
 }) {
   return (
-    <li className="font-semibold px-2 text-green-500 text-shadow-black-background-black">
+    <li className="font-semibold px-6 text-green-500 text-shadow-black-background-black">
       {label === "Contact" ? (
         <Link
           href={href}
