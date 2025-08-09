@@ -16,12 +16,21 @@ export function middleware(request: NextRequest) {
     frame-src 'none';
   `;
   const previewCspHeader = `
-    font-src 'self' https://vercel.live/ https://assets.vercel.com;
+    default-src 'self';
+    connect-src 'self' https://api.emailjs.com/ https://vercel.live
+    wss://ws-us3.pusher.com
+    https://api.iconify.design/
+    ;
+    script-src 'self' 'nonce-${nonce}' https://va.vercel-scripts.com https://vercel.live/;
     style-src 'self' 'unsafe-inline' https://vercel.live;
-    script-src 'self' 'nonce-${nonce}' https://vercel.live;
-    connect-src 'self' https://vercel.live wss://ws-us3.pusher.com https://api.emailjs.com/;
-    img-src 'self' blob: data: https://vercel.live https://vercel.com;
-    frame-src https://vercel.live;
+    img-src 'self' https://vercel.live https://vercel.com blob: data:;
+    font-src 'self' https://vercel.live https://assets.vercel.com;
+    object-src 'none';
+    base-uri 'self';
+    form-action 'self';
+    frame-ancestors 'none';
+    frame-src 'self' https://vercel.live;
+    upgrade-insecure-requests;
   `;
   const productionCspHeader = `
     default-src 'self';
