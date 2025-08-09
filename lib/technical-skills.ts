@@ -61,6 +61,7 @@ export const technicalSkills = {
     "CommonSpot"
   ],
   others: [
+    "NextAuth.js",
     "Figma",
     "Model-View-Controller",
     "PWA",

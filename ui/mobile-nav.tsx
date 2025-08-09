@@ -48,28 +48,24 @@ export default function MobileNav({ navListItems }: MobileMenuProps) {
 
         {/* Dialog Content */}
         <div className="fixed inset-0 flex items-center justify-center p-4">
-          <DialogPanel className="w-[80vw] border-2 border-red-500 bg-gray-200 text-black flex flex-col justify-center rounded-lg">
+          <DialogPanel className="w-[80vw] border-2 border-green-500 bg-neutral-800 text-black flex flex-col justify-center rounded-lg p-4">
             {/* Dialog Title */}
             <DialogTitle as="h2" className="sr-only">
               Menu
             </DialogTitle>
 
-            {/* Logo */}
+           
             <div
-              className="flex items-center justify-center mt-6"
+              className="flex items-center justify-center text-green-500 text-xl py-4"
               onClick={toggleMenu}>
               <Link href="/">
-                {/* <ShiftAutoLogoTransparentBGBlackText
-                  priority={true}
-                  width={178.125}
-                  height={43.75}
-                /> */}
+              Kevin Long
               </Link>
             </div>
 
             {/* Navigation */}
             <nav className="my-4">
-              <ul className="flex flex-col gap-8 font-semibold text-black">
+              <ul className="flex flex-col gap-8 font-semibold text-black items-center">
                 {navListItems.map((item) => (
                   <NavListItem
                     key={item.label}

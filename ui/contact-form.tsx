@@ -25,7 +25,7 @@ export default function ContactForm() {
   const [, setButtonSubmitted] = useState(false);
 
   const notifySuccess = () =>
-    toast.info("Thank you. We will be in touch!", {
+    toast.success("Thank you. I will be in touch!", {
       transition: Zoom,
       position: "top-center",
       // icon: (
@@ -38,7 +38,7 @@ export default function ContactForm() {
       // ),
       closeOnClick: true,
       pauseOnHover: true,
-      className: "border-2 border-neutral-400 text-white",
+      className: "border-2 border-green-500 text-white",
     });
 
   const showErrorToast = (msg: string) => {
@@ -124,7 +124,7 @@ export default function ContactForm() {
               There was an error delivering your message. Please send me an email.
             </p>
             <a
-              href="mailto:info@shiftautosolutions.com"
+              href="mailto:kevinlong.dev@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="underline text-blue-500 hover:text-blue-700">
@@ -188,7 +188,7 @@ export default function ContactForm() {
             type="text"
             name="name"
             id="name"
-            className="shadow-2xl shadow-gray-200/50 border-2 border-neutral-600 p-2 w-full text-black placeholder-neutral-400 rounded-2xl bg-neutral-200"
+            className="shadow-2xl shadow-green-500/50 border-2 border-neutral-600 p-2 w-full text-black placeholder-neutral-400 rounded-2xl bg-neutral-200"
           />
         </div>
         <div className="flex flex-col justify-start">
@@ -203,7 +203,7 @@ export default function ContactForm() {
             type="tel"
             name="phone"
             id="phone"
-            className="shadow-2xl shadow-gray-200/50 border-2 border-neutral-600 p-2 w-full text-black placeholder-neutral-400 rounded-2xl bg-neutral-200"
+            className="shadow-2xl shadow-green-500/50 border-2 border-neutral-600 p-2 w-full text-black placeholder-neutral-400 rounded-2xl bg-neutral-200"
           />
         </div>
         <div className="flex flex-col justify-start">
@@ -218,7 +218,7 @@ export default function ContactForm() {
             type="email"
             name="email"
             id="email"
-            className="shadow-2xl shadow-gray-200/50 border-2 border-neutral-600 p-2 w-full text-black placeholder-neutral-400 rounded-2xl bg-neutral-200"
+            className="shadow-2xl shadow-green-500/50 border-2 border-neutral-600 p-2 w-full text-black placeholder-neutral-400 rounded-2xl bg-neutral-200"
           />
         </div>
         <div className="flex flex-col justify-start">
@@ -233,7 +233,7 @@ export default function ContactForm() {
             required
             name="message"
             id="message"
-            className="shadow-2xl shadow-gray-200/50 border-2 border-neutral-600 p-2 w-full text-black  rounded-2xl h-80 w-60 resize-none w-full bg-neutral-200"
+            className="shadow-2xl shadow-green-500/50 border-2 border-neutral-600 p-2 w-full text-black  rounded-2xl h-80 w-60 resize-none w-full bg-neutral-200"
           />
         </div>
         <div className="flex justify-center items-center p-6 mt-4">

@@ -110,6 +110,8 @@
 
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { ColdFusionIcon } from "./cold-fusion-icon";
+import { NextAuthIcon } from "./next-auth-icon";
 import {
   RiNextjsLine,
   RiReactjsLine,
@@ -144,10 +146,14 @@ import {
   SiHeroku,
   SiMysql,
   SiHeadlessui,
+  SiApollographql
 } from "react-icons/si";
 import { HiOutlineCommandLine } from "react-icons/hi2";
 
 const ICONS = [
+  { component: SiApollographql, color: "#fff" },
+  { component: NextAuthIcon, color: "#000000" },
+  { component: ColdFusionIcon, color: "#7badff" },
   { component: RiNextjsLine, color: "#000000" },
   { component: RiReactjsLine, color: "#61dafb" },
   { component: RiTailwindCssFill, color: "#06b6d4" },
