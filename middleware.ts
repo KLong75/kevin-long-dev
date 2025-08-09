@@ -18,7 +18,7 @@ export function middleware(request: NextRequest) {
   const previewCspHeader = `
     default-src 'self';
     connect-src 'self' https://api.emailjs.com/ https://vercel.live;
-    script-src 'self' 'nonce-${nonce}'  https://vercel.live/ wss://ws-us3.pusher.com;
+    script-src 'self' 'nonce-${nonce}' 'strict-dynamic' https://vercel.live/ wss://ws-us3.pusher.com;
     style-src 'self' 'unsafe-inline' https://vercel.live;
     img-src 'self' data: blob: https://vercel.live https://vercel.com;
     font-src 'self' https://vercel.live https://assets.vercel.com;
