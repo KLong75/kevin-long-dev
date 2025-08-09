@@ -1,6 +1,8 @@
+import { connection } from 'next/server'
 import PopcornIcons from "@/ui/popcorn-icons";
 
-export default function Home() {
+export default async function Home() {
+  await connection();
   return (
     <div className="flex flex-1 items-center justify-center ">
       <div className="w-full h-screen lg:h-80 overflow-hidden relative  items-center justify-center">
