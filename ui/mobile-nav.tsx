@@ -5,6 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 //import icons
 import { FiMenu } from "react-icons/fi";
+import { RiCloseFill } from "react-icons/ri";
 // import from headless ui
 import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 // import components
@@ -31,7 +32,7 @@ export default function MobileNav({ navListItems }: MobileMenuProps) {
       {/* Menu Button */}
       <button
         onClick={toggleMenu}
-        className="p-2 bg-gray-200 rounded-lg"
+        className="p-2 bg-green-500 rounded-lg"
         value={isMenuOpen ? "Close menu" : "Open menu"}
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}>
         <FiMenu size={20} className="text-black" />
@@ -48,20 +49,22 @@ export default function MobileNav({ navListItems }: MobileMenuProps) {
 
         {/* Dialog Content */}
         <div className="fixed inset-0 flex items-center justify-center p-4">
-          <DialogPanel className="w-[80vw] border-2 border-green-500 bg-neutral-800 text-black flex flex-col justify-center rounded-lg p-4">
+          <DialogPanel className="relative h-80 border-2 border-green-500 bg-neutral-800 text-black flex flex-col justify-center rounded-lg p-4">
             {/* Dialog Title */}
-            <DialogTitle as="h2" className="sr-only">
-              Menu
+            <DialogTitle as="h2" className="">
+              <div
+                className="flex items-center justify-center text-green-500 text-xl py-4"
+                onClick={toggleMenu}>
+                <Link href="/">Kevin Long</Link>
+              </div>
             </DialogTitle>
 
-           
-            <div
-              className="flex items-center justify-center text-green-500 text-xl py-4"
-              onClick={toggleMenu}>
-              <Link href="/">
-              Kevin Long
-              </Link>
-            </div>
+            <button
+              onClick={toggleMenu}
+              className="absolute top-2 right-2 text-black bg-green-500 rounded-full cursor-pointer"
+              aria-label="Close menu">
+              <RiCloseFill size={20} />
+            </button>
 
             {/* Navigation */}
             <nav className="my-4">

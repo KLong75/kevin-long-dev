@@ -5,9 +5,9 @@ export default function ContactPage() {
   return (
     <div className="flex flex-1 items-center justify-center">
       <div className="max-w-2xl w-full">
-        <h1 className="text-4xl font-bold text-center my-8 text-green-500">
+        <h2 className="text-4xl font-bold text-center my-8 text-green-500">
           Let's Talk!
-        </h1>
+        </h2>
         <ContactForm />
       </div>
     </div>

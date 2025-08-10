@@ -26,12 +26,21 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+a, button {
+  cursor: pointer;
+}
+
 .text-shadow-black-background-black {
   text-shadow: 2px 2px 0 black;
   background-color: rgba(0, 0, 0, 1);
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
+}
+
+/* Remove text-shadow on hover */
+.hover\:no-text-shadow-black-background-black:hover {
+  text-shadow: none !important;
 }
 
 .text-shadow-green-background-black {
