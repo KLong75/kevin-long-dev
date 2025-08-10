@@ -178,7 +178,7 @@ const ICONS = [
   { component: SiGooglesearchconsole, color: "#4285f4" },
   { component: SiSequelize, color: "#52B0E8" },
   { component: RiBootstrapFill, color: "#7952b3" },
-  { component: RiVercelFill, color: "#000000" },
+  { component: RiVercelFill, color: "#fff" },
   { component: RiNpmjsFill, color: "#cb3837" },
   { component: SiInsomnia, color: "#5851db" },
   { component: SiHeroku, color: "#430098" },
