@@ -601,9 +601,9 @@ export default function PopcornIcons() {
   useEffect(() => {
     function updateSize() {
       if (window.innerWidth >= 1280) {
-        setIconSize(52);
-      } else if (window.innerWidth > 1024) {
         setIconSize(48);
+      } else if (window.innerWidth > 1024) {
+        setIconSize(42);
       } else {
         setIconSize(42);
       }
