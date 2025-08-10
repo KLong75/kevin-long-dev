@@ -548,7 +548,7 @@ const ICONS = [
   { component: SiApollographql, color: "#fff" },
   { component: NextAuthIcon, color: "#000000" },
   { component: ColdFusionIcon, color: "#7badff" },
-  { component: RiNextjsLine, color: "#000000" },
+  { component: RiNextjsLine, color: "#fff" },
   { component: RiReactjsLine, color: "#61dafb" },
   { component: RiTailwindCssFill, color: "#06b6d4" },
   { component: RiJavascriptLine, color: "#f7df1e" },
@@ -559,9 +559,9 @@ const ICONS = [
   { component: SiHeadlessui, color: "#4f46e5" },
   { component: TbFileTypeSql, color: "#003b57" },
   { component: SiGit, color: "#f05032" },
-  { component: SiGithub, color: "#000000" },
+  { component: SiGithub, color: "#fff" },
   { component: SiMongodb, color: "#47a248" },
-  { component: SiExpress, color: "#000000" },
+  { component: SiExpress, color: "#fff" },
   { component: HiOutlineCommandLine, color: "#f7df1e" },
   { component: SiMui, color: "#007fff" },
   { component: SiPython, color: "#3776ab" },
@@ -727,7 +727,7 @@ export default function PopcornIcons() {
             pointerEvents: "none",
           }}
         >
-          <Icon size={ICON_SIZE} color={color} />
+          <Icon size={ICON_SIZE} color={color} style={{ filter: "drop-shadow(2px 2px 0 #000)" }}  />
         </div>
       ))}
     </div>
