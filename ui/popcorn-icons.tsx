@@ -543,6 +543,7 @@ import {
   SiApollographql,
 } from "react-icons/si";
 import { HiOutlineCommandLine } from "react-icons/hi2";
+const screenWidth = typeof window !== "undefined" ? window.innerWidth : 0;
 
 const ICONS = [
   { component: SiApollographql, color: "#fff" },
@@ -580,7 +581,7 @@ const ICONS = [
   { component: SiMysql, color: "#4479ff" },
 ];
 
-const ICON_SIZE = 42;
+// const ICON_SIZE = 42;
 const ICON_COUNT = ICONS.length;
 const SPEED = 2;
 
@@ -595,6 +596,22 @@ function shuffle<T>(array: T[]): T[] {
 }
 
 export default function PopcornIcons() {
+  const [iconSize, setIconSize] = useState(42); // Default for SSR
+
+  useEffect(() => {
+    function updateSize() {
+      if (window.innerWidth >= 1280) {
+        setIconSize(52);
+      } else if (window.innerWidth > 1024) {
+        setIconSize(48);
+      } else {
+        setIconSize(42);
+      }
+    }
+    updateSize();
+    window.addEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
   const containerRef = useRef<HTMLDivElement>(null);
   const iconRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [visibleCount, setVisibleCount] = useState(0);
@@ -616,13 +633,13 @@ export default function PopcornIcons() {
     const container = containerRef.current;
     if (!container) return;
     const { width, height } = container.getBoundingClientRect();
-    const centerX = width / 2 - ICON_SIZE / 2;
-    const centerY = height / 2 - ICON_SIZE / 2;
+    const centerX = width / 2 - iconSize / 2;
+    const centerY = height / 2 - iconSize / 2;
 
     const cols = Math.ceil(Math.sqrt(ICON_COUNT));
     const rows = Math.ceil(ICON_COUNT / cols);
-    const xSpacing = (width - ICON_SIZE) / Math.max(cols - 1, 1);
-    const ySpacing = (height - ICON_SIZE) / Math.max(rows - 1, 1);
+    const xSpacing = (width - iconSize) / Math.max(cols - 1, 1);
+    const ySpacing = (height - iconSize) / Math.max(rows - 1, 1);
 
     // Calculate grid positions and shuffle their assignment
     const gridPositions = Array.from({ length: ICON_COUNT }, (_, i) => {
@@ -689,10 +706,10 @@ export default function PopcornIcons() {
           }
           pos.x += pos.dx;
           pos.y += pos.dy;
-          if (pos.x < 0 || pos.x > width - ICON_SIZE) pos.dx *= -1;
-          if (pos.y < 0 || pos.y > height - ICON_SIZE) pos.dy *= -1;
-          pos.x = Math.max(0, Math.min(pos.x, width - ICON_SIZE));
-          pos.y = Math.max(0, Math.min(pos.y, height - ICON_SIZE));
+          if (pos.x < 0 || pos.x > width - iconSize) pos.dx *= -1;
+          if (pos.y < 0 || pos.y > height - iconSize) pos.dy *= -1;
+          pos.x = Math.max(0, Math.min(pos.x, width - iconSize));
+          pos.y = Math.max(0, Math.min(pos.y, height - iconSize));
         }
 
         const icon = iconRefs.current[i];
@@ -722,12 +739,12 @@ export default function PopcornIcons() {
           style={{
             left: 0,
             top: 0,
-            width: ICON_SIZE,
-            height: ICON_SIZE,
+            width: iconSize,
+            height: iconSize,
             pointerEvents: "none",
           }}
         >
-          <Icon size={ICON_SIZE} color={color} style={{ filter: "drop-shadow(2px 2px 0 #000)" }}  />
+          <Icon size={iconSize} color={color} style={{ filter: "drop-shadow(2px 2px 0 #000)" }}  />
         </div>
       ))}
     </div>
