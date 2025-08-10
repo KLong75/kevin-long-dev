@@ -1,4 +1,3 @@
-
 export const projects = [
   {
     title: "mikemartinmedia.com",
@@ -15,7 +14,7 @@ export const projects = [
       "Google Tag Manager",
       "Google Analytics",
       "Google Search Console",
-      "Cookie Yes"
+      "Cookie Yes",
     ],
     role: ["Developer"],
     url: "https://mikemartinmedia.com",
@@ -28,9 +27,9 @@ export const projects = [
         "/images/mmm/mobile/blog.jpg",
         "/images/mmm/mobile/contact.jpg",
         "/images/mmm/mobile/education.jpg",
-        "/images/mmm/mobile/video-editing.jpg"
+        "/images/mmm/mobile/video-editing.jpg",
       ],
-      desktop: [],
+      desktop: ["/images/mmm/desktop/drone-desktop.png"],
     },
   },
   {
@@ -45,16 +44,38 @@ export const projects = [
       "TypeScript",
       "CSS",
       "Vercel Analytics",
-      "EmailJS"
+      "EmailJS",
     ],
     role: ["Developer", "Designer"],
     url: "https://thelongemergency.net/",
     gitHubRepo: "https://github.com/RhythmCodeStudio/the-long-emergency",
-
+    images: {
+      mobile: [
+        "/images/the-long-emergency/mobile/1-17-2025.jpg",
+        "/images/the-long-emergency/mobile/contact.jpg",
+        "/images/the-long-emergency/mobile/home.jpg",
+        "/images/the-long-emergency/mobile/lyrics.jpg",
+        "/images/the-long-emergency/mobile/music-2.jpg",
+        "/images/the-long-emergency/mobile/music-player.jpg",
+        "/images/the-long-emergency/mobile/music.jpg",
+        "/images/the-long-emergency/mobile/shows-future.jpg",
+        "/images/the-long-emergency/mobile/shows-past.jpg",
+      ],
+      desktop: [
+        "/images/the-long-emergency/desktop/contact.png",
+        "/images/the-long-emergency/desktop/home.png",
+        "/images/the-long-emergency/desktop/lyrics.png",
+        "/images/the-long-emergency/desktop/music.png",
+        "/images/the-long-emergency/desktop/shows-future.png",
+        "/images/the-long-emergency/desktop/shows-past.png",
+        "/images/the-long-emergency/desktop/shows-footer.png",
+      ],
+    },
   },
   {
     title: "WatchTV",
-    description: "React. Node. MongoDB. Express. Full stack application. Serves as a central hub for all of a user's subscription streaming accounts. Search for any TV show or movie and link to where it is available online to stream, rent, or buy. Multiple search methods enable users to find what they want to watch and where they can watch it. Users can search all sources or just the ones they are subscribed to. Save titles to a watchlist for later viewing. The watchlist can be filtered by source, type, and genre.",
+    description:
+      "React. Node. MongoDB. Express. Full stack application. Serves as a central hub for all of a user's subscription streaming accounts. Search for any TV show or movie and link to where it is available online to stream, rent, or buy. Multiple search methods enable users to find what they want to watch and where they can watch it. Users can search all sources or just the ones they are subscribed to. Save titles to a watchlist for later viewing. The watchlist can be filtered by source, type, and genre.",
     technologies: [
       "React",
       "Node",
@@ -71,19 +92,27 @@ export const projects = [
       "Swiperjs",
       "JavaScript",
       "HTML",
-      "CSS"
+      "CSS",
     ],
     role: "",
     url: "https://streamhub-e4fc2af8fdfc.herokuapp.com/",
     gitHubRepo: "https://github.com/KLong75/stream-hub",
     guestCredentials: {
       email: "guest@email.com",
-      password: "Guest#1"
-    }
+      password: "Guest#1",
+    },
+    images: {
+      mobile: [
+        "/images/watch-tv/mobile/home.png",
+      ],
+      desktop: [
+        "/images/watch-tv/desktop/feature.png",
+      ],
+    },
   },
   {
     title: "Musicology",
-    description: "",
+    description: "A full stack networking application for musicians.",
     technologies: [
       "React",
       "Node",
@@ -91,34 +120,42 @@ export const projects = [
       "Express",
       "Material UI",
       "React Router",
-      "React Context",
       "Apollo",
       "GraphQL",
       "JSON web tokens",
       "bcrypt",
       "Mongoose",
-      "Swiperjs",
       "JavaScript",
       "HTML",
-      "CSS"
+      "CSS",
     ],
-    role: "",
-    url: "",
-    gitHubRepo: "https://github.com/KLong75/",
-  },
-  {
-    title: "",
-    description: "",
-    technologies: [
-    ],
-    role: ["Developer"],
-    url: "",
-    gitHubRepo: "",
+    role: ["Lead Developer", "Project Manager", "Designer"],
+    url: "https://musicology-umekev.herokuapp.com/",
+    gitHubRepo: "https://github.com/KLong75/musician-networking-app",
     images: {
       mobile: [
+        "/images/musicology/mobile/home.jpg",
       ],
       desktop: [
+        "/images/musicology/desktop/home.gif",
       ],
     },
   },
+  // {
+  //   title: "",
+  //   description: "",
+  //   technologies: [
+  //   ],
+  //   role: ["Developer"],
+  //   url: "",
+  //   gitHubRepo: "",
+  //   images: {
+  //   mobile: [
+  //     "",
+  //   ],
+  //   desktop: [
+  //     "",
+  //   ],
+  // },
+  // },
 ];
