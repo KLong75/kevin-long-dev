@@ -726,7 +726,7 @@ export default function PopcornIcons() {
   }, [visibleCount, popOrder]);
 
   return (
-    <div ref={containerRef} className="relative w-full h-full overflow-hidden">
+    <div ref={containerRef} className="relative w-full h-full ">
       {ICONS.map(({ component: Icon, color }, i) => (
         <div
           key={i}

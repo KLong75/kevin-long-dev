@@ -37,7 +37,7 @@ export default function NavListItem({
       ) : htmlElement === "internalLink" ? (
         <Link
           href={href}
-          className="flex items-center space-x-2 relative group ">
+          className="flex items-center relative group ">
           <span
             className="nav-link-label lg:hover:text-neutral-400 transition-colors duration-600 ease-in-out"
             onClick={onClick}>
@@ -50,7 +50,7 @@ export default function NavListItem({
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center space-x-2">
+          className="flex items-center">
           <span>{label}</span>
         </a>
       ) : null}

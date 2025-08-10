@@ -28,7 +28,7 @@ export default function RootLayout({
         <main className="flex-1 flex flex-col max-w-1200 ">
           {children}
         </main>
-        <Footer />
+        <Footer/>
       </body>
     </html>
   );
