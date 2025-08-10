@@ -81,4 +81,44 @@ export const projects = [
       password: "Guest#1"
     }
   },
+  {
+    title: "Musicology",
+    description: "",
+    technologies: [
+      "React",
+      "Node",
+      "MongoDB",
+      "Express",
+      "Material UI",
+      "React Router",
+      "React Context",
+      "Apollo",
+      "GraphQL",
+      "JSON web tokens",
+      "bcrypt",
+      "Mongoose",
+      "Swiperjs",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    role: "",
+    url: "",
+    gitHubRepo: "https://github.com/KLong75/",
+  },
+  {
+    title: "",
+    description: "",
+    technologies: [
+    ],
+    role: ["Developer"],
+    url: "",
+    gitHubRepo: "",
+    images: {
+      mobile: [
+      ],
+      desktop: [
+      ],
+    },
+  },
 ];
