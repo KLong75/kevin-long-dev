@@ -22,6 +22,7 @@
 body {
   /* background: var(--background); */
   background: conic-gradient(#333, #222, #333);
+  /* background: conic-gradient(#444, #333, #444); */
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -49,4 +50,8 @@ a, button {
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
+}
+
+.hover\:green-text-shadow-black-background-black:hover {
+  text-shadow: 2px 2px 0 lab(70.5521 -66.5147 45.8072) !important;
 }

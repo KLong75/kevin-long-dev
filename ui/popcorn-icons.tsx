@@ -509,6 +509,8 @@
 import { useEffect, useRef, useState } from "react";
 import { ColdFusionIcon } from "./cold-fusion-icon";
 import { NextAuthIcon } from "./next-auth-icon";
+import { NeonIcon } from "./neon-icon";
+import { FigmaIcon } from "./figma-icon";
 import {
   RiNextjsLine,
   RiReactjsLine,
@@ -541,11 +543,14 @@ import {
   SiMysql,
   SiHeadlessui,
   SiApollographql,
+  SiFigma
 } from "react-icons/si";
 import { HiOutlineCommandLine } from "react-icons/hi2";
 const screenWidth = typeof window !== "undefined" ? window.innerWidth : 0;
 
 const ICONS = [
+  { component: FigmaIcon, color: "#000000" },
+  { component: NeonIcon, color: "#39ff14" }, // neon green
   { component: SiApollographql, color: "#fff" },
   { component: NextAuthIcon, color: "#000000" },
   { component: ColdFusionIcon, color: "#7badff" },
@@ -569,7 +574,7 @@ const ICONS = [
   { component: SiHandlebarsdotjs, color: "#f7931e" },
   { component: SiJquery, color: "#0769ad" },
   { component: SiGoogletagmanager, color: "#fbbc05" },
-  { component: SiGoogleanalytics, color: "#ea4335" },
+  { component: SiGoogleanalytics, color: "#ff6f00" }, // dark orange
   { component: SiGooglesearchconsole, color: "#4285f4" },
   { component: SiSequelize, color: "#52B0E8" },
   { component: RiBootstrapFill, color: "#7952b3" },

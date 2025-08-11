@@ -7,8 +7,8 @@ export function NextAuthIcon() {
       <Image
         src="/tech-icons/next-auth.png" // Place your PNG at public/icons/next-auth.png
         alt="NextAuth.js"
-        width={42}
-        height={42}
+        width={32}
+        height={32}
         style={{ display: "inline-block" }}
         draggable={false}
         priority

@@ -1,4 +1,4 @@
-export function ColdFusionIcon({ size = 48 }) {
+export function ColdFusionIcon({ size = 42 }) {
   return (
     <svg
       width={size}
