@@ -543,7 +543,6 @@ import {
   SiMysql,
   SiHeadlessui,
   SiApollographql,
-  SiFigma
 } from "react-icons/si";
 import { HiOutlineCommandLine } from "react-icons/hi2";
 const screenWidth = typeof window !== "undefined" ? window.innerWidth : 0;
