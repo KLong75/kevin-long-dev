@@ -125,9 +125,9 @@
 //   RiNpmjsFill,
 //   RiGitlabFill,
 // } from "react-icons/ri";
-// import { 
-//   TbBrandTypescript, 
-//   TbFileTypeSql, 
+// import {
+//   TbBrandTypescript,
+//   TbFileTypeSql,
 // } from "react-icons/tb";
 // import {
 //   SiGit,
@@ -299,8 +299,6 @@
 //   );
 // }
 
-
-
 // "use client";
 // import { useEffect, useRef, useState } from "react";
 // import { ColdFusionIcon } from "./cold-fusion-icon";
@@ -318,9 +316,9 @@
 //   RiNpmjsFill,
 //   RiGitlabFill,
 // } from "react-icons/ri";
-// import { 
-//   TbBrandTypescript, 
-//   TbFileTypeSql, 
+// import {
+//   TbBrandTypescript,
+//   TbFileTypeSql,
 // } from "react-icons/tb";
 // import {
 //   SiGit,
@@ -545,44 +543,51 @@ import {
   SiApollographql,
 } from "react-icons/si";
 import { HiOutlineCommandLine } from "react-icons/hi2";
-const screenWidth = typeof window !== "undefined" ? window.innerWidth : 0;
 
 const ICONS = [
-  { component: FigmaIcon, color: "#000000" },
-  { component: NeonIcon, color: "#39ff14" }, // neon green
-  { component: SiApollographql, color: "#fff" },
-  { component: NextAuthIcon, color: "#000000" },
-  { component: ColdFusionIcon, color: "#7badff" },
-  { component: RiNextjsLine, color: "#fff" },
-  { component: RiReactjsLine, color: "#61dafb" },
-  { component: RiTailwindCssFill, color: "#06b6d4" },
-  { component: RiJavascriptLine, color: "#f7df1e" },
-  { component: TbBrandTypescript, color: "#3178c6" },
-  { component: RiHtml5Fill, color: "#e34f26" },
-  { component: RiCss3Fill, color: "#1572b6" },
-  { component: RiNodejsLine, color: "#8cc84b" },
-  { component: SiHeadlessui, color: "#4f46e5" },
-  { component: TbFileTypeSql, color: "#003b57" },
-  { component: SiGit, color: "#f05032" },
-  { component: SiGithub, color: "#fff" },
-  { component: SiMongodb, color: "#47a248" },
-  { component: SiExpress, color: "#fff" },
-  { component: HiOutlineCommandLine, color: "#f7df1e" },
-  { component: SiMui, color: "#007fff" },
-  { component: SiPython, color: "#3776ab" },
-  { component: SiHandlebarsdotjs, color: "#f7931e" },
-  { component: SiJquery, color: "#0769ad" },
-  { component: SiGoogletagmanager, color: "#fbbc05" },
-  { component: SiGoogleanalytics, color: "#ff6f00" }, // dark orange
-  { component: SiGooglesearchconsole, color: "#4285f4" },
-  { component: SiSequelize, color: "#52B0E8" },
-  { component: RiBootstrapFill, color: "#7952b3" },
-  { component: RiVercelFill, color: "#fff" },
-  { component: RiNpmjsFill, color: "#cb3837" },
-  { component: SiInsomnia, color: "#5851db" },
-  { component: SiHeroku, color: "#430098" },
-  { component: RiGitlabFill, color: "#e24329" },
-  { component: SiMysql, color: "#4479ff" },
+  { component: FigmaIcon, color: "#000000", name: "Figma" },
+  { component: NeonIcon, color: "#39ff14", name: "Neon Postgres" }, // neon green
+  { component: SiApollographql, color: "#fff", name: "Apollo GraphQL" },
+  { component: NextAuthIcon, color: "#000000", name: "NextAuth" },
+  { component: ColdFusionIcon, color: "#7badff", name: "ColdFusion" },
+  { component: RiNextjsLine, color: "#fff", name: "Next.js" },
+  { component: RiReactjsLine, color: "#61dafb", name: "React" },
+  { component: RiTailwindCssFill, color: "#06b6d4", name: "Tailwind CSS" },
+  { component: RiJavascriptLine, color: "#f7df1e", name: "JavaScript" },
+  { component: TbBrandTypescript, color: "#3178c6", name: "TypeScript" },
+  { component: RiHtml5Fill, color: "#e34f26", name: "HTML5" },
+  { component: RiCss3Fill, color: "#1572b6", name: "CSS3" },
+  { component: RiNodejsLine, color: "#8cc84b", name: "Node.js" },
+  { component: SiHeadlessui, color: "#4f46e5", name: "HeadlessUI" },
+  { component: TbFileTypeSql, color: "#003b57", name: "SQL" },
+  { component: SiGit, color: "#f05032", name: "Git" },
+  { component: SiGithub, color: "#fff", name: "GitHub" },
+  { component: SiMongodb, color: "#47a248", name: "MongoDB" },
+  { component: SiExpress, color: "#fff", name: "Express.js" },
+  { component: HiOutlineCommandLine, color: "#f7df1e", name: "Command Line" },
+  { component: SiMui, color: "#007fff", name: "MUI" },
+  { component: SiPython, color: "#3776ab", name: "Python" },
+  { component: SiHandlebarsdotjs, color: "#f7931e", name: "Handlebars.js" },
+  { component: SiJquery, color: "#0769ad", name: "jQuery" },
+  {
+    component: SiGoogletagmanager,
+    color: "#fbbc05",
+    name: "Google Tag Manager",
+  },
+  { component: SiGoogleanalytics, color: "#ff6f00", name: "Google Analytics" },
+  {
+    component: SiGooglesearchconsole,
+    color: "#4285f4",
+    name: "Google Search Console",
+  },
+  { component: SiSequelize, color: "#52B0E8", name: "Sequelize" },
+  { component: RiBootstrapFill, color: "#7952b3", name: "Bootstrap" },
+  { component: RiVercelFill, color: "#fff", name: "Vercel" },
+  { component: RiNpmjsFill, color: "#cb3837", name: "npm" },
+  { component: SiInsomnia, color: "#5851db", name: "Insomnia" },
+  { component: SiHeroku, color: "#430098", name: "Heroku" },
+  { component: RiGitlabFill, color: "#e24329", name: "GitLab" },
+  { component: SiMysql, color: "#4479ff", name: "MySQL" },
 ];
 
 // const ICON_SIZE = 42;
@@ -601,15 +606,18 @@ function shuffle<T>(array: T[]): T[] {
 
 export default function PopcornIcons() {
   const [iconSize, setIconSize] = useState(42); // Default for SSR
+const [hovered, setHovered] = useState<number | null>(null);
 
   useEffect(() => {
     function updateSize() {
-      if (window.innerWidth >= 1280) {
+      if (window.innerWidth >= 1536) {
         setIconSize(42);
-      } else if (window.innerWidth > 1024) {
+      } else if (window.innerWidth >= 1280) {
         setIconSize(40);
-      } else {
+      } else if (window.innerWidth > 1024) {
         setIconSize(36);
+      } else {
+        setIconSize(32);
       }
     }
     updateSize();
@@ -623,8 +631,12 @@ export default function PopcornIcons() {
   // Store both current and target positions
   const positions = useRef(
     Array.from({ length: ICON_COUNT }, () => ({
-      x: 0, y: 0, dx: 0, dy: 0, // current
-      tx: 0, ty: 0, // target
+      x: 0,
+      y: 0,
+      dx: 0,
+      dy: 0, // current
+      tx: 0,
+      ty: 0, // target
       progress: 0, // 0=start, 1=arrived
     }))
   );
@@ -731,7 +743,7 @@ export default function PopcornIcons() {
 
   return (
     <div ref={containerRef} className="relative w-full h-full ">
-      {ICONS.map(({ component: Icon, color }, i) => (
+      {ICONS.map(({ component: Icon, color, name }, i) => (
         <div
           key={i}
           ref={(el) => {
@@ -745,10 +757,24 @@ export default function PopcornIcons() {
             top: 0,
             width: iconSize,
             height: iconSize,
-            pointerEvents: "none",
-          }}
+           }}
+          onMouseEnter={() => setHovered(i)}
+          onMouseLeave={() => setHovered(null)}
+          aria-label={name}
         >
-          <Icon size={iconSize} color={color} style={{ filter: "drop-shadow(2px 2px 0 #000)" }}  />
+          <Icon
+            size={iconSize}
+            color={color}
+            style={{ filter: "drop-shadow(2px 2px 0 #000)" }}
+          />
+          {hovered === i && (
+            <span
+              className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-full bg-neutral-900 text-white text-xs px-2 py-1 rounded shadow pointer-events-none z-50"
+              style={{ whiteSpace: "nowrap" }}
+            >
+              {name}
+            </span>
+          )}
         </div>
       ))}
     </div>

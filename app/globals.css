@@ -39,6 +39,14 @@ a, button {
   -moz-background-clip: text;
 }
 
+.nav-item-text-shadow-black {
+  text-shadow: 1px 1px 0 black;
+  background-color: rgba(0, 0, 0, 1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+}
+
 /* Remove text-shadow on hover */
 .hover\:no-text-shadow-black-background-black:hover {
   text-shadow: none !important;
@@ -52,6 +60,11 @@ a, button {
   -moz-background-clip: text;
 }
 
-.hover\:green-text-shadow-black-background-black:hover {
-  text-shadow: 2px 2px 0 lab(70.5521 -66.5147 45.8072) !important;
+
+.group:hover .group-hover\:text-shadow-green-background-black {
+  text-shadow: 1px 1px 0 lab(70.5521 -66.5147 45.8072) !important;
+  /* background-color: rgba(0, 0, 0, 1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text; */
 }

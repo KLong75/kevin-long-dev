@@ -21,7 +21,7 @@ export const projects = [
     gitHubRepo: "https://github.com/KLong75/mike-martin-media",
     images: {
       mobile: [
-        "/images/mmm/mobile/home-video.mp4",
+        
         "/images/mmm/mobile/home.jpg",
         "/images/mmm/mobile/drone.jpg",
         "/images/mmm/mobile/blog.jpg",

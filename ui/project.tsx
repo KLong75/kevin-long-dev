@@ -1,4 +1,8 @@
+// import from next
 import Image from "next/image";
+// import components
+import MobileImageCarousel from "./mobile-image-carousel";
+import DesktopImageCarousel from "./desktop-image-carousel";
 
 interface ProjectProps {
   title: string;
