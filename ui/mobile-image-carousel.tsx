@@ -1,3 +1,5 @@
+"use client";
+
 import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
@@ -27,8 +29,8 @@ export default function MobileImageCarousel(props: PropType) {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <>
-      <div className="grid grid-cols-3">
+    <div className="flex flex-col items-center">
+      <div className="grid grid-cols-3 w-128 md:w-auto">
         <div className="embla__buttons place-content-center ml-10">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
         </div>
@@ -82,6 +84,6 @@ export default function MobileImageCarousel(props: PropType) {
           />
         ))}
       </div> */}
-    </>
+    </div>
   );
 }

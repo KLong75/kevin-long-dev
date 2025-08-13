@@ -1,5 +1,3 @@
-// import from next
-import Image from "next/image";
 // import components
 import MobileImageCarousel from "./mobile-image-carousel";
 import DesktopImageCarousel from "./desktop-image-carousel";
@@ -27,9 +25,25 @@ export default function Project({
   images,
 }: ProjectProps) {
   return (
-    <div className="project">
-      <h2>{title}</h2>
-      <p>{description}</p>
+    <li className="text-white shadow-lg shadow-gray-200/50 border-2 border-neutral-600 rounded-2xl m-6 p-2 text-shadow-black-background-black">
+      <h2 className="text-lg font-bold text-shadow-black-background-black text-center">{title}</h2>
+      <p className="p-2">{description}</p>
+      <div className="flex items-center justify-center my-4">
+        <figure className="w-full h-auto">
+          <figcaption className="text-center font-bold text-xs lg:text-sm mb-2">
+            Mobile View
+          </figcaption>
+          <MobileImageCarousel slides={images.mobile} />
+        </figure>
+      </div>
+      <div className="flex items-center justify-center mt-8">
+        <figure className="w-full h-auto px-4">
+          <figcaption className="text-center font-bold text-xs lg:text-sm mb-2">
+            Desktop View
+          </figcaption>
+          <DesktopImageCarousel slides={images.desktop} />
+        </figure>
+      </div>
       <ul>
         {technologies.map((tech, index) => (
           <li key={index}>{tech}</li>
@@ -42,7 +56,7 @@ export default function Project({
       <a href={gitHubRepo} target="_blank" rel="noopener noreferrer">
         GitHub Repo
       </a>
-      <div className="images">
+      {/* <div className="images">
         {images.mobile.map((img, index) =>
           img.endsWith(".mp4") ? (
             <video key={index} controls style={{ width: "100%" }}>
@@ -75,7 +89,7 @@ export default function Project({
             />
           )
         )}
-      </div>
-    </div>
+      </div> */}
+    </li>
   );
 }
