@@ -7,11 +7,13 @@ export default async function ProjectsPage() {
   await connection();
   return (
       <div className="flex flex-1 items-center justify-center text-shadow-black-background-black">
-        <div className="w-full max-w-8xl px-4">
+        <div className="w-full">
           <h2 className="text-4xl font-bold text-center my-8 text-green-500">
             My Work
           </h2>
-          <ProjectGallery />
+          <div className="mx-auto max-w-600">
+            <ProjectGallery />
+          </div>
         </div>
       </div>
   );
