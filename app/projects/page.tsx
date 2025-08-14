@@ -1,7 +1,10 @@
+// import from next
+import { connection } from "next/server";
 // import components
 import ProjectGallery from "@/ui/project-gallery";
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
+  await connection();
   return (
       <div className="flex flex-1 items-center justify-center text-shadow-black-background-black">
         <div className="w-full max-w-8xl px-4">

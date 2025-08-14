@@ -25,9 +25,9 @@ export default function Project({
   images,
 }: ProjectProps) {
   return (
-    <li className="text-white shadow-lg shadow-gray-200/50 border-2 border-neutral-600 rounded-2xl m-6 p-2 text-shadow-black-background-black">
+    <li className="text-white shadow-lg shadow-gray-200/50 border-2 border-neutral-600 rounded-2xl m-6 p-2 text-shadow-black-background-black w-full">
       <h2 className="text-lg font-bold text-shadow-black-background-black text-center">{title}</h2>
-      <p className="p-2">{description}</p>
+      
       <div className="flex items-center justify-center my-4">
         <figure className="w-full h-auto">
           <figcaption className="text-center font-bold text-xs lg:text-sm mb-2">
@@ -43,6 +43,9 @@ export default function Project({
           </figcaption>
           <DesktopImageCarousel slides={images.desktop} />
         </figure>
+      </div>
+      <div>
+        <p className="p-2">{description}</p>
       </div>
       <ul>
         {technologies.map((tech, index) => (
