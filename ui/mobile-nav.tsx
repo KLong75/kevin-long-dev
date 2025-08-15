@@ -10,6 +10,7 @@ import { RiCloseFill } from "react-icons/ri";
 import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 // import components
 import NavListItem from "./nav-list-item";
+import ContactIconLinks from "./contact-icon-links";
 
 interface MobileMenuProps {
   navListItems: {
@@ -58,7 +59,9 @@ export default function MobileNav({ navListItems }: MobileMenuProps) {
                 <Link href="/">Kevin Long</Link>
               </div>
             </DialogTitle>
-
+            <div className="mb-4">
+              <ContactIconLinks orientation="horizontal" />
+            </div>
             <button
               onClick={toggleMenu}
               className="absolute top-2 right-2 text-black bg-green-500 rounded-full cursor-pointer"
@@ -67,7 +70,7 @@ export default function MobileNav({ navListItems }: MobileMenuProps) {
             </button>
 
             {/* Navigation */}
-            <nav className="my-4">
+            <nav className="my-6">
               <ul className="flex flex-col gap-8 font-semibold text-black items-center">
                 {navListItems.map((item) => (
                   <NavListItem
