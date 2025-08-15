@@ -129,3 +129,7 @@ a, button {
   width: 20%;
   height: 20%;
 }
+
+.icon-link {
+  filter: drop-shadow(2px 2px 0 #000);
+}

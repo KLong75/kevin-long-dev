@@ -14,7 +14,7 @@ export default function IconLink({
       rel="noopener noreferrer"
       className="flex items-center space-x-2 text-green-500 hover:text-green-400 transition-colors duration-300"
     >
-      <Icon className="w-5 h-5" />
+      <Icon className="w-5 h-5 icon-link"  />
       {/* <span>{label}</span> */}
     </a>
   );
