@@ -9,8 +9,6 @@ import { clsx } from "clsx";
 import { ToastContainer, Zoom, toast } from "react-toastify";
 // import components
 import ContactFormInput from "./contact-form-input";
-// import fonts
-import { shareTechMono, vt323 } from "@/fonts";
 // import from utils
 import {
   validateEmail,
@@ -197,6 +195,7 @@ export default function ContactForm({
         onSubmit={handleFormSubmit}
         className="px-12 py-6 max-w-200 mx-auto relative text-green-500">
         <ContactFormInput
+          inputType="input"
           label="First Name"
           name="first_name"
           type="text"
@@ -209,6 +208,7 @@ export default function ContactForm({
           setStateVariable={setFirstName}
         />
         <ContactFormInput
+          inputType="input"
           label="Last Name"
           name="last_name"
           type="text"
@@ -221,6 +221,7 @@ export default function ContactForm({
           setStateVariable={setLastName}
         />
         <ContactFormInput
+          inputType="input"
           label="Phone"
           name="phone"
           type="tel"
@@ -233,6 +234,7 @@ export default function ContactForm({
           setStateVariable={setPhone}
         />
         <ContactFormInput
+          inputType="input"
           label="Email"
           name="email"
           type="text"
@@ -244,7 +246,20 @@ export default function ContactForm({
           handleChange={handleChange}
           setStateVariable={setEmail}
         />
-        <div className="flex flex-col justify-start text-base">
+        <ContactFormInput
+          inputType="textarea"
+          label="Message"
+          name="message"
+          type="text"
+          placeholder=""
+          value={message}
+          required={true}
+          autoComplete="off"
+          // errorMessage={messageErrorMessage}
+          handleChange={handleChange}
+          setStateVariable={setMessage}
+        />
+        {/* <div className="flex flex-col justify-start text-base">
           <label htmlFor="message" className="m-2 text-left">
             Message*<span className="text-xs"> (required)</span>
           </label>
@@ -256,22 +271,18 @@ export default function ContactForm({
             required
             name="message"
             id="message"
-            className={clsx(
-              "shadow-2xl shadow-green-500/50 border-2 border-neutral-600 p-2 w-full text-black rounded-2xl h-80 w-60 resize-none bg-neutral-300",
-              vt323.variable // <-- add this
-            )}
+            className="shadow-2xl shadow-green-500/50 border-2 border-neutral-600 p-2 w-full text-black rounded-2xl h-80 w-60 resize-none bg-neutral-300"
           />
           <p className="p-2">{messageErrorMessage}</p>
-        </div>
+        </div> */}
         <div className="flex justify-center items-center p-6 mt-4">
           <button
             style={{ textShadow: "2px 2px 0 black" }}
             onClick={handleFormSubmit}
             type="submit"
-            className={clsx(
-              "border border-2 border-green-500 hover:border-neutral-800 rounded-2xl py-1 px-6 bg-neutral-800 hover:bg-green-500 text-green-500 hover:text-white transition-colors duration-600 ease-in-out"
-            )}>
-            <span className="font-semibold tracking-wide">
+            className="border border-2 border-green-500 hover:border-neutral-800 rounded-2xl py-1 px-6 bg-neutral-800 hover:bg-green-500 text-green-500 hover:text-white transition-colors duration-600 ease-in-out"
+          >
+            <span className="font-semibold tracking-widest">
               {buttonSubmitted ? "Message Sent!" : "Send"}
             </span>
           </button>

@@ -33,12 +33,58 @@ a, button {
   cursor: pointer;
 }
 
+.icon-link {
+  filter: drop-shadow(2px 2px 0 #000);
+  transition: transform 0.4s ease-in-out;
+}
+
+.icon-link:hover {
+  transform: scale(1.15);
+}
+
+.icon-link:active {
+  transform: scale(0.95);
+}
+
+button {
+  transition: transform 0.6s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+
+.font-vt323 {
+  font-family: var(--font-vt323), monospace;
+}
+
+.font-share-tech-mono {
+  font-family: var(--font-share-tech-mono), monospace;
+}
+
+.font-pt-mono {
+  font-family: var(--font-pt-mono), monospace;
+}
+
+.font-noto-sans-mono {
+  font-family: var(--font-noto-sans-mono), monospace;
+}
+
 .text-shadow-black-background-black {
   text-shadow: 2px 2px 0 black;
   background-color: rgba(0, 0, 0, 1);
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
+}
+
+.text-shadow-black {
+  text-shadow: 2px 2px 0 black;
 }
 
 .nav-item-text-shadow-black {
@@ -62,6 +108,9 @@ a, button {
   -moz-background-clip: text;
 }
 
+.text-shadow-green {
+  text-shadow: 1px 1px 0 lab(70.5521 -66.5147 45.8072);
+}
 
 .group:hover .group-hover\:text-shadow-green-background-black {
   text-shadow: 1px 1px 0 lab(70.5521 -66.5147 45.8072) !important;
@@ -130,8 +179,4 @@ a, button {
 .embla__button__svg {
   width: 20%;
   height: 20%;
-}
-
-.icon-link {
-  filter: drop-shadow(2px 2px 0 #000);
 }

@@ -22,16 +22,11 @@ export default function NavListItem({
       {label === "Contact" ? (
         <Link
           href={href}
-          className={clsx(
-            "border border-2 border-green-500 hover:border-neutral-800 rounded-2xl py-2 px-6 bg-neutral-800 hover:bg-green-500 text-green-500 hover:text-white transition-colors duration-600 ease-in-out"
-          )}>
+          className="text-shadow-black border border-2 border-green-500 hover:border-neutral-800 rounded-2xl py-1 px-6 bg-neutral-800 hover:bg-green-500 text-green-500 hover:text-white transition-all duration-600 ease-in-out"
+        >
           <span
             onClick={onClick}
-            className={clsx(
-              "contact-btn-label",
-              "text-shadow-black-background-black"
-              // "hover:no-text-shadow-black-background-black"
-            )}>
+            className="transition-colors duration-600 ease-in-out">
             {label}
           </span>
         </Link>
