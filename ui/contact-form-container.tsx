@@ -19,7 +19,7 @@ export default function ContactFormContainer() {
           <p className="m-8 ">
             I look forward to connecting with you.
           </p>
-          <ContactIconLinks orientation="horizontal"/>
+          <ContactIconLinks orientation="horizontal" include={["GitHub","LinkedIn"]} size={52}/>
         </div>
       ) : (
         <>
@@ -27,8 +27,6 @@ export default function ContactFormContainer() {
             Let&apos;s Talk!
           </h2>
           <div className=" items-center justify-center max-w-200">
-            {/* <p className="px-8 py-4">{contactPageCopy.text_block_one}</p> */}
-            {/* <p className=" px-8 p-4">{contactPageCopy.text_block_two}</p> */}
           </div>
           <ContactForm setFormSubmitted={setFormSubmitted} />
         </>

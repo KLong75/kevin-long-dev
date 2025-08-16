@@ -1,33 +1,41 @@
-// import link data
 import { contactIconLinkData } from "../lib/contact-icon-link-data";
-// import components
 import IconLink from "./icon-link";
-// import react icons
-// import { SiGithub } from "react-icons/si";
-// import { SiLinkedin } from "react-icons/si";
-// import { TfiEmail } from "react-icons/tfi";
-// import { MdEmail } from "react-icons/md";
 
 type ContactIconLinkProps = {
   orientation: "vertical" | "horizontal";
+  include?: string[]; // array of names to include, e.g. ["GitHub", "Email"]
+  size?: number; // optional size for the icons, default can be set in IconLink component
 };
 
 type ContactIconLinkData = {
   href: string;
   icon: React.ElementType;
-  // label: string;
+  name: string;
 };
 
 export default function ContactIconLinks({
   orientation,
+  include,
+  size,
 }: ContactIconLinkProps) {
+  // Filter links if include is provided
+  const filteredLinks = include
+    ? contactIconLinkData.filter((item: ContactIconLinkData) =>
+        include.includes(item.name)
+      )
+    : contactIconLinkData;
+
+  // Provide a default size if not specified
+  const iconSize = size ?? 24;
+
   return (
     <div
       className={`flex justify-center space-x-6 ${
         orientation === "vertical" ? "flex-col" : "flex-row"
-      }`}>
-      {contactIconLinkData.map(({ href, icon: Icon,  }: ContactIconLinkData) => (
-        <IconLink key={href} href={href} icon={Icon}  />
+      }`}
+    >
+      {filteredLinks.map(({ href, icon: Icon }: ContactIconLinkData) => (
+        <IconLink key={href} href={href} icon={Icon} size={iconSize} />
       ))}
     </div>
   );
