@@ -541,12 +541,16 @@ import {
   SiMysql,
   SiHeadlessui,
   SiApollographql,
+  SiArcgis,
+  SiEsri
 } from "react-icons/si";
 import { HiOutlineCommandLine } from "react-icons/hi2";
 
 const ICONS = [
+  { component: SiEsri, color: "#0072c6", name: "Esri" },
+  { component: SiArcgis, color: "#0072c6", name: "ArcGIS" },
   { component: FigmaIcon, color: "#000000", name: "Figma" },
-  { component: NeonIcon, color: "#39ff14", name: "Neon Postgres" }, // neon green
+  { component: NeonIcon, color: "#39ff14", name: "Neon Postgres" },
   { component: SiApollographql, color: "#fff", name: "Apollo GraphQL" },
   { component: NextAuthIcon, color: "#000000", name: "NextAuth" },
   { component: ColdFusionIcon, color: "#7badff", name: "ColdFusion" },

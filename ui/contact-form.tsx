@@ -1,45 +1,43 @@
 "use client";
+// import from vercel
 import { track } from "@vercel/analytics";
-import Image from "next/image";
-import { ChangeEvent, SetStateAction, useState } from "react";
+// import from react
+import { useState } from "react";
+// import from clsx
+import { clsx } from "clsx";
+// import from toastify
 import { ToastContainer, Zoom, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+// import components
+import ContactFormInput from "./contact-form-input";
+// import fonts
+import { shareTechMono, vt323 } from "@/fonts";
+// import from utils
 import {
   validateEmail,
   validateName,
   validatePhone,
   validateMessage,
 } from "../utils/utils";
+// import from emailjs
 import emailjs from "@emailjs/browser";
 
-export default function ContactForm() {
-  const [name, setName] = useState("");
+export default function ContactForm({
+  setFormSubmitted,
+}: {
+  setFormSubmitted: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [, setEmailErrorMessage] = useState("");
   const [, setPhoneErrorMessage] = useState("");
-  const [, setNameErrorMessage] = useState("");
-  const [, setMessageErrorMessage] = useState("");
+  const [, setFirstNameErrorMessage] = useState("");
+  const [, setLastNameErrorMessage] = useState("");
+  const [messageErrorMessage, setMessageErrorMessage] = useState("");
   const [, setDeliveryErrorMessage] = useState("");
-  const [, setButtonSubmitted] = useState(false);
-
-  const notifySuccess = () =>
-    toast.success("Thank you. I will be in touch!", {
-      transition: Zoom,
-      position: "top-center",
-      // icon: (
-      //   <Image
-      //     src="/logos/mark-only.png"
-      //     alt="Shift Auto Solutions Logo"
-      //     width={68}
-      //     height={49}
-      //   />
-      // ),
-      closeOnClick: true,
-      pauseOnHover: true,
-      className: "border-2 border-green-500 text-white",
-    });
+  const [buttonSubmitted, setButtonSubmitted] = useState(false);
 
   const showErrorToast = (msg: string) => {
     toast.error(msg, {
@@ -60,68 +58,90 @@ export default function ContactForm() {
   };
 
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>,
-    setState: (value: SetStateAction<string>) => void
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    setState: React.Dispatch<React.SetStateAction<any>>
   ) => {
     const { name, value } = e.target;
     setState(value);
-
-    if (name === "email" && validateEmail(value)) setEmailErrorMessage("");
-    else if (name === "name" && validateName(value)) setNameErrorMessage("");
-    else if (name === "phone" && validatePhone(value)) setPhoneErrorMessage("");
-    else if (name === "message" && validateMessage(value))
+    // Check if the email is being updated and is valid
+    if (name === "email" && validateEmail(value)) {
+      setEmailErrorMessage("");
+    }
+    if (name === "first_name" && validateName(value)) {
+      setFirstNameErrorMessage("");
+    }
+    if (name === "last_name" && validateName(value)) {
+      setLastNameErrorMessage("");
+    }
+    if (name === "phone" && validatePhone(value)) {
+      setPhoneErrorMessage("");
+    }
+    if (name === "message" && validateMessage(value)) {
       setMessageErrorMessage("");
+    }
   };
 
   const handleFormSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    const trimmedName = name.trim();
+    // trim form data
+    const trimmedFirstName = firstName.trim();
+    const trimmedLastName = lastName.trim();
     const trimmedEmail = email.trim();
     const trimmedPhone = phone.trim();
-
+    // validation  for inputs, handle errors accordingly
     const isEmailValid = validateEmail(trimmedEmail);
     const isPhoneValid = validatePhone(trimmedPhone);
-    const isNameValid = validateName(trimmedName);
+    const isFirstNameValid = validateName(trimmedFirstName);
+    const isLastNameValid = validateName(trimmedLastName);
     const isMessageValid = validateMessage(message);
 
     const errors = [];
     if (!isEmailValid) errors.push("email");
-    if (!isNameValid) errors.push("name");
+    if (!isFirstNameValid) errors.push("first_name");
+    if (!isLastNameValid) errors.push("last_name");
     if (!isPhoneValid) errors.push("phone");
     if (!isMessageValid) errors.push("message");
 
     if (errors.length === 0) {
       // All valid
       const emailTemplateParams = {
-        name: trimmedName,
+        first_name: trimmedFirstName,
+        last_name: trimmedLastName,
         email: trimmedEmail,
         phone_number: trimmedPhone,
         message: message,
       };
+
       try {
         await emailjs.send(
-          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
-          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
           emailTemplateParams,
           process.env.NEXT_PUBLIC_EMAILJS_USER_ID
         );
+        // .then((result) => {
         track("Contact form submission");
         setButtonSubmitted(true);
-        setName("");
+        setFirstName("");
+        setLastName("");
         setEmail("");
         setPhone("");
         setMessage("");
-        setTimeout(() => setButtonSubmitted(false), 5000);
-        notifySuccess();
+        setFormSubmitted(true);
+        // Reset the button's submitted state after 5 seconds
+        setTimeout(() => {
+          setButtonSubmitted(false);
+        }, 5000);
+        // });
       } catch (error) {
         setDeliveryErrorMessage(
-          "There was an error delivering your message. Please email me at kevinlong.dev@gmail.com."
+          "There was an error delivering your message. Please email me at kevinlong.dev@gmail.com. My apologies for the inconvenience."
         );
-        console.error("Error sending email:", error);
         toast.error(
           <div className="p-2">
             <p>
-              There was an error delivering your message. Please send me an email.
+              There was an error delivering your message. Please send me an
+              email.
             </p>
             <a
               href="mailto:kevinlong.dev@gmail.com"
@@ -172,56 +192,59 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full text-base">
       <form
         onSubmit={handleFormSubmit}
-        className="expand-on-load px-12 py-6 max-w-200 mx-auto relative text-green-500">
-        <div className="flex flex-col justify-start">
-          <label htmlFor="lastName" className="m-2 text-left">
-            Name*<span className="text-xs"> (required)</span>
-          </label>
-          <input
-            required
-            autoComplete="family-name"
-            onChange={(e) => handleChange(e, setName)}
-            value={name}
-            type="text"
-            name="name"
-            id="name"
-            className="shadow-2xl shadow-green-500/50 border-2 border-neutral-600 p-2 w-full text-black placeholder-neutral-400 rounded-2xl bg-neutral-300"
-          />
-        </div>
-        <div className="flex flex-col justify-start">
-          <label htmlFor="phone" className="m-2 text-left">
-            Phone*<span className="text-xs"> (required)</span>
-          </label>
-          <input
-            required
-            autoComplete="tel"
-            onChange={(e) => handleChange(e, setPhone)}
-            value={phone}
-            type="tel"
-            name="phone"
-            id="phone"
-            className="shadow-2xl shadow-green-500/50 border-2 border-neutral-600 p-2 w-full text-black placeholder-neutral-400 rounded-2xl bg-neutral-300"
-          />
-        </div>
-        <div className="flex flex-col justify-start">
-          <label htmlFor="email" className="m-2 text-left">
-            Email*<span className="text-xs"> (required)</span>
-          </label>
-          <input
-            autoComplete="email"
-            onChange={(e) => handleChange(e, setEmail)}
-            value={email}
-            required
-            type="email"
-            name="email"
-            id="email"
-            className="shadow-2xl shadow-green-500/50 border-2 border-neutral-600 p-2 w-full text-black placeholder-neutral-400 rounded-2xl bg-neutral-300"
-          />
-        </div>
-        <div className="flex flex-col justify-start">
+        className="px-12 py-6 max-w-200 mx-auto relative text-green-500">
+        <ContactFormInput
+          label="First Name"
+          name="first_name"
+          type="text"
+          placeholder=""
+          value={firstName}
+          required={true}
+          autoComplete="given-name"
+          // errorMessage={firstNameErrorMessage}
+          handleChange={handleChange}
+          setStateVariable={setFirstName}
+        />
+        <ContactFormInput
+          label="Last Name"
+          name="last_name"
+          type="text"
+          placeholder=""
+          value={lastName}
+          required={true}
+          autoComplete="family-name"
+          // errorMessage={lastNameErrorMessage}
+          handleChange={handleChange}
+          setStateVariable={setLastName}
+        />
+        <ContactFormInput
+          label="Phone"
+          name="phone"
+          type="tel"
+          placeholder=""
+          value={phone}
+          required={false}
+          autoComplete="tel"
+          // errorMessage={phoneErrorMessage}
+          handleChange={handleChange}
+          setStateVariable={setPhone}
+        />
+        <ContactFormInput
+          label="Email"
+          name="email"
+          type="text"
+          placeholder=""
+          value={email}
+          required={true}
+          autoComplete="email"
+          // errorMessage={emailErrorMessage}
+          handleChange={handleChange}
+          setStateVariable={setEmail}
+        />
+        <div className="flex flex-col justify-start text-base">
           <label htmlFor="message" className="m-2 text-left">
             Message*<span className="text-xs"> (required)</span>
           </label>
@@ -233,17 +256,54 @@ export default function ContactForm() {
             required
             name="message"
             id="message"
-            className="shadow-2xl shadow-green-500/50 border-2 border-neutral-600 p-2 w-full text-black  rounded-2xl h-80 w-60 resize-none w-full bg-neutral-300"
+            className={clsx(
+              "shadow-2xl shadow-green-500/50 border-2 border-neutral-600 p-2 w-full text-black rounded-2xl h-80 w-60 resize-none bg-neutral-300",
+              vt323.variable // <-- add this
+            )}
           />
+          <p className="p-2">{messageErrorMessage}</p>
         </div>
         <div className="flex justify-center items-center p-6 mt-4">
           <button
+            style={{ textShadow: "2px 2px 0 black" }}
             onClick={handleFormSubmit}
             type="submit"
-            className="cursor-pointer border border-2 border-green-500 hover:border-neutral-600 rounded-2xl py-2 px-6 bg-neutral-800 hover:bg-green-500 text-green-500 hover:text-neutral-600 transition-colors duration-600 ease-in-out">
-            <span className="font-semibold tracking-wide">Send</span>
+            className={clsx(
+              "border border-2 border-green-500 hover:border-neutral-800 rounded-2xl py-1 px-6 bg-neutral-800 hover:bg-green-500 text-green-500 hover:text-white transition-colors duration-600 ease-in-out"
+            )}>
+            <span className="font-semibold tracking-wide">
+              {buttonSubmitted ? "Message Sent!" : "Send"}
+            </span>
           </button>
         </div>
+        {/* <div className="flex flex-col py-2">
+          <label htmlFor="message" className="px-4 font-bold">
+            {`Brief Project Description*`.toUpperCase()}
+            <span className="text-xs"> (required)</span>
+          </label>
+          <textarea
+            autoComplete="off"
+            maxLength={1500}
+            placeholder=""
+            onChange={(e) => handleChange(e, setMessage)}
+            value={message}
+            required={true}
+            name="message"
+            id="message"
+            className="resize-none h-36 rounded-3xl px-4 opacity-75"
+          />
+          <p className="">{messageErrorMessage}</p>
+        </div>
+        <div className="flex justify-end">
+          <button
+            type="submit"
+            className="tracking-wider border border-2 text-white rounded-full px-4 py-1 mt-4 hover:text-black hover:bg-white"
+            onClick={handleFormSubmit}
+            // isSubmitted={buttonSubmitted}
+          >
+            {buttonSubmitted ? "Message Sent!" : "SUBMIT"}
+          </button>
+        </div> */}
       </form>
       <ToastContainer
         limit={1}

@@ -9,7 +9,7 @@ import ContactIconLinks from "./contact-icon-links";
 
 export default function Header() {
   return (
-    <header className="w-full p-4">
+    <header className="w-full px-4">
       <div className="flex items-center justify-between w-full px-4 py-4">
         <div className="flex flex-col items-center justify-center space-y-2">
           <div>
