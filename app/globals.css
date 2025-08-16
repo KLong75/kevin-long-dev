@@ -35,7 +35,7 @@ a, button {
 
 .icon-link {
   filter: drop-shadow(2px 2px 0 #000);
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.6s ease-in-out;
 }
 
 .icon-link:hover {
@@ -87,6 +87,10 @@ button:active {
   text-shadow: 2px 2px 0 black;
 }
 
+.text-shadow-black-thin {
+  text-shadow: 1px 1px 0 black;
+}
+
 .nav-item-text-shadow-black {
   text-shadow: 1px 1px 0 black;
   background-color: rgba(0, 0, 0, 1);
@@ -136,19 +140,19 @@ button:active {
   overflow: hidden;
 }
 
-.embla__controls {
+/* .embla__controls { */
   /* display: grid; */
   /* grid-template-columns: auto 1fr; */
   /* justify-content: space-between; */
   /* gap: 1.2rem; */
   /* margin-top: 1.8rem; */
-}
-.embla__buttons {
+/* } */
+/* .embla__buttons { */
   /* display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.6rem;
   align-items: center; */
-}
+/* } */
 .embla__button {
   /* -webkit-tap-highlight-color: rgba(101, 101, 101, 0.5); */
   /* -webkit-appearance: none; */
@@ -170,13 +174,40 @@ button:active {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
 }
+
+.embla__button--prev {
+  filter: drop-shadow(-2px 2px 0 #000);
+}
+
+.embla__button--next {
+  filter: drop-shadow(2px 2px 0 #000);
+}
+
 .embla__button:disabled {
-  /* color: rgb(101, 101, 101); */
+  color: rgb(101, 101, 101);
   /* display: none; */
   opacity: 0.2;
 }
 .embla__button__svg {
   width: 20%;
   height: 20%;
+}
+
+.project-icon {
+  filter: drop-shadow(2px 2px 0 #000);
+}
+
+.project-link {
+  /* filter: drop-shadow(2px 2px 0 #000); */
+  transition: transform 0.6s ease-in-out;
+}
+
+.project-link:hover {
+  transform: scale(1.05);
+}
+
+.project-link:active {
+  transform: scale(0.95);
 }

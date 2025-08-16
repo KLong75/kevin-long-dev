@@ -4,7 +4,7 @@ import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 // import components
-// import { DotButton, useDotButton } from "./carousel-dot-buttons";
+import { DotButton, useDotButton } from "./carousel-dot-buttons";
 import {
   PrevButton,
   NextButton,
@@ -19,8 +19,8 @@ type PropType = {
 export default function MobileImageCarousel(props: PropType) {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
-  // const { selectedIndex, scrollSnaps, onDotButtonClick } =
-  //   useDotButton(emblaApi);
+  const { selectedIndex, scrollSnaps, onDotButtonClick } =
+    useDotButton(emblaApi);
   const {
     prevBtnDisabled,
     nextBtnDisabled,
@@ -30,13 +30,13 @@ export default function MobileImageCarousel(props: PropType) {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="grid grid-cols-3 w-128 md:w-auto">
+      <div className="grid grid-cols-3 md:w-auto">
         <div className="embla__buttons place-content-center ml-10">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
         </div>
 
         <div
-          className="embla__viewport rounded-2xl border-4 border-zinc-900 bg-zinc-800 shadow-lg shadow-gray-200/50"
+          className="embla__viewport rounded-2xl border-4 border-zinc-900 bg-zinc-800 shadow-lg shadow-zinc-200/50"
           ref={emblaRef}>
           <div className="embla__container">
             <div className="embla__controls"></div>

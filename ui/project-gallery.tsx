@@ -6,7 +6,8 @@ import { projects } from "../lib/projects";
 
 export default function ProjectGallery() {
   return (
-    <ul id="project-gallery" className="grid grid-cols-1 lg:grid-cols-2 gap-12 p-12">
+    <div className="max-w-500 mx-auto">
+    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-12 p-6 sm:p-12 w-full">
       {projects.map((project, index) => (
         <Project key={index} 
           title={project.title}
@@ -20,5 +21,6 @@ export default function ProjectGallery() {
         />
       ))}
     </ul>
+    </div>
   );
 }

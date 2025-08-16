@@ -27,7 +27,7 @@ export default function DesktopImageCarousel(props: PropType) {
   return (
     <>
       <div
-        className="embla__viewport rounded-2xl border-4 border-zinc-900 bg-zinc-800 shadow-lg shadow-gray-200/50"
+        className="embla__viewport rounded-2xl border-4 border-zinc-900 bg-zinc-800 shadow-lg shadow-zinc-200/50"
         ref={emblaRef}>
         <div className="embla__container">
           {slides.map((slide, index) => (
