@@ -43,7 +43,7 @@ export default function DesktopImageCarousel(props: PropType) {
           ))}
         </div>
       </div>
-      <div className="grid grid-cols-3 p-6">
+      <div className="grid grid-cols-3 p-6 pb-0">
       <div className="embla__buttons place-content-center ">
         <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
       </div>

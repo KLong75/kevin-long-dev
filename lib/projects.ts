@@ -1,8 +1,9 @@
 export const projects = [
   {
     title: "mikemartinmedia.com",
+    type: "Business Website",
     description:
-      "Mike Martin Media is an multi media production company based in St Louis, Missouri and working all around the world. When I first began working with MMM they had an old WordPress website that was not meeting their needs. Our first order of business was to stabilize the old website. After that I worked with them to design and develop a new website, custom made to fit their specific needs. The biggest challenge was working with a large amount of video content. They needed a website to showcase their work for potential clients. Video files are big and not always easy to work with. I was able to optimize the website to load quickly and display the video content in a way that was easy to navigate and view. The website is fully responsive and looks great on any device. It features a sortable video gallery, embedded video content, a blog, and a contact form. The website is integrated with Google Analytics and Google Tag Manager for running ads and monitoring site traffic. Cookie consent management is handled with Cookie Yes.",
+      "Mike Martin Media is an multi media production company based in St Louis, Missouri and working all around the world. Mikemartinmedia.com features a sortable video gallery, embedded video content, a blog, and a contact form. The website is integrated with Google Analytics and Google Tag Manager for running ads and monitoring site traffic. Cookie consent management is handled with Cookie Yes. The website was designed by Seafoam Media.",
     technologies: [
       { name: "Next.js", url: "https://nextjs.org/" },
       { name: "Vercel", url: "https://vercel.com/docs" },
@@ -45,6 +46,7 @@ export const projects = [
   },
   {
     title: "thelongemergency.net",
+    type: "Band Website",
     description:
       "The Long Emergency is a rock band in St. Louis, Missouri. They needed a website to showcase their music, shows, and merchandise. The website features a gig calendar, music player, audio downloads, merch store, blog, and contact form. The website is fully responsive and accessible. It is integrated with Vercel Analytics for monitoring site traffic. The website is built with Next.js and Tailwind CSS.",
     technologies: [
@@ -57,7 +59,7 @@ export const projects = [
       { name: "Vercel Analytics", url: "https://vercel.com/docs/analytics" },
       { name: "EmailJS", url: "https://www.emailjs.com/docs/" },
     ],
-    role: ["Developer", "Designer"],
+    role: ["Sole Developer and Designer"],
     url: "https://thelongemergency.net/",
     gitHubRepo: "https://github.com/RhythmCodeStudio/the-long-emergency",
     images: {
@@ -85,8 +87,9 @@ export const projects = [
   },
   {
     title: "WatchTV",
+    type: "Full Stack Application",
     description:
-      "React. Node. MongoDB. Express. Full stack application. Serves as a central hub for all of a user's subscription streaming accounts. Search for any TV show or movie and link to where it is available online to stream, rent, or buy. Multiple search methods enable users to find what they want to watch and where they can watch it. Users can search all sources or just the ones they are subscribed to. Save titles to a watchlist for later viewing. The watchlist can be filtered by source, type, and genre.",
+      "WatchTV serves as a central hub for all of a user's subscription streaming accounts. Search for any TV show or movie and link to where it is available online to stream, rent, or buy. Multiple search methods enable users to find what they want to watch and where they can watch it. Users can search all sources or just the ones they are subscribed to. Save titles to a watchlist for later viewing. The watchlist can be filtered by source, type, and genre.",
     technologies: [
       { name: "React", url: "https://react.dev/" },
       { name: "Node", url: "https://nodejs.org/en/docs/" },
@@ -117,7 +120,8 @@ export const projects = [
   },
   {
     title: "Musicology",
-    description: "A full stack networking application for musicians.",
+    type: "Full Stack Application",
+    description: "A full stack networking application for musicians. Users can sign up, create a profile describing their musical abilities and interests, make posts on the bulletin board, respond to posts made by other users, and connect with other musicians for creative and business purposes.",
     technologies: [
       { name: "React", url: "https://react.dev/" },
       { name: "Node", url: "https://nodejs.org/en/docs/" },
@@ -134,7 +138,7 @@ export const projects = [
       { name: "HTML", url: "https://developer.mozilla.org/docs/Web/HTML" },
       { name: "CSS", url: "https://developer.mozilla.org/docs/Web/CSS" },
     ],
-    role: ["Lead Developer", "Project Manager", "Designer"],
+    role: ["Lead Developer", "UI/UX Designer", "Project Manager"],
     url: "https://musicology-umekev.herokuapp.com/",
     gitHubRepo: "https://github.com/KLong75/musician-networking-app",
     images: {

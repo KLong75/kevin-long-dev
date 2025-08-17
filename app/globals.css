@@ -91,6 +91,10 @@ button:active {
   text-shadow: 1px 1px 0 black;
 }
 
+.text-shadow-white-thin {
+  text-shadow: 1px 1px 0 white;
+}
+
 .nav-item-text-shadow-black {
   text-shadow: 1px 1px 0 black;
   background-color: rgba(0, 0, 0, 1);

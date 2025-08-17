@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${notoSansMono.variable} ${vt323.variable} min-h-screen flex flex-col antialiased`}>
+      <body className={`${notoSansMono.variable} ${vt323.variable} ${ptMono.variable} ${shareTechMono.variable} min-h-screen flex flex-col antialiased`}>
         <Header />
         <main className="flex-1 flex flex-col w-full">{children}</main>
         <Footer />
