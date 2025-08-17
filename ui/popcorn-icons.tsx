@@ -542,7 +542,7 @@ import {
   SiHeadlessui,
   SiApollographql,
   SiArcgis,
-  SiEsri
+  SiEsri,
 } from "react-icons/si";
 import { HiOutlineCommandLine } from "react-icons/hi2";
 
@@ -610,7 +610,7 @@ function shuffle<T>(array: T[]): T[] {
 
 export default function PopcornIcons() {
   const [iconSize, setIconSize] = useState(42); // Default for SSR
-const [hovered, setHovered] = useState<number | null>(null);
+  const [hovered, setHovered] = useState<number | null>(null);
 
   useEffect(() => {
     function updateSize() {
@@ -746,7 +746,7 @@ const [hovered, setHovered] = useState<number | null>(null);
   }, [visibleCount, popOrder]);
 
   return (
-    <div ref={containerRef} className="relative w-full h-full ">
+    <div ref={containerRef} className="relative w-full h-full">
       {ICONS.map(({ component: Icon, color, name }, i) => (
         <div
           key={i}
@@ -761,11 +761,10 @@ const [hovered, setHovered] = useState<number | null>(null);
             top: 0,
             width: iconSize,
             height: iconSize,
-           }}
+          }}
           onMouseEnter={() => setHovered(i)}
           onMouseLeave={() => setHovered(null)}
-          aria-label={name}
-        >
+          aria-label={name}>
           <Icon
             size={iconSize}
             color={color}
@@ -774,8 +773,7 @@ const [hovered, setHovered] = useState<number | null>(null);
           {hovered === i && (
             <span
               className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-full bg-neutral-900 text-white text-xs px-2 py-1 rounded shadow pointer-events-none z-50"
-              style={{ whiteSpace: "nowrap" }}
-            >
+              style={{ whiteSpace: "nowrap" }}>
               {name}
             </span>
           )}

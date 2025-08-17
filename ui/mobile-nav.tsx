@@ -36,7 +36,7 @@ export default function MobileNav({ navListItems }: MobileMenuProps) {
         className="p-2 bg-green-500 rounded-lg"
         value={isMenuOpen ? "Close menu" : "Open menu"}
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}>
-        <FiMenu size={20} className="text-black" />
+        <FiMenu size={16} className="text-black" />
       </button>
 
       {/* Dialog */}

@@ -21,20 +21,20 @@ export default function Header() {
         <div className="flex flex-col items-center justify-center">
           <div>
             {isHome ? (
-              <span
+              <h1
                 className={clsx(
-                  "text-2xl text-green-500 cursor-default select-none",
+                  "text-xl md:text-2xl text-green-500 cursor-default select-none",
                   "text-shadow-black-background-black"
                 )}
                 aria-current="page"
               >
                 Kevin Long
-              </span>
+              </h1>
             ) : (
               <Link href="/" className="relative group">
                 <h1
                   className={clsx(
-                    "text-2xl text-green-500 lg:hover:text-white transition-colors duration-600 ease-in-out",
+                    "text-xl md:text-2xl text-green-500 lg:hover:text-white transition-colors duration-600 ease-in-out",
                     "text-shadow-black-background-black",
                     "group-hover:text-shadow-green-background-black"
                   )}
@@ -45,7 +45,7 @@ export default function Header() {
             )}
           </div>
           <div className="mt-4">
-            <ContactIconLinks orientation="horizontal" />
+            <ContactIconLinks orientation="horizontal" size={20} />
           </div>
         </div>
         <div className="hidden lg:flex items-center">
