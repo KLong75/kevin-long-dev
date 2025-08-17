@@ -38,7 +38,7 @@ export default function NavListItem({
         <Link href={href} className="flex items-center relative group">
           <span
             className={clsx(
-              "nav-link-label lg:hover:text-white transition-colors duration-600 ease-in-out",
+              "tracking-widest lg:hover:text-white transition-colors duration-600 ease-in-out",
               "text-shadow-black-background-black",
               "group-hover:text-shadow-green-background-black"
             )}

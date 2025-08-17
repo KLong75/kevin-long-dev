@@ -4,7 +4,7 @@ import DesktopImageCarousel from "./desktop-image-carousel";
 // import icons
 import { CgWebsite } from "react-icons/cg";
 import { FiGithub } from "react-icons/fi";
-
+import clsx from "clsx";
 interface ProjectProps {
   title: string;
   description: string;
@@ -31,23 +31,23 @@ export default function Project({
   images,
 }: ProjectProps) {
   return (
-    <li className="flex flex-col justify-between h-full min-h-[500px] text-green-500 shadow-lg shadow-green-500/50 border-2 border-green-500 rounded-2xl p-2 bg-neutral-800">
+    <li className="flex flex-col justify-between h-full min-h-[500px] shadow-2xl shadow-green-500/50 border-2 border-neutral-600 rounded-2xl p-2">
       <div className="flex-1 flex flex-col">
         <h3 className="my-4 text-xl lg:text-2xl font-bold text-shadow-black-background-black text-center">
           {title}
         </h3>
-        <div className="mt-4">
+        <div className="my-4">
           <figure className="w-full h-auto">
-            <figcaption className="text-shadow-black-background-black text-center font-bold text-xs lg:text-sm mb-2">
-              Mobile View
+            <figcaption className="sr-only text-shadow-black-background-black text-center font-bold text-xs lg:text-sm mb-2">
+              Mobile
             </figcaption>
             <MobileImageCarousel slides={images.mobile} />
           </figure>
         </div>
-        <div className="flex items-center justify-center mt-8">
+        <div className="flex items-center justify-center my-8">
           <figure className="w-full h-auto px-4">
-            <figcaption className="text-shadow-black-background-black text-center font-bold text-xs lg:text-sm mb-2">
-              Desktop View
+            <figcaption className="sr-only text-shadow-black-background-black text-center font-bold text-xs lg:text-sm mb-2">
+              Desktop
             </figcaption>
             <DesktopImageCarousel slides={images.desktop} />
           </figure>
@@ -56,7 +56,7 @@ export default function Project({
           <h4 className="font-bold text-lg text-center mb-6">
             Project Description:
           </h4>
-          <p>{description}</p>
+          <p className="text-white p-6 rounded-2xl border-4 border-zinc-900 shadow-lg shadow-zinc-200/50">{description}</p>
         </div>
         <ul className="p-4 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 ">
           <h5 className="text-shadow-black-background-black font-bold text-lg text-center col-span-1 md:col-span-2 2xl:col-span-3 mb-6">
@@ -65,7 +65,7 @@ export default function Project({
           {technologies.map((tech, index) => (
             <li
               key={index}
-              className="text-shadow-black-thin m-2 border border-black text-center rounded-2xl text-white bg-green-500 py-1">
+              className="text-shadow-black-thin font-bold m-2 border-4 border-zinc-900 shadow-lg shadow-zinc-200/50 text-center rounded-2xl text-white bg-green-500 py-1">
               <a
                 href={tech.url}
                 target="_blank"
@@ -85,15 +85,22 @@ export default function Project({
           </p>
         </div>
       </div>
-      <div className="flex justify-center space-x-12 my-6">
+      <div className="text-green-500 flex justify-center space-x-12 my-6">
         <div>
           <a
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center project-link">
-            <span className="text-shadow-black-background-black">View Project</span>
-            <CgWebsite size={32} className="project-icon" />
+             className="relative group flex flex-col items-center project-link">
+            <span
+              className={clsx(
+                "tracking-widest lg:hover:text-white transition-colors duration-600 ease-in-out",
+                "text-shadow-black-background-black",
+                "group-hover:text-shadow-green-background-black"
+              )}>
+              Visit Website
+            </span>
+            <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-full"></span>
           </a>
         </div>
         <div>
@@ -101,9 +108,16 @@ export default function Project({
             href={gitHubRepo}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center project-link">
-            <span className="text-shadow-black-background-black">GitHub Repo</span>
-            <FiGithub size={32} className="project-icon" />
+            className="relative group flex flex-col items-center project-link">
+            <span
+              className={clsx(
+                "tracking-widest lg:hover:text-white transition-colors duration-600 ease-in-out",
+                "text-shadow-black-background-black",
+                "group-hover:text-shadow-green-background-black"
+              )}>
+              GitHub Repo
+            </span>
+            <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-full"></span>
           </a>
         </div>
       </div>
