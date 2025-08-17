@@ -227,7 +227,7 @@ export default function ContactForm({
           type="tel"
           placeholder=""
           value={phone}
-          required={false}
+          required={true}
           autoComplete="tel"
           // errorMessage={phoneErrorMessage}
           handleChange={handleChange}
