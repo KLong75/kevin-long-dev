@@ -50,16 +50,20 @@ export default function MobileNav({ navListItems }: MobileMenuProps) {
 
         {/* Dialog Content */}
         <div className="fixed inset-0 flex items-center justify-center p-4">
-          <DialogPanel className="relative h-80 border-2 border-green-500 bg-neutral-800 text-black flex flex-col justify-center rounded-lg p-4">
+          <DialogPanel className="relative  border-2 border-green-500 bg-neutral-800 text-black flex flex-col justify-center rounded-lg p-6">
             {/* Dialog Title */}
             <DialogTitle as="h2" className="">
               <div
-                className="flex items-center justify-center text-green-500 text-xl py-4"
+                className="flex items-center justify-center text-center text-green-500 p-4 mt-"
                 onClick={toggleMenu}>
-                <Link href="/">Kevin Long</Link>
+                <Link href="/">
+                  <span className="text-xl">Kevin Long</span>
+                  <br />
+                  <span className="text-sm">Full Stack Developer</span>
+                </Link>
               </div>
             </DialogTitle>
-            <div className="mb-4">
+            <div className="mb-4 flex justify-center">
               <ContactIconLinks orientation="horizontal" />
             </div>
             <button
