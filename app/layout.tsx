@@ -1,5 +1,6 @@
 // import from next
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 // import fonts
 import { shareTechMono, ptMono, notoSansMono, vt323 } from "@/fonts";
 // import { geistSans, geistMono } from "@/fonts";
@@ -23,8 +24,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${notoSansMono.variable} ${vt323.variable} ${ptMono.variable} ${shareTechMono.variable} min-h-screen flex flex-col antialiased`}>
         <Header />
-        <main className="flex-1 flex flex-col w-full">{children}</main>
+        <main className="flex-1 flex flex-col w-full">
+          {children}
+        </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
