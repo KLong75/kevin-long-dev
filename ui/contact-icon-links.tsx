@@ -30,7 +30,7 @@ export default function ContactIconLinks({
 
   return (
     <div
-      className={`flex justify-center space-x-6 ${
+      className={`flex  space-x-6 ${
         orientation === "vertical" ? "flex-col" : "flex-row"
       }`}
     >

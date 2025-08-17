@@ -16,38 +16,48 @@ export default function Header() {
   const isHome = pathname === "/";
 
   return (
-    <header className="w-full px-4">
+    <header className="w-full px-4 mx-auto">
       <div className="flex items-center justify-between w-full p-4">
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col">
           <div>
             {isHome ? (
-              <h1
-                className={clsx(
-                  "text-xl md:text-2xl text-green-500 cursor-default select-none",
-                  "text-shadow-black-background-black"
-                )}
-                aria-current="page"
-              >
-                Kevin Long
-              </h1>
-            ) : (
-              <Link href="/" className="relative group">
+              <div className="text-green-500 cursor-default select-none text-shadow-black-background-black">
                 <h1
-                  className={clsx(
-                    "text-xl md:text-2xl text-green-500 lg:hover:text-white transition-colors duration-600 ease-in-out",
-                    "text-shadow-black-background-black",
-                    "group-hover:text-shadow-green-background-black"
-                  )}
-                >
+                  className="text-xl md:text-2xl "
+                  aria-current="page">
                   Kevin Long
                 </h1>
+                <h2 className="text-xs md:text-sm">
+                  Full Stack Developer
+                </h2>
+              </div>
+            ) : (
+              <Link href="/" className="relative group block">
+                <div
+                 className={clsx(
+                      "text-green-500 lg:hover:text-white transition-colors duration-600 ease-in-out",
+                      "text-shadow-black-background-black",
+                      "group-hover:text-shadow-green-background-black"
+                    )}
+                >
+                  <h1
+                   className="text-xl md:text-2xl"
+                  >
+                    Kevin Long
+                  </h1>
+                  <h2 className="text-xs md:text-sm">
+                    Full Stack Developer
+                  </h2>
+                </div>
               </Link>
             )}
           </div>
-          <div className="mt-4">
+
+          <div className="mt-2 hidden md:block">
             <ContactIconLinks orientation="horizontal" size={20} />
           </div>
         </div>
+
         <div className="hidden lg:flex items-center">
           <DesktopNav navItems={navListItems} />
         </div>

@@ -20,6 +20,10 @@
   }
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   /* background: var(--background); */
   background: conic-gradient(#333, #222, #333);
