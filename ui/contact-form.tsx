@@ -33,22 +33,21 @@ export default function ContactForm({
   const [, setPhoneErrorMessage] = useState("");
   const [, setFirstNameErrorMessage] = useState("");
   const [, setLastNameErrorMessage] = useState("");
-  const [messageErrorMessage, setMessageErrorMessage] = useState("");
+  const [, setMessageErrorMessage] = useState("");
   const [, setDeliveryErrorMessage] = useState("");
   const [buttonSubmitted, setButtonSubmitted] = useState(false);
+
+  const isFormValid =
+    validateName(firstName.trim()) &&
+    validateName(lastName.trim()) &&
+    validateEmail(email.trim()) &&
+    validatePhone(phone.trim()) &&
+    validateMessage(message);
 
   const showErrorToast = (msg: string) => {
     toast.error(msg, {
       transition: Zoom,
       position: "top-center",
-      // icon: (
-      //   <Image
-      //     src="/logos/mark-only.png"
-      //     alt="Shift Auto Solutions Logo"
-      //     width={68}
-      //     height={49}
-      //   />
-      // ),
       closeOnClick: true,
       pauseOnHover: true,
       className: "border-2 border-neutral-400 text-white",
@@ -152,9 +151,6 @@ export default function ContactForm({
           {
             transition: Zoom,
             position: "top-center",
-            // icon: (
-            //   <img src="/logos/mark-only.png" alt="Shift Auto Solutions Logo" />
-            // ),
             closeOnClick: true,
             pauseOnHover: true,
             className: "border-2 border-neutral-400 text-white",
@@ -174,14 +170,6 @@ export default function ContactForm({
       toast.error("Please fill in all required fields.", {
         transition: Zoom,
         position: "top-center",
-        // icon: (
-        //   <Image
-        //     src="/logos/mark-only.png"
-        //     alt="Shift Auto Solutions Logo"
-        //     width={68}
-        //     height={49}
-        //   />
-        // ),
         closeOnClick: true,
         pauseOnHover: true,
         className: "border-2 border-neutral-400 text-white",
@@ -259,62 +247,34 @@ export default function ContactForm({
           handleChange={handleChange}
           setStateVariable={setMessage}
         />
-        {/* <div className="flex flex-col justify-start text-base">
-          <label htmlFor="message" className="m-2 text-left">
-            Message*<span className="text-xs"> (required)</span>
-          </label>
-          <textarea
-            autoComplete="off"
-            maxLength={1000}
-            onChange={(e) => handleChange(e, setMessage)}
-            value={message}
-            required
-            name="message"
-            id="message"
-            className="shadow-2xl shadow-green-500/50 border-2 border-neutral-600 p-2 w-full text-black rounded-2xl h-80 w-60 resize-none bg-neutral-300"
-          />
-          <p className="p-2">{messageErrorMessage}</p>
-        </div> */}
+
         <div className="flex justify-center items-center p-6 mt-4">
           <button
-            style={{ textShadow: "2px 2px 0 black" }}
+            id="contact-form-submit-button"
             onClick={handleFormSubmit}
             type="submit"
-            className="border border-2 border-green-500 hover:border-neutral-800 rounded-2xl py-1 px-6 bg-neutral-800 hover:bg-green-500 text-green-500 hover:text-white transition-colors duration-600 ease-in-out"
-          >
-            <span className="font-semibold tracking-widest">
+            disabled={!isFormValid || buttonSubmitted}
+            aria-disabled={!isFormValid || buttonSubmitted}
+            className={clsx(
+              "text-shadow-black border border-2 rounded-2xl py-1 px-6 transition-colors transition-shadow transition-transform duration-600 ease-in-out font-semibold tracking-widest will-change-transform",
+              {
+                // enabled styles
+                "bg-neutral-800 text-green-500 border-green-500 hover:border-neutral-800 hover:bg-green-500 hover:text-white cursor-pointer shadow-lg shadow-green-500/50 hover:scale-110 active:scale-90":
+                  isFormValid && !buttonSubmitted,
+                // disabled styles
+                "text-neutral-400 bg-neutral-500 text-neutral-300 border-neutral-400 cursor-not-allowed":
+                  !isFormValid || buttonSubmitted,
+              }
+            )}>
+            <span
+              className={clsx(
+                "transition-opacity duration-600",
+                isFormValid && !buttonSubmitted ? "opacity-100" : "opacity-60"
+              )}>
               {buttonSubmitted ? "Message Sent!" : "Send"}
             </span>
           </button>
         </div>
-        {/* <div className="flex flex-col py-2">
-          <label htmlFor="message" className="px-4 font-bold">
-            {`Brief Project Description*`.toUpperCase()}
-            <span className="text-xs"> (required)</span>
-          </label>
-          <textarea
-            autoComplete="off"
-            maxLength={1500}
-            placeholder=""
-            onChange={(e) => handleChange(e, setMessage)}
-            value={message}
-            required={true}
-            name="message"
-            id="message"
-            className="resize-none h-36 rounded-3xl px-4 opacity-75"
-          />
-          <p className="">{messageErrorMessage}</p>
-        </div>
-        <div className="flex justify-end">
-          <button
-            type="submit"
-            className="tracking-wider border border-2 text-white rounded-full px-4 py-1 mt-4 hover:text-black hover:bg-white"
-            onClick={handleFormSubmit}
-            // isSubmitted={buttonSubmitted}
-          >
-            {buttonSubmitted ? "Message Sent!" : "SUBMIT"}
-          </button>
-        </div> */}
       </form>
       <ToastContainer
         limit={1}
