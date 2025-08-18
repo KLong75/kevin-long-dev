@@ -59,7 +59,7 @@ export default function MobileImageCarousel(props: PropType) {
                       src={slide}
                       alt={`Slide ${index + 1}`}
                       width={1080}
-                      height={1920}
+                      height={1938}
                       {...(slide.endsWith(".gif") ? { unoptimized: true } : {})}
                     />
                   )}

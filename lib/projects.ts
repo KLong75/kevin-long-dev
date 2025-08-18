@@ -41,7 +41,15 @@ export const projects = [
         "/images/mmm/mobile/education.jpg",
         "/images/mmm/mobile/video-editing.jpg",
       ],
-      desktop: ["/images/mmm/desktop/drone-desktop.png"],
+      desktop: [
+        "/images/mmm/desktop/home.png",
+        "/images/mmm/desktop/drone-logo.png",
+        "/images/mmm/desktop/drone.png",
+        "/images/mmm/desktop/our-work.png",
+        "/images/mmm/desktop/blog-preview.png",
+        "/images/mmm/desktop/blog-post.png",
+        "/images/mmm/desktop/contact-form.png",
+      ],
     },
   },
   {
@@ -114,7 +122,20 @@ export const projects = [
       password: "Guest#1",
     },
     images: {
-      mobile: ["/images/watch-tv/mobile/home.png"],
+      mobile: [
+        "/images/watch-tv/mobile/home.jpg",
+        "/images/watch-tv/mobile/login.jpg",
+        "/images/watch-tv/mobile/homepage.jpg",
+        "/images/watch-tv/mobile/home-star-wars.jpg",
+        "/images/watch-tv/mobile/home-menu.jpg",
+        "/images/watch-tv/mobile/rogue-one.jpg",
+        "/images/watch-tv/mobile/mando.jpg",
+        "/images/watch-tv/mobile/search-menu.jpg",
+        "/images/watch-tv/mobile/settings.jpg",
+        "/images/watch-tv/mobile/combo-search.jpg",
+        // "/images/watch-tv/mobile/signup.jpg",
+        
+      ],
       desktop: ["/images/watch-tv/desktop/feature.png"],
     },
   },
@@ -142,7 +163,10 @@ export const projects = [
     url: "https://musicology-umekev.herokuapp.com/",
     gitHubRepo: "https://github.com/KLong75/musician-networking-app",
     images: {
-      mobile: ["/images/musicology/mobile/home.jpg"],
+      mobile: [
+        "/images/musicology/mobile/home.jpg",
+        "/images/musicology/mobile/login.jpg",
+      ],
       desktop: ["/images/musicology/desktop/home.gif"],
     },
   },

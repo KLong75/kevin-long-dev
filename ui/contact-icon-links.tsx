@@ -11,6 +11,7 @@ type ContactIconLinkData = {
   href: string;
   icon: React.ElementType;
   name: string;
+  label: string; // descriptive label for accessibility
 };
 
 export default function ContactIconLinks({
@@ -34,8 +35,8 @@ export default function ContactIconLinks({
         orientation === "vertical" ? "flex-col" : "flex-row"
       }`}
     >
-      {filteredLinks.map(({ href, icon: Icon }: ContactIconLinkData) => (
-        <IconLink key={href} href={href} icon={Icon} size={iconSize} />
+      {filteredLinks.map(({ href, icon: Icon, label }: ContactIconLinkData) => (
+        <IconLink key={href} href={href} icon={Icon} size={iconSize} label={label} />
       ))}
     </div>
   );
