@@ -167,7 +167,15 @@ export const projects = [
         "/images/musicology/mobile/home.jpg",
         "/images/musicology/mobile/login.jpg",
       ],
-      desktop: ["/images/musicology/desktop/home.gif"],
+      desktop: [
+        "/images/musicology/desktop/home.gif",
+        // "/images/musicology/desktop/home.png",
+        "/images/musicology/desktop/home2.png",
+        "/images/musicology/desktop/login.png",
+        "/images/musicology/desktop/polka-king.png",
+        "/images/musicology/desktop/slash.png",
+        "/images/musicology/desktop/signup.png",
+      ],
     },
   },
   // {
