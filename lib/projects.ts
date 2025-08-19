@@ -136,7 +136,18 @@ export const projects = [
         // "/images/watch-tv/mobile/signup.jpg",
         
       ],
-      desktop: ["/images/watch-tv/desktop/feature.png"],
+      desktop: [
+        // "/images/watch-tv/desktop/feature.png",
+        "/images/watch-tv/desktop/user-home.png",
+        "/images/watch-tv/desktop/home.png",
+        "/images/watch-tv/desktop/login.png",
+        "/images/watch-tv/desktop/mando.png",
+        "/images/watch-tv/desktop/rogue-one.png",
+        "/images/watch-tv/desktop/diego.png",
+        "/images/watch-tv/desktop/search.png",
+        "/images/watch-tv/desktop/search-results.png",
+        "/images/watch-tv/desktop/title-gallery.png",
+      ],
     },
   },
   {
@@ -166,9 +177,10 @@ export const projects = [
       mobile: [
         "/images/musicology/mobile/home.jpg",
         "/images/musicology/mobile/login.jpg",
+       
       ],
       desktop: [
-        "/images/musicology/desktop/home.gif",
+        // "/images/musicology/desktop/home.gif",
         // "/images/musicology/desktop/home.png",
         "/images/musicology/desktop/home2.png",
         "/images/musicology/desktop/login.png",
