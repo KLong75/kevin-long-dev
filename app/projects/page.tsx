@@ -2,9 +2,12 @@
 import { connection } from "next/server";
 // import components
 import ProjectGallery from "@/ui/project-gallery";
+// import from utils
+import { delayPageLoad } from "@/utils/utils";
 
 export default async function ProjectsPage() {
   await connection();
+  await delayPageLoad(6000);
   return (
       <div className="flex flex-1">
         <div className="w-full">

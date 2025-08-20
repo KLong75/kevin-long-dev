@@ -19,7 +19,7 @@ export default function NavListItem({
   const isActive = pathname === href;
 
   return (
-    <li className={clsx("font-semibold px-6 text-green-500 tracking-widest")}>
+    <li className={clsx("font-semibold text-green-500 tracking-widest")}>
       {label === "Contact" ? (
         isActive ? (
           <span

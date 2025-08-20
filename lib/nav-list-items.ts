@@ -5,8 +5,8 @@ export const navListItems = [
     htmlElement: "internalLink",
   },
   {
-    label: "Resume",
-    href: "/resume",
+    label: "About",
+    href: "/about",
     htmlElement: "internalLink",
   },
   {

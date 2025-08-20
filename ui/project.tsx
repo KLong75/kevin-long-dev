@@ -55,11 +55,11 @@ export default function Project({
             <DesktopImageCarousel slides={images.desktop} />
           </figure>
         </div>
-        <div className="text-shadow-black-background-black p-4">
+        <div className="text-shadow-black-background-black p-4 ">
           <h4 className="font-bold text-xl text-center mb-6">
            Description:
           </h4>
-          <p className="font-share-tech-mono text-white p-6 rounded-2xl border-4 border-zinc-900 shadow-lg shadow-zinc-200/50 bg-neutral-800">{description}</p>
+          <p className="font-share-tech-mono text-white p-4 rounded-2xl border-4 border-zinc-900 shadow-lg shadow-zinc-200/50 bg-neutral-800 overflow-y-auto">{description}</p>
         </div>
         <ul className="p-4 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3">
           <h4 className="text-shadow-black-background-black font-bold text-lg text-center col-span-1 md:col-span-2 2xl:col-span-3 mb-6">
