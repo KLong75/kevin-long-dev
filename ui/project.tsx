@@ -1,9 +1,7 @@
 // import components
 import MobileImageCarousel from "./mobile-image-carousel";
 import DesktopImageCarousel from "./desktop-image-carousel";
-// import icons
-import { CgWebsite } from "react-icons/cg";
-import { FiGithub } from "react-icons/fi";
+// import clsx
 import clsx from "clsx";
 interface ProjectProps {
   title: string;
@@ -20,6 +18,10 @@ interface ProjectProps {
     mobile: string[];
     desktop: string[];
   };
+  guestCredentials?: {
+    email: string;
+    password: string;
+  };
 }
 
 export default function Project({
@@ -31,6 +33,8 @@ export default function Project({
   url,
   gitHubRepo,
   images,
+  guestCredentials,
+
 }: ProjectProps) {
   return (
     <li className="flex flex-col justify-between h-full min-h-[500px] shadow-2xl shadow-green-500/50 border-2 border-neutral-600 rounded-2xl p-2">
@@ -59,7 +63,7 @@ export default function Project({
           <h4 className="font-bold text-xl text-center mb-6">
            Description:
           </h4>
-          <p className="font-share-tech-mono text-white p-4 rounded-2xl border-4 border-zinc-900 shadow-lg shadow-zinc-200/50 bg-neutral-800 h-40  overflow-y-auto">{description}</p>
+          <p className="font-share-tech-mono text-white p-4 rounded-2xl border-4 border-zinc-900 shadow-lg shadow-zinc-200/50 bg-neutral-800 h-40 overflow-y-auto">{description}</p>
         </div>
         <ul className="p-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
           <h4 className="text-shadow-black-background-black font-bold text-lg text-center col-span-2 sm:col-span-3 md:col-span-2 xl:col-span-3 2xl:col-span-4 mb-6">
@@ -123,6 +127,19 @@ export default function Project({
             <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-full"></span>
           </a>
         </div>
+        {guestCredentials && (
+          <div className="flex flex-col text-white text-sm">
+            <h5 className="text-shadow-black-background-black font-bold text-center mb-2">
+              Guest Credentials:
+            </h5>
+            <p className="text-shadow-black-background-black font-bold text-center ">
+              email:{" "}{guestCredentials?.email}
+            </p>
+            <p className="text-shadow-black-background-black font-bold text-center ">
+              password:{" "}{guestCredentials?.password}
+            </p>
+          </div>
+        )}
       </div>
     </li>
   );
