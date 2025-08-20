@@ -7,10 +7,10 @@ import { delayPageLoad } from "@/utils/utils";
 
 export default async function ProjectsPage() {
   await connection();
-  await delayPageLoad(6000);
+  // await delayPageLoad(6000);
   return (
       <div className="flex flex-1">
-        <div className="w-full">
+        <div className="w-full mt-12 md:mt-24">
           <h2 className="text-2xl lg:text-4xl font-bold text-center my-8 text-green-500 text-shadow-black-background-black">
             My Work
           </h2>

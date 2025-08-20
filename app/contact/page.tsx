@@ -10,10 +10,6 @@ export default async function ContactPage() {
   return (
     <div className="flex flex-1 items-center justify-center text-green-500 text-shadow-black-background-black">
       <div className="max-w-2xl w-full">
-        {/* <h2 className="text-4xl font-bold text-center  mb-12">
-          Let&apos;s Talk!
-        </h2> */}
-        {/* <ContactForm /> */}
         <ContactFormContainer />
       </div>
     </div>

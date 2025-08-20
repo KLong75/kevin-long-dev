@@ -55,20 +55,20 @@ export default function Project({
             <DesktopImageCarousel slides={images.desktop} />
           </figure>
         </div>
-        <div className="text-shadow-black-background-black p-4 ">
+        <div className="text-shadow-black-background-black px-2 ">
           <h4 className="font-bold text-xl text-center mb-6">
            Description:
           </h4>
-          <p className="font-share-tech-mono text-white p-4 rounded-2xl border-4 border-zinc-900 shadow-lg shadow-zinc-200/50 bg-neutral-800 overflow-y-auto">{description}</p>
+          <p className="font-share-tech-mono text-white p-4 rounded-2xl border-4 border-zinc-900 shadow-lg shadow-zinc-200/50 bg-neutral-800 h-40  overflow-y-auto">{description}</p>
         </div>
-        <ul className="p-4 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3">
-          <h4 className="text-shadow-black-background-black font-bold text-lg text-center col-span-1 md:col-span-2 2xl:col-span-3 mb-6">
+        <ul className="p-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+          <h4 className="text-shadow-black-background-black font-bold text-lg text-center col-span-2 sm:col-span-3 md:col-span-2 xl:col-span-3 2xl:col-span-4 mb-6">
             Technologies Used:
           </h4>
           {technologies.map((tech, index) => (
             <li
               key={index}
-              className="font-share-tech-mono text-shadow-black-thin font-bold m-2 border-4 border-zinc-900 shadow-lg shadow-zinc-200/50 text-center rounded-2xl text-white bg-green-500 p-1">
+              className="font-share-tech-mono text-shadow-black-thin font-bold m-2 border-4 border-zinc-900 shadow-lg shadow-zinc-200/50 text-center rounded-2xl text-white bg-green-500 p-1 text-sm ">
               <a
                 href={tech.url}
                 target="_blank"
@@ -88,24 +88,7 @@ export default function Project({
           </p>
         </div>
       </div>
-      <div className="text-green-500 flex justify-center space-x-12 my-6">
-        <div>
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-             className="relative group flex flex-col items-center project-link">
-            <span
-              className={clsx(
-                "tracking-widest lg:hover:text-white transition-colors duration-600 ease-in-out",
-                "text-shadow-black-background-black",
-                "group-hover:text-shadow-green-background-black"
-              )}>
-              View Project
-            </span>
-            <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-full"></span>
-          </a>
-        </div>
+      <div className="text-green-500 text-lg md:text-xl flex flex-col space-y-4 justify-center my-6">
         <div>
           <a
             href={gitHubRepo}
@@ -119,6 +102,23 @@ export default function Project({
                 "group-hover:text-shadow-green-background-black"
               )}>
               GitHub Repo
+            </span>
+            <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-full"></span>
+          </a>
+        </div>
+        <div>
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+             className="relative group flex flex-col items-center project-link">
+            <span
+              className={clsx(
+                "tracking-widest lg:hover:text-white transition-colors duration-600 ease-in-out",
+                "text-shadow-black-background-black",
+                "group-hover:text-shadow-green-background-black"
+              )}>
+              View Project
             </span>
             <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-full"></span>
           </a>

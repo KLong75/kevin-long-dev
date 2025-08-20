@@ -16,7 +16,7 @@ export default function DesktopNav({
 }) {
   return (
     <nav className="">
-      <ul className="w-full flex gap-12 md:gap-16 lg:gap-24 xl:gap-32 2xl:gap-36 justify-between 2xl:text-lg ">
+      <ul className="w-full flex gap-12 md:gap-16 lg:gap-24 justify-between 2xl:text-lg ">
         {navItems.map((item) => (
           <NavListItem 
             key={item.label}
