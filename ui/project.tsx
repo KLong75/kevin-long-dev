@@ -62,7 +62,7 @@ export default function Project({
         </div>
         <div className="text-shadow-black-background-black px-2 ">
           <h4 className="font-bold text-xl text-center mb-6">Description:</h4>
-          <p className="font-share-tech-mono text-white p-4 rounded-2xl border-4 border-zinc-900 shadow-lg shadow-zinc-200/50 bg-neutral-800 h-40 overflow-y-auto">
+          <p className="font-share-tech-mono text-white p-4 rounded-2xl border-4 border-zinc-900 shadow-lg shadow-zinc-200/50 bg-neutral-800 h-40 overflow-y-auto custom-scrollbar">
             {description}
           </p>
         </div>

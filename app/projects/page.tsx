@@ -3,7 +3,7 @@ import { connection } from "next/server";
 // import components
 import ProjectGallery from "@/ui/project-gallery";
 // import from utils
-import { delayPageLoad } from "@/utils/utils";
+// import { delayPageLoad } from "@/utils/utils";
 
 export default async function ProjectsPage() {
   await connection();
