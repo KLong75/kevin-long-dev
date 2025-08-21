@@ -66,7 +66,7 @@ export default function Project({
             {description}
           </p>
         </div>
-        <div className="h-96">
+        <div className="h-120 xl:h-96 2xl:h-80">
           <ul className="p-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
             <h4 className="text-shadow-black-background-black font-bold text-lg text-center col-span-2 sm:col-span-3 md:col-span-2 xl:col-span-3 2xl:col-span-4 m-6">
               Technologies Used:
