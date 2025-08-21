@@ -5,6 +5,15 @@ import ContactFormContainer from "@/ui/contact-form-container";
 // import from utils
 // import { delayPageLoad } from "@/utils/utils";
 
+export const metadata = {
+  title: "Kevin Long | Contact",
+  description:
+    "Contact page for Kevin Long, a full stack developer.",
+  alternates: {
+    canonical: "/contact",
+  },
+};
+
 export default async function ContactPage() {
   await connection();
   return (

@@ -5,6 +5,15 @@ import ProjectGallery from "@/ui/project-gallery";
 // import from utils
 // import { delayPageLoad } from "@/utils/utils";
 
+export const metadata = {
+  title: "Kevin Long | Portfolio",
+  description:
+    "Portfolio display of web development projects by Kevin Long, a full stack developer.",
+  alternates: {
+    canonical: "/projects",
+  },
+};
+
 export default async function ProjectsPage() {
   await connection();
   // await delayPageLoad(6000);

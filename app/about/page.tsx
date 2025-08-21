@@ -1,6 +1,15 @@
 // import from next
 import { connection } from "next/server";
 
+export const metadata = {
+  title: "Kevin Long | About",
+  description:
+    "About page for Kevin Long, a full stack developer.",
+  alternates: {
+    canonical: "/about",
+  },
+};
+
 export default async function AboutPage() {
   await connection();
   return (

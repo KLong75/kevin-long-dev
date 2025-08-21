@@ -11,8 +11,24 @@ import Header from "@/ui/header";
 import Footer from "@/ui/footer";
 
 export const metadata: Metadata = {
-  title: "Kevin Long | Full Stack Developer",
-  description: "Portfolio website for Kevin Long, a full stack developer.",
+  metadataBase: new URL("https://www.kevinlong.dev"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      "en-US": "/en-US",
+      "de-DE": "/de-DE",
+    },
+  },
+  title: {
+    template:
+      "%s | Kevin Long | Full Stack Developer",
+    default: "Kevin Long | Full Stack Developer",
+  },
+  description:
+    "Portfolio website for Kevin Long, a full stack developer.",
+  // openGraph: {
+  //   images: "/opengraph-image.png",
+  // },
 };
 
 export default function RootLayout({
