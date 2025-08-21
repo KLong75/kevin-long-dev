@@ -4,11 +4,11 @@ export const navListItems = [
     href: "/projects",
     htmlElement: "internalLink",
   },
-  {
-    label: "About",
-    href: "/about",
-    htmlElement: "internalLink",
-  },
+  // {
+  //   label: "About",
+  //   href: "/about",
+  //   htmlElement: "internalLink",
+  // },
   {
     label: "Contact",
     href: "/contact",
