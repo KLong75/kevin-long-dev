@@ -34,7 +34,6 @@ export default function Project({
   gitHubRepo,
   images,
   guestCredentials,
-
 }: ProjectProps) {
   return (
     <li className="flex flex-col justify-between h-full min-h-[500px] shadow-2xl shadow-green-500/50 border-2 border-neutral-600 rounded-2xl p-2">
@@ -42,8 +41,10 @@ export default function Project({
         <h3 className="my-4 text-2xl font-bold text-shadow-black-background-black text-center">
           {title}
         </h3>
-        <h4 className="  font-bold text-shadow-black-background-black text-center">{type}</h4>
-        <div className="my-4">
+        <h4 className="  font-bold text-shadow-black-background-black text-center">
+          {type}
+        </h4>
+        <div className="my-10 lg:my-12">
           <figure className="w-full h-auto">
             <figcaption className="sr-only text-shadow-black-background-black text-center font-bold text-xs lg:text-sm mb-2">
               Mobile
@@ -60,29 +61,32 @@ export default function Project({
           </figure>
         </div>
         <div className="text-shadow-black-background-black px-2 ">
-          <h4 className="font-bold text-xl text-center mb-6">
-           Description:
-          </h4>
-          <p className="font-share-tech-mono text-white p-4 rounded-2xl border-4 border-zinc-900 shadow-lg shadow-zinc-200/50 bg-neutral-800 h-40 overflow-y-auto">{description}</p>
+          <h4 className="font-bold text-xl text-center mb-6">Description:</h4>
+          <p className="font-share-tech-mono text-white p-4 rounded-2xl border-4 border-zinc-900 shadow-lg shadow-zinc-200/50 bg-neutral-800 h-40 overflow-y-auto">
+            {description}
+          </p>
         </div>
-        <ul className="p-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-          <h4 className="text-shadow-black-background-black font-bold text-lg text-center col-span-2 sm:col-span-3 md:col-span-2 xl:col-span-3 2xl:col-span-4 mb-6">
-            Technologies Used:
-          </h4>
-          {technologies.map((tech, index) => (
-            <li
-              key={index}
-              className="font-share-tech-mono text-shadow-black-thin font-bold m-2 border-4 border-zinc-900 shadow-lg shadow-zinc-200/50 text-center rounded-2xl text-white bg-green-500 p-1 text-sm ">
-              <a
-                href={tech.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:text-black transition-colors duration-200">
-                {tech.name}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="h-96">
+          <ul className="p-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+            <h4 className="text-shadow-black-background-black font-bold text-lg text-center col-span-2 sm:col-span-3 md:col-span-2 xl:col-span-3 2xl:col-span-4 m-6">
+              Technologies Used:
+            </h4>
+            {technologies.map((tech, index) => (
+              <li
+                key={index}
+                className="font-share-tech-mono text-shadow-black-thin font-bold m-2 border-4 border-zinc-900 shadow-lg shadow-zinc-200/50 text-center rounded-2xl text-white bg-green-500 p-1 text-sm ">
+                <a
+                  href={tech.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-black transition-colors duration-200">
+                  {tech.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <div className="p-4">
           <h5 className="text-shadow-black-background-black font-bold text-lg text-center col-span-1 md:col-span-2 2xl:col-span-3 mb-2">
             Role:
@@ -115,7 +119,7 @@ export default function Project({
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-             className="relative group flex flex-col items-center project-link">
+            className="relative group flex flex-col items-center project-link">
             <span
               className={clsx(
                 "tracking-widest lg:hover:text-white transition-colors duration-600 ease-in-out",
@@ -133,10 +137,10 @@ export default function Project({
               Guest Credentials:
             </h5>
             <p className="text-shadow-black-background-black font-bold text-center ">
-              email:{" "}{guestCredentials?.email}
+              email: {guestCredentials?.email}
             </p>
             <p className="text-shadow-black-background-black font-bold text-center ">
-              password:{" "}{guestCredentials?.password}
+              password: {guestCredentials?.password}
             </p>
           </div>
         )}
