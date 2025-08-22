@@ -36,15 +36,15 @@ export default function Project({
   guestCredentials,
 }: ProjectProps) {
   return (
-    <li className="flex flex-col justify-between h-full min-h-[500px] shadow-2xl shadow-green-500/50 border-2 border-neutral-600 rounded-2xl p-2">
+    <li className="flex flex-col justify-between h-full min-h-[500px] shadow-md shadow-green-500/50 border-2 border-zinc-900 rounded-2xl p-2">
       <div className="flex-1 flex flex-col">
         <h3 className="my-4 text-2xl font-bold text-shadow-black-background-black text-center">
           {title}
         </h3>
-        <h4 className="  font-bold text-shadow-black-background-black text-center">
+        <h4 className="font-bold text-shadow-black-background-black text-center">
           {type}
         </h4>
-        <div className="my-10 lg:my-12">
+        <div className="mt-10 sm:mb-6 2xl:my-12">
           <figure className="w-full h-auto">
             <figcaption className="sr-only text-shadow-black-background-black text-center font-bold text-xs lg:text-sm mb-2">
               Mobile
@@ -62,7 +62,7 @@ export default function Project({
         </div>
         <div className="text-shadow-black-background-black px-2 ">
           <h4 className="font-bold text-xl text-center mb-6">Description:</h4>
-          <p className="font-share-tech-mono text-white px-4 py-3 rounded-2xl border-4 border-zinc-900 shadow-lg shadow-zinc-200/50 bg-neutral-800 h-40 overflow-y-auto custom-scrollbar">
+          <p className="font-share-tech-mono text-white px-4 py-3 rounded-2xl border-4 border-zinc-900 shadow-md shadow-zinc-200/50 bg-neutral-800 h-40 overflow-y-auto custom-scrollbar">
             {description}
           </p>
         </div>
@@ -74,7 +74,7 @@ export default function Project({
             {technologies.map((tech, index) => (
               <li
                 key={index}
-                className="font-share-tech-mono text-shadow-black-thin font-bold m-2 border-4 border-zinc-900 shadow-lg shadow-zinc-200/50 text-center rounded-2xl text-white bg-green-500 p-1 text-sm ">
+                className="font-share-tech-mono text-shadow-black-thin font-bold m-2 border-4 border-zinc-900 shadow-md shadow-zinc-200/50 text-center rounded-2xl text-white bg-green-500 p-1 text-sm ">
                 <a
                   href={tech.url}
                   target="_blank"

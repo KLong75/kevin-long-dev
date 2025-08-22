@@ -24,7 +24,7 @@ export default function ContactFormContainer() {
       ) : (
         <>
           <h2 className="text-2xl lg:text-4xl font-bold text-center mt-12 lg:mt-16">
-            What can I do for you?
+            How can I help?
           </h2>
           <div className="mt-6 lg:mt-12 items-center justify-center max-w-200">
           </div>

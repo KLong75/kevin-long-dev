@@ -63,7 +63,7 @@ export default function MobileNav({ navListItems }: MobileMenuProps) {
                 </Link>
               </div>
             </DialogTitle>
-            <div className="mb-4 flex justify-center">
+            <div className=" flex justify-center">
               <ContactIconLinks orientation="horizontal" />
             </div>
             <button
@@ -74,8 +74,8 @@ export default function MobileNav({ navListItems }: MobileMenuProps) {
             </button>
 
             {/* Navigation */}
-            <nav className="my-6">
-              <ul className="flex flex-col gap-8 font-semibold text-black items-center">
+            <nav className="my-10">
+              <ul className="flex flex-col gap-10 font-semibold text-black items-center">
                 {navListItems.map((item) => (
                   <NavListItem
                     key={item.label}

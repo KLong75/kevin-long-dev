@@ -36,7 +36,7 @@ export default function MobileImageCarousel(props: PropType) {
         </div>
 
         <div
-          className="embla__viewport rounded-2xl border-4 border-zinc-900 bg-zinc-800 shadow-lg shadow-zinc-200/50"
+          className="embla__viewport rounded-2xl border-4 border-zinc-900 bg-zinc-800 shadow-md shadow-zinc-200/50"
           ref={emblaRef}>
           <div className="embla__container">
             <div className="embla__controls"></div>
