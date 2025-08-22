@@ -20,6 +20,18 @@
   }
 }
 
+@layer utilities {
+  .max-w-8xl {
+    max-width: 88rem; /* 1408px, following the 8rem increment pattern */
+  }
+  .max-w-9xl {
+    max-width: 96rem; /* 1536px, following the 8rem increment pattern */
+  }
+  .max-w-10xl {
+    max-width: 104rem; /* 1664px, following the 8rem increment pattern */
+  }
+}
+
 html {
   overflow-y: scroll;
 }

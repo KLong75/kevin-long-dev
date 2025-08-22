@@ -111,7 +111,7 @@ export default function Project({
               )}>
               GitHub Repo
             </span>
-            <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-full"></span>
+            <span className="absolute bottom-[-.25rem] left-50 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-[9.25rem]"></span>
           </a>
         </div>
         <div>
@@ -128,7 +128,7 @@ export default function Project({
               )}>
               View Project
             </span>
-            <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-full"></span>
+            <span className="absolute bottom-[-.25rem] left-50 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-[9.25rem]"></span>
           </a>
         </div>
         {guestCredentials && (

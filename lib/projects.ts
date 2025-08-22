@@ -56,7 +56,7 @@ export const projects = [
     title: "thelongemergency.net",
     type: "Band Website",
     description:
-      "The Long Emergency is a rock band in St. Louis, Missouri. They needed a website to showcase their music, shows, and merchandise. The website features a gig calendar, music player, audio downloads, merch store, blog, and contact form. The website is fully responsive and accessible. It is integrated with Vercel Analytics for monitoring site traffic. The website is built with Next.js and Tailwind CSS.",
+      "The Long Emergency is a rock band in St. Louis, Missouri. Their website features a gig calendar, music player, audio downloads, merch store, blog, and contact form. The website is fully responsive and accessible. It is integrated with Vercel Analytics for monitoring site traffic. The website is built with Next.js and Tailwind CSS.",
     technologies: [
       { name: "Next.js", url: "https://nextjs.org/docs" },
       { name: "Vercel", url: "https://vercel.com/docs" },
