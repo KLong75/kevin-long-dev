@@ -96,8 +96,8 @@ export default function Project({
           </p>
         </div>
       </div>
-      <div className="text-green-500 text-lg md:text-xl flex flex-col space-y-4 justify-center my-6">
-        <div>
+      <div className="text-green-500 text-lg md:text-xl flex flex-col items-center space-y-6 justify-center my-6">
+        <div className="flex flex-row space-x-12">
           <a
             href={gitHubRepo}
             target="_blank"
@@ -111,10 +111,8 @@ export default function Project({
               )}>
               GitHub Repo
             </span>
-            <span className="absolute bottom-[-.25rem] left-50 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-[9.25rem]"></span>
+            <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-full"></span>
           </a>
-        </div>
-        <div>
           <a
             href={url}
             target="_blank"
@@ -128,7 +126,7 @@ export default function Project({
               )}>
               View Project
             </span>
-            <span className="absolute bottom-[-.25rem] left-50 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-[9.25rem]"></span>
+            <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-full"></span>
           </a>
         </div>
         {guestCredentials && (
