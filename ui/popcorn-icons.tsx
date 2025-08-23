@@ -521,6 +521,7 @@ import {
   RiVercelFill,
   RiNpmjsFill,
   RiGitlabFill,
+  RiWordpressFill
 } from "react-icons/ri";
 import { TbBrandTypescript, TbFileTypeSql } from "react-icons/tb";
 import {
@@ -547,6 +548,12 @@ import {
 import { HiOutlineCommandLine } from "react-icons/hi2";
 
 const ICONS = [
+  { component: RiNextjsLine, color: "#fff", name: "Next.js" },
+  { component: RiReactjsLine, color: "#61dafb", name: "React" },
+  { component: RiNodejsLine, color: "#8cc84b", name: "Node.js" },
+  { component: RiTailwindCssFill, color: "#06b6d4", name: "Tailwind CSS" },
+  { component: RiJavascriptLine, color: "#f7df1e", name: "JavaScript" },
+  { component: TbBrandTypescript, color: "#3178c6", name: "TypeScript" },
   { component: SiEsri, color: "#0072c6", name: "Esri" },
   { component: SiArcgis, color: "#0072c6", name: "ArcGIS" },
   { component: FigmaIcon, color: "#000000", name: "Figma" },
@@ -554,14 +561,8 @@ const ICONS = [
   { component: SiApollographql, color: "#fff", name: "Apollo GraphQL" },
   { component: NextAuthIcon, color: "#000000", name: "NextAuth" },
   { component: ColdFusionIcon, color: "#7badff", name: "ColdFusion" },
-  { component: RiNextjsLine, color: "#fff", name: "Next.js" },
-  { component: RiReactjsLine, color: "#61dafb", name: "React" },
-  { component: RiTailwindCssFill, color: "#06b6d4", name: "Tailwind CSS" },
-  { component: RiJavascriptLine, color: "#f7df1e", name: "JavaScript" },
-  { component: TbBrandTypescript, color: "#3178c6", name: "TypeScript" },
   { component: RiHtml5Fill, color: "#e34f26", name: "HTML5" },
   { component: RiCss3Fill, color: "#1572b6", name: "CSS3" },
-  { component: RiNodejsLine, color: "#8cc84b", name: "Node.js" },
   { component: SiHeadlessui, color: "#4f46e5", name: "HeadlessUI" },
   { component: TbFileTypeSql, color: "#003b57", name: "SQL" },
   { component: SiGit, color: "#f05032", name: "Git" },
@@ -592,6 +593,7 @@ const ICONS = [
   { component: SiHeroku, color: "#430098", name: "Heroku" },
   { component: RiGitlabFill, color: "#e24329", name: "GitLab" },
   { component: SiMysql, color: "#4479ff", name: "MySQL" },
+  { component: RiWordpressFill, color: "#21759b", name: "WordPress" },
 ];
 
 // const ICON_SIZE = 42;
@@ -648,6 +650,9 @@ export default function PopcornIcons() {
   // Store a randomized order for popping out
   const [popOrder] = useState(() => shuffle([...Array(ICON_COUNT).keys()]));
 
+  // icons pop out in order
+  // const [popOrder] = useState(() => [...Array(ICON_COUNT).keys()]);
+
   // On mount, set all icons' targets to a grid, but start at center
   useEffect(() => {
     const container = containerRef.current;
@@ -691,10 +696,10 @@ export default function PopcornIcons() {
     });
   }, []);
 
-  // Pop in icons one at a time, in randomized order, more slowly
+  // Pop in icons one at a time, in randomized order
   useEffect(() => {
     if (visibleCount < ICON_COUNT) {
-      const timeout = setTimeout(() => setVisibleCount(visibleCount + 1), 260); // slower pop
+      const timeout = setTimeout(() => setVisibleCount(visibleCount + 1), 260);
       return () => clearTimeout(timeout);
     }
   }, [visibleCount]);
