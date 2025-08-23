@@ -6,6 +6,7 @@ import { experience } from "@/lib/experience"
 import { technicalSkills } from "@/lib/technical-skills";
 // import components
 import TechBadge from "@/ui/tech-badge";
+import DownloadResume from "@/ui/download-resume";
 
 export const metadata = {
   title: "Kevin Long | About",
@@ -30,6 +31,9 @@ export default async function AboutPage() {
               persistence of a teacher, to my work as a developer.
             </p>
           </div>
+        </div>
+        <div className="flex justify-center w-full mt-6">
+          <DownloadResume />
         </div>
         <div className="w-full max-w-7xl mt-6">
           <h3 className="text-2xl lg:text-3xl font-bold text-center">
