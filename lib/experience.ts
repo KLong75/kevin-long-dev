@@ -1,4 +1,4 @@
-export const relevantExperience = [
+export const experience = [
   {
     jobTitle: "Web Development Specialist",
     company: "The City of St. Louis",

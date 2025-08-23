@@ -1,6 +1,7 @@
 // import components
 import MobileImageCarousel from "./mobile-image-carousel";
 import DesktopImageCarousel from "./desktop-image-carousel";
+import TechBadge from "./tech-badge";
 // import clsx
 import clsx from "clsx";
 interface ProjectProps {
@@ -36,7 +37,7 @@ export default function Project({
   guestCredentials,
 }: ProjectProps) {
   return (
-    <li className="flex flex-col justify-between h-full min-h-[500px] shadow-md shadow-green-500/50 border-2 border-zinc-900 rounded-2xl p-2">
+    <li className="flex flex-col justify-between h-full min-h-[500px] shadow-lg shadow-green-500/50 border-2 border-green-500 rounded-2xl p-2">
       <div className="flex-1 flex flex-col">
         <h3 className="my-4 text-2xl font-bold text-shadow-black-background-black text-center">
           {title}
@@ -72,17 +73,23 @@ export default function Project({
               Technologies Used:
             </h4>
             {technologies.map((tech, index) => (
-              <li
+              // <li
+              //   key={index}
+              //   className="font-share-tech-mono text-shadow-black-thin font-bold m-2 border-4 border-zinc-900 shadow-md shadow-zinc-200/50 text-center rounded-2xl text-white bg-green-500 p-1 text-sm"
+              // >
+              //   <a
+              //     href={tech.url}
+              //     target="_blank"
+              //     rel="noopener noreferrer"
+              //     className="underline hover:text-black transition-colors duration-200">
+              //     {tech.name}
+              //   </a>
+              // </li>
+              <TechBadge
                 key={index}
-                className="font-share-tech-mono text-shadow-black-thin font-bold m-2 border-4 border-zinc-900 shadow-md shadow-zinc-200/50 text-center rounded-2xl text-white bg-green-500 p-1 text-sm ">
-                <a
-                  href={tech.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:text-black transition-colors duration-200">
-                  {tech.name}
-                </a>
-              </li>
+                name={tech.name}
+                documentationUrl={tech.url}
+              />
             ))}
           </ul>
         </div>

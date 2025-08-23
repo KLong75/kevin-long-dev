@@ -1,6 +1,7 @@
 import { SiGithub } from "react-icons/si";
 import { SiLinkedin } from "react-icons/si";
 import { BsEnvelopeFill } from "react-icons/bs";
+import { MdOutlinePhoneAndroid } from "react-icons/md";
 
 export const contactIconLinkData = [
   {
@@ -20,5 +21,11 @@ export const contactIconLinkData = [
     icon: BsEnvelopeFill,
     name: "Email",
     label: "Send me an email"
+  },
+  {
+    href: "tel:+15129750082",
+    icon: MdOutlinePhoneAndroid,
+    name: "Phone",
+    label: "Call me"
   },
 ];
