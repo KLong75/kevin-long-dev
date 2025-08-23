@@ -134,10 +134,10 @@ export default function Project({
             <h5 className="text-shadow-black-background-black font-bold text-center mb-2">
               Guest Credentials:
             </h5>
-            <p className="text-shadow-black-background-black font-bold text-center ">
+            <p className="text-shadow-black-background-black font-bold text-center">
               email: {guestCredentials?.email}
             </p>
-            <p className="text-shadow-black-background-black font-bold text-center ">
+            <p className="text-shadow-black-background-black font-bold text-center mt-1">
               password: {guestCredentials?.password}
             </p>
           </div>
