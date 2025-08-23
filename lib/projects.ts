@@ -29,7 +29,7 @@ export const projects = [
       },
       { name: "Cookie Yes", url: "https://www.cookieyes.com/documentation/" },
     ],
-    role: ["Developer"],
+    role: ["Sole Developer"],
     url: "https://mikemartinmedia.com",
     gitHubRepo: "https://github.com/KLong75/mike-martin-media",
     images: {
@@ -170,7 +170,7 @@ export const projects = [
       { name: "HTML", url: "https://developer.mozilla.org/docs/Web/HTML" },
       { name: "CSS", url: "https://developer.mozilla.org/docs/Web/CSS" },
     ],
-    role: ["Lead Developer", "UI/UX Designer", "Project Manager"],
+    role: ["Lead Developer", "Project Manager"],
     url: "https://musicology-umekev.herokuapp.com/",
     gitHubRepo: "https://github.com/KLong75/musician-networking-app",
     images: {
