@@ -94,7 +94,7 @@ export default function Project({
           </ul>
         </div>
 
-        <div className="p-4 mt-6">
+        <div className="p-4 mt-8 md:mt-6 lg:mt-0 ">
           <h5 className="text-shadow-black-background-black font-bold text-lg text-center col-span-1 md:col-span-2 2xl:col-span-3 mb-2">
             Role:
           </h5>
@@ -103,7 +103,7 @@ export default function Project({
           </p>
         </div>
       </div>
-      <div className="text-green-500 text-lg md:text-xl flex flex-col items-center space-y-6 justify-center my-6">
+      <div className="text-green-500 text-sm md:text-lg lg:text-xl flex flex-col items-center space-y-6 justify-center my-6">
         <div className="flex flex-row space-x-12">
           <a
             href={gitHubRepo}
