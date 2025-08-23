@@ -94,7 +94,7 @@ export default function Project({
           </ul>
         </div>
 
-        <div className="p-4">
+        <div className="p-4 mt-6">
           <h5 className="text-shadow-black-background-black font-bold text-lg text-center col-span-1 md:col-span-2 2xl:col-span-3 mb-2">
             Role:
           </h5>
