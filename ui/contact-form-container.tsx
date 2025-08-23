@@ -16,10 +16,15 @@ export default function ContactFormContainer() {
           <h2 className="text-4xl text-center">
             Thank you!
           </h2>
-          <p className="m-8 ">
-            I look forward to connecting with you.
+          <p className="m-8 text-center text-balance">
+            I will be in touch soon. In the meantime, you can follow my work on GitHub and LinkedIn. I look forward to connecting with you.
           </p>
-          <ContactIconLinks orientation="horizontal" include={["GitHub","LinkedIn"]} size={52}/>
+          <div className="flex items-center justify-center">
+            <ContactIconLinks 
+              orientation="horizontal" 
+              include={["GitHub","LinkedIn"]} 
+              size={52}/>
+          </div>
         </div>
       ) : (
         <>
