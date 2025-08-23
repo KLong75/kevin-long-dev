@@ -103,8 +103,8 @@ export default function Project({
           </p>
         </div>
       </div>
-      <div className="text-green-500 text-sm md:text-lg lg:text-xl flex flex-col items-center space-y-6 justify-center my-6">
-        <div className="flex flex-row space-x-12">
+      <div className="text-green-500 text-sm md:text-lg lg:text-xl flex flex-col items-center space-y-6 md:space-y-4 lg:space-y-6 justify-center mb-6 mt-2">
+        <div className="flex flex-row space-x-8 lg:space-x-12">
           <a
             href={gitHubRepo}
             target="_blank"
