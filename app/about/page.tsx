@@ -25,7 +25,7 @@ export default async function AboutPage() {
           About Me
         </h2>
           <div className="flex justify-center w-full mt-6">
-            <p className="text-shadow-black-background-black w-200 md:text-lg text-center text-balance ">
+            <p className="text-shadow-black-background-black w-200 md:text-lg text-center text-balance px-6 md:px-0">
               With a background in the performing arts and education, I bring
               the passion and creativity of an artist, along with the patient
               persistence of a teacher, to my work as a developer.
