@@ -1,5 +1,5 @@
 // import from next
-// import { connection } from "next/server";
+import { connection } from "next/server";
 // import data
 import { education } from "@/lib/education"
 import { experience } from "@/lib/experience"
@@ -17,7 +17,7 @@ export const metadata = {
 };
 
 export default async function AboutPage() {
-  // await connection();
+  await connection();
   return (
     <div className="flex flex-col flex-1 items-center text-green-500">
       <div className="w-full max-w-7xl mt-12 lg:mt-18 3xl:mt-24">
