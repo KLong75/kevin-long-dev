@@ -210,8 +210,12 @@ a, button {
   height: 20%;
 }
 
-.project-icon {
+.icon-shadow {
   filter: drop-shadow(2px 2px 0 #000);
+}
+
+.icon-shadow:hover {
+  filter: drop-shadow(1px 1px 0 #22c55e);
 }
 
 .project-link {
