@@ -83,10 +83,6 @@ export const technicalSkills = [
     documentationUrl: "https://www.typescriptlang.org/docs/",
   },
   {
-    name: "Agile",
-    documentationUrl: "https://www.agilealliance.org/agile101/",
-  },
-  {
     name: "Apollo GraphQL",
     documentationUrl: "https://www.apollographql.com/docs/",
   },
@@ -107,8 +103,16 @@ export const technicalSkills = [
     documentationUrl: "https://docs.paperthin.com/commonspot/latest/",
   },
   {
+    name: "CookieYes",
+    documentationUrl: "https://www.cookieyes.com/developer-use-cases/",
+  },
+  {
     name: "CSS",
     documentationUrl: "https://developer.mozilla.org/docs/Web/CSS",
+  },
+  {
+    name: "EmailJS",
+    documentationUrl: "https://www.emailjs.com/docs/",
   },
   {
     name: "Esri",
@@ -166,6 +170,10 @@ export const technicalSkills = [
     name: "MUI",
     documentationUrl: "https://mui.com/material-ui/getting-started/overview/",
   },
+  {
+    name: "Mux",
+    documentationUrl: "https://mux.com/docs"  
+  },
   { name: "MySQL", documentationUrl: "https://dev.mysql.com/doc/" },
   {
     name: "Neon Postgres",
@@ -175,7 +183,10 @@ export const technicalSkills = [
     name: "NextAuth.js",
     documentationUrl: "https://next-auth.js.org/getting-started/introduction",
   },
-
+  {
+    name: "Next Video",
+    documentationUrl: "https://next-video.dev/" 
+  },
   { name: "npm", documentationUrl: "https://docs.npmjs.com/" },
   {
     name: "Object-Oriented Programming",
@@ -193,10 +204,6 @@ export const technicalSkills = [
     name: "Responsive Web Design",
     documentationUrl:
       "https://developer.mozilla.org/docs/Learn/CSS/CSS_layout/Responsive_Design",
-  },
-  {
-    name: "Scrum",
-    documentationUrl: "https://www.scrum.org/resources/what-is-scrum",
   },
   { name: "Sequelize", documentationUrl: "https://sequelize.org/docs/v6/" },
   {

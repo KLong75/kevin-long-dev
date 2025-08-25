@@ -8,6 +8,7 @@ import { technicalSkills } from "@/lib/technical-skills";
 import TechBadge from "@/ui/tech-badge";
 import DownloadResume from "@/ui/download-resume";
 
+
 export const metadata = {
   title: "Kevin Long | About",
   description: "About page for Kevin Long, a full stack developer.",
