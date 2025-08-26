@@ -17,7 +17,7 @@ export function middleware(request: NextRequest) {
   `;
   const previewCspHeader = `
     default-src 'self';
-    connect-src 'self' https://api.emailjs.com/ https://vercel.live;
+    connect-src 'self' https://api.emailjs.com/ https://vercel.live https://github-contributions-api.jogruber.de/v4/KLong75;
     script-src 'self' 'nonce-${nonce}' 'strict-dynamic' https://vercel.live/ wss://ws-us3.pusher.com https://va.vercel-scripts.com;
     style-src 'self' 'unsafe-inline' https://vercel.live;
     img-src 'self' data: blob: https://vercel.live https://vercel.com;
