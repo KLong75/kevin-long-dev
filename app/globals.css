@@ -218,6 +218,10 @@ a, button {
   filter: drop-shadow(1px 1px 0 #22c55e);
 }
 
+.contribution-shadow {
+  filter: drop-shadow(2px 2px 0 #000);
+}
+
 .project-link {
   /* filter: drop-shadow(2px 2px 0 #000); */
   transition: transform 0.6s ease-in-out;

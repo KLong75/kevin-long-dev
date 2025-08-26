@@ -11,7 +11,7 @@ export function middleware(request: NextRequest) {
     font-src 'self';
     style-src 'self' 'unsafe-inline';
     script-src 'self' 'unsafe-inline' 'unsafe-eval' https://va.vercel-scripts.com;
-    connect-src 'self' https://api.emailjs.com/;
+    connect-src 'self' https://api.emailjs.com/ https://github-contributions-api.jogruber.de/v4/KLong75;
     img-src 'self' data: ;
     frame-src 'none';
   `;
