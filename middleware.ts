@@ -31,7 +31,7 @@ export function middleware(request: NextRequest) {
   `;
   const productionCspHeader = `
     default-src 'self';
-    script-src 'self' 'nonce-${nonce}';
+    script-src 'self' 'nonce-${nonce}' https://vercel.live/;
     connect-src 'self' https://api.emailjs.com/ https://github-contributions-api.jogruber.de/v4/KLong75;
     style-src 'self' 'unsafe-inline';
     img-src 'self' blob: data:;
