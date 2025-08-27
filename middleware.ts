@@ -12,7 +12,7 @@ export function middleware(request: NextRequest) {
     style-src 'self' 'unsafe-inline';
     script-src 'self' 'unsafe-inline' 'unsafe-eval' https://va.vercel-scripts.com;
     connect-src 'self' https://api.emailjs.com/ https://github-contributions-api.jogruber.de/v4/KLong75;
-    img-src 'self' data: ;
+    img-src 'self' data: blob:;
     frame-src 'none';
   `;
   const previewCspHeader = `
@@ -32,7 +32,7 @@ export function middleware(request: NextRequest) {
   const productionCspHeader = `
     default-src 'self';
     script-src 'self' 'nonce-${nonce}';
-    connect-src 'self' https://api.emailjs.com/;
+    connect-src 'self' https://api.emailjs.com/ https://github-contributions-api.jogruber.de/v4/KLong75;
     style-src 'self' 'unsafe-inline';
     img-src 'self' blob: data:;
     font-src 'self';
@@ -48,7 +48,7 @@ export function middleware(request: NextRequest) {
   } else if (isPreview) {
     cspHeader = previewCspHeader;
   } else if (isProduction) {
-    cspHeader = previewCspHeader;
+    cspHeader = productionCspHeader;
   }
 
   // Replace newline characters and spaces
