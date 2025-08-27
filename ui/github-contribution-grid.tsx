@@ -41,18 +41,21 @@ export default function GitHubContributionGrid() {
         fontSize={14}
         renderBlock={(block, activity) => (
           <MuiTooltip
-            title={`${activity.count} ${
-              activity.count === 1 ? "contribution" : "contributions"
-            } on ${activity.date}`}
+            title={
+              activity && typeof activity.count === "number" && activity.date
+                ? `${activity.count} ${
+                    activity.count === 1 ? "contribution" : "contributions"
+                  } on ${activity.date}`
+                : ""
+            }
             slotProps={{
               tooltip: {
                 sx: {
                   color: "#000",
-                  backgroundColor: "#e0e0e0", 
+                  backgroundColor: "#e0e0e0",
                 },
               },
-            }}
-            >
+            }}>
             {block}
           </MuiTooltip>
         )}
