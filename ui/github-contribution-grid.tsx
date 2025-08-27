@@ -43,19 +43,15 @@ export default function GitHubContributionGrid() {
           <MuiTooltip
             title={`${activity.count} ${
               activity.count === 1 ? "contribution" : "contributions"
-            } on ${new Date(activity.date).toLocaleDateString("en-US", {
-              month: "long",
-              day: "2-digit",
-              year: "numeric",
-            })}`}
-            // slotProps={{
-            //   tooltip: {
-            //     sx: {
-            //       color: "#000",
-            //       backgroundColor: "#e0e0e0", 
-            //     },
-            //   },
-            // }}
+            } on ${activity.date}`}
+            slotProps={{
+              tooltip: {
+                sx: {
+                  color: "#000",
+                  backgroundColor: "#e0e0e0", 
+                },
+              },
+            }}
             >
             {block}
           </MuiTooltip>
