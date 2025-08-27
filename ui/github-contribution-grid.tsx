@@ -1,4 +1,6 @@
 "use client";
+// import from react
+import { useEffect, useState } from "react";
 // import github calendar
 import GitHubCalendar from "react-github-calendar";
 // import from mui
@@ -7,6 +9,8 @@ import { Tooltip as MuiTooltip } from "@mui/material";
 import ContactIconLinks from "./contact-icon-links";
 
 export default function GitHubContributionGrid() {
+  const [dateRange, setDateRange] = useState({ start: "", end: "" });
+  useEffect(() => {
   const today = new Date().toISOString();
   const todayFormatted = new Intl.DateTimeFormat("en-US", {
     year: "numeric",
@@ -14,12 +18,6 @@ export default function GitHubContributionGrid() {
     day: "numeric",
   }).format(new Date());
   const oneYearAgo = new Date();
-  // oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
-  // const oneYearAgoFormatted = new Intl.DateTimeFormat("en-US", {
-  //   year: "numeric",
-  //   month: "long",
-  //   day: "numeric",
-  // }).format(oneYearAgo);
   const oneYearAgoPlusOneDay = new Date(oneYearAgo);
   oneYearAgoPlusOneDay.setDate(oneYearAgoPlusOneDay.getDate() - 1);
   const oneYearAgoPlusOneDayFormatted = new Intl.DateTimeFormat("en-US", {
@@ -27,6 +25,8 @@ export default function GitHubContributionGrid() {
     month: "long",
     day: "numeric",
   }).format(oneYearAgoPlusOneDay);
+   setDateRange({ start: oneYearAgoPlusOneDayFormatted, end: todayFormatted });
+  }, []);
 
   return (
     <div className="w-full max-w-10xl flex flex-col items-center my-16 contribution-shadow custom-scrollbar md:shadow-2xl md:shadow-green-500/50 p-2 md:p-12 rounded-2xl">
@@ -61,7 +61,7 @@ export default function GitHubContributionGrid() {
         )}
       />
       <span className="text-sm italic mt-2">
-        {oneYearAgoPlusOneDayFormatted} - {todayFormatted}
+        {dateRange.start} - {dateRange.end}
       </span>
       <div className="mt-4 -mb-4">
         <ContactIconLinks
