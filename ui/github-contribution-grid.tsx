@@ -25,7 +25,10 @@ export default function GitHubContributionGrid() {
   }).format(oneYearAgoPlusOneDay);
 
   return (
-    <div>
+    <div className="w-full max-w-10xl flex flex-col items-center my-16 contribution-shadow custom-scrollbar">
+        <h3 className="text-2xl lg:text-3xl font-bold text-center mb-6">
+          GitHub Contributions
+        </h3>
       <GitHubCalendar
         username="KLong75"
         blockSize={15}

@@ -85,17 +85,8 @@ export default async function AboutPage() {
           ))}
         </ul>
       </div>
-      <div className="w-full max-w-7xl flex flex-col items-center my-16 contribution-shadow">
-        <h3 className="text-2xl lg:text-3xl font-bold text-center mb-6">
-          GitHub Contributions
-        </h3>
-        <div className="">
-          <GitHubContributionGrid />
-        </div>
-        {/* <span className="text-sm italic mt-2">
-          {oneYearAgoFormatted} - {todayFormatted}
-        </span> */}
-
+      <div className="max-w-[90vw]">
+        <GitHubContributionGrid />
       </div>
       <div className="w-full max-w-7xl mt-6">
         <h3 className="text-shadow-black-background-blacktext-2xl lg:text-3xl font-bold text-center">
