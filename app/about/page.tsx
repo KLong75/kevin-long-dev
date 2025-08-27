@@ -39,7 +39,7 @@ export default async function AboutPage() {
   return (
     <div className="flex flex-col flex-1 items-center text-green-500">
       <div className="w-full max-w-7xl mt-12 lg:mt-18 3xl:mt-24">
-        <h2 className="text-shadow-black-background-black text-3xl lg:text-4xl font-bold text-center mt-8">
+        <h2 className="text-shadow-black-background-black text-3xl 3xl:text-4xl font-bold text-center mt-8">
           About Me
         </h2>
         <div className="flex justify-center w-full mt-6">
@@ -55,7 +55,7 @@ export default async function AboutPage() {
         <DownloadResume />
       </div>
       <div className="w-full max-w-7xl mt-6">
-        <h3 className="text-shadow-black-background-black text-2xl lg:text-3xl font-bold text-center">
+        <h3 className="text-shadow-black-background-black text-2xl 3xl:text-3xl font-bold text-center">
           Education
         </h3>
         <ul className="p-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -70,7 +70,7 @@ export default async function AboutPage() {
         </ul>
       </div>
       <div className="w-full max-w-7xl mt-6">
-        <h3 className="text-shadow-black-background-black text-2xl lg:text-3xl font-bold text-center">
+        <h3 className="text-shadow-black-background-black text-2xl 3xl:text-3xl font-bold text-center">
           Experience
         </h3>
         <ul className="p-4 grid grid-cols-1 lg:grid-cols-3 gap-4">
@@ -89,7 +89,7 @@ export default async function AboutPage() {
         <GitHubContributionGrid />
       </div>
       <div className="w-full max-w-7xl mt-6">
-        <h3 className="text-shadow-black-background-blacktext-2xl lg:text-3xl font-bold text-center">
+        <h3 className="text-shadow-black-background-black text-2xl 3xl:text-3xl font-bold text-center">
           Technical Skills
         </h3>
         <ul className="p-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
