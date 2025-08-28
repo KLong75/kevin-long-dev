@@ -33,6 +33,7 @@ export const projects = [
     url: "https://mikemartinmedia.com",
     // gitHubRepo: "https://github.com/KLong75/mike-martin-media",
     gitHubRepo: "private",
+    repoPrivacyMessage: "This repository is private.",
     images: {
       mobile: [
         "/images/mmm/mobile/home.jpg",
