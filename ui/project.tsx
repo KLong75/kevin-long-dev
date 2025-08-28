@@ -73,18 +73,6 @@ export default function Project({
               Technologies Used:
             </h4>
             {technologies.map((tech, index) => (
-              // <li
-              //   key={index}
-              //   className="font-share-tech-mono text-shadow-black-thin font-bold m-2 border-4 border-zinc-900 shadow-md shadow-zinc-200/50 text-center rounded-2xl text-white bg-green-500 p-1 text-sm"
-              // >
-              //   <a
-              //     href={tech.url}
-              //     target="_blank"
-              //     rel="noopener noreferrer"
-              //     className="underline hover:text-black transition-colors duration-200">
-              //     {tech.name}
-              //   </a>
-              // </li>
               <TechBadge
                 key={index}
                 name={tech.name}
