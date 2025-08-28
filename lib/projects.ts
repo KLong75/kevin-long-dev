@@ -31,7 +31,8 @@ export const projects = [
     ],
     role: ["Sole Developer"],
     url: "https://mikemartinmedia.com",
-    gitHubRepo: "https://github.com/KLong75/mike-martin-media",
+    // gitHubRepo: "https://github.com/KLong75/mike-martin-media",
+    gitHubRepo: "private",
     images: {
       mobile: [
         "/images/mmm/mobile/home.jpg",
