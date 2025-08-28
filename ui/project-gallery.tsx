@@ -17,6 +17,7 @@ export default function ProjectGallery() {
           technologies={project.technologies}
           url={project.url}
           gitHubRepo={project.gitHubRepo}
+          repoPrivacyMessage={project.repoPrivacyMessage}
           role={Array.isArray(project.role) ? project.role : [project.role]}
           images={project.images ?? { mobile: [], desktop: [] }}
           guestCredentials={project.guestCredentials} // Pass guest credentials if available

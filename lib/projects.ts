@@ -3,7 +3,7 @@ export const projects = [
     title: "mikemartinmedia.com",
     type: "Business Website",
     description:
-      "Mike Martin Media is an multi media production company based in St Louis, Missouri and working all around the world. Mikemartinmedia.com features a sortable video gallery, embedded video content, a blog, and a contact form. The website is integrated with Google Analytics and Google Tag Manager for running ads and monitoring site traffic. Cookie consent management is handled with Cookie Yes. The website was designed by Seafoam Media.",
+      "Mike Martin Media is an multi media production company based in St Louis, Missouri and working all around the world. They have trusted me with their website since 2023. This is the third iteration of the site I have worked on. Fully responsive and accessible, mikemartinmedia.com features a sortable video and photo gallery, embedded video content, a blog, and a contact form. The website is integrated with Google Analytics and Google Tag Manager for running ads and monitoring site traffic. Cookie consent management is handled with Cookie Yes. The website was designed by Seafoam Media.",
     technologies: [
       { name: "Next.js", url: "https://nextjs.org/" },
       { name: "Vercel", url: "https://vercel.com/docs" },
@@ -33,6 +33,7 @@ export const projects = [
     url: "https://mikemartinmedia.com",
     // gitHubRepo: "https://github.com/KLong75/mike-martin-media",
     gitHubRepo: "private",
+    repoPrivacyMessage: "This repository is private.",
     images: {
       mobile: [
         "/images/mmm/mobile/home.jpg",

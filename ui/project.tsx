@@ -1,7 +1,14 @@
+"use client";
+// import from react
+import { useState } from "react";
+// import from headless ui
+import { Dialog, DialogPanel } from "@headlessui/react";
 // import components
 import MobileImageCarousel from "./mobile-image-carousel";
 import DesktopImageCarousel from "./desktop-image-carousel";
 import TechBadge from "./tech-badge";
+// import from react icons
+import { RiCloseFill } from "react-icons/ri";
 // import clsx
 import clsx from "clsx";
 interface ProjectProps {
@@ -15,6 +22,7 @@ interface ProjectProps {
   role: string[];
   url: string;
   gitHubRepo: string;
+  repoPrivacyMessage?: string;
   images: {
     mobile: string[];
     desktop: string[];
@@ -33,9 +41,12 @@ export default function Project({
   role,
   url,
   gitHubRepo,
+  repoPrivacyMessage,
   images,
   guestCredentials,
 }: ProjectProps) {
+  const [dialogIsOpen, setDialogIsOpen] = useState(false);
+
   return (
     <li className="flex flex-col justify-between h-full min-h-[500px] shadow-lg shadow-green-500/50 border-2 border-green-500 rounded-2xl p-2">
       <div className="flex-1 flex flex-col">
@@ -93,21 +104,57 @@ export default function Project({
       </div>
       <div className="text-green-500 text-sm md:text-lg lg:text-xl flex flex-col items-center space-y-6 md:space-y-4 lg:space-y-6 justify-center mb-6 mt-2">
         <div className="flex flex-row space-x-8 lg:space-x-12">
-          <a
-            href={gitHubRepo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative group flex flex-col items-center project-link">
-            <span
-              className={clsx(
-                "tracking-widest lg:hover:text-white transition-colors duration-600 ease-in-out",
-                "text-shadow-black-background-black",
-                "group-hover:text-shadow-green-background-black"
-              )}>
-              GitHub Repo
-            </span>
-            <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-full"></span>
-          </a>
+          {gitHubRepo === "private" ? (
+            <>
+              <button
+                className="relative group flex flex-col items-center project-link"
+                onClick={() => setDialogIsOpen(true)}>
+                <span
+                  className={clsx(
+                    "tracking-widest lg:hover:text-white transition-colors duration-600 ease-in-out",
+                    "text-shadow-black-background-black",
+                    "group-hover:text-shadow-green-background-black"
+                  )}>
+                  GitHub Repo
+                </span>
+                <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-full"></span>
+              </button>
+              <Dialog
+                open={dialogIsOpen}
+                onClose={() => setDialogIsOpen(false)}
+                className="relative z-50">
+                <div className="fixed inset-0 flex w-screen items-center justify-center bg-black/80 p-4">
+                  <DialogPanel className="relative max-w-lg space-y-4 border bg-neutral-900 border-2 border-green-500 rounded-2xl shadow-lg shadow-green-500/50 p-8">
+                    <button
+                      type="button"
+                      onClick={() => setDialogIsOpen(false)}
+                      className="absolute top-4 right-4 text-green-500 hover:text-white transition-colors"
+                      aria-label="Close">
+                      <RiCloseFill size={28} />
+                    </button>
+                    {/* <DialogTitle>GitHub Repository</DialogTitle> */}
+                    {repoPrivacyMessage && <p className="p-12 font-share-tech-mono text-shadow-black-background-black">{repoPrivacyMessage}</p>}
+                  </DialogPanel>
+                </div>
+              </Dialog>
+            </>
+          ) : (
+            <a
+              href={gitHubRepo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative group flex flex-col items-center project-link">
+              <span
+                className={clsx(
+                  "tracking-widest lg:hover:text-white transition-colors duration-600 ease-in-out",
+                  "text-shadow-black-background-black",
+                  "group-hover:text-shadow-green-background-black"
+                )}>
+                GitHub Repo
+              </span>
+              <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-full"></span>
+            </a>
+          )}
           <a
             href={url}
             target="_blank"
