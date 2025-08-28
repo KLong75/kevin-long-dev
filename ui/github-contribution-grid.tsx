@@ -29,7 +29,7 @@ export default function GitHubContributionGrid() {
   }, []);
 
   return (
-    <div className="w-full max-w-10xl flex flex-col items-center my-16 contribution-shadow custom-scrollbar md:shadow-2xl md:shadow-green-500/50 p-2 md:p-12 rounded-2xl">
+    <div className="w-full flex flex-col items-center my-16 contribution-shadow custom-scrollbar md:shadow-2xl md:shadow-green-500/50 p-2 md:p-12 rounded-2xl">
       <h3 className="text-2xl 3xl:text-3xl font-bold text-center -mt-4 mb-6">
         GitHub Contributions
       </h3>

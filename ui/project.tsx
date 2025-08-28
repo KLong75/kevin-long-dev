@@ -1,3 +1,8 @@
+"use client";
+// import from react
+import { useState } from 'react'
+// import from headless ui
+import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 // import components
 import MobileImageCarousel from "./mobile-image-carousel";
 import DesktopImageCarousel from "./desktop-image-carousel";
@@ -73,18 +78,6 @@ export default function Project({
               Technologies Used:
             </h4>
             {technologies.map((tech, index) => (
-              // <li
-              //   key={index}
-              //   className="font-share-tech-mono text-shadow-black-thin font-bold m-2 border-4 border-zinc-900 shadow-md shadow-zinc-200/50 text-center rounded-2xl text-white bg-green-500 p-1 text-sm"
-              // >
-              //   <a
-              //     href={tech.url}
-              //     target="_blank"
-              //     rel="noopener noreferrer"
-              //     className="underline hover:text-black transition-colors duration-200">
-              //     {tech.name}
-              //   </a>
-              // </li>
               <TechBadge
                 key={index}
                 name={tech.name}
@@ -105,21 +98,38 @@ export default function Project({
       </div>
       <div className="text-green-500 text-sm md:text-lg lg:text-xl flex flex-col items-center space-y-6 md:space-y-4 lg:space-y-6 justify-center mb-6 mt-2">
         <div className="flex flex-row space-x-8 lg:space-x-12">
-          <a
-            href={gitHubRepo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative group flex flex-col items-center project-link">
-            <span
+          {gitHubRepo === "private" ? (
+            <button
+              disabled
               className={clsx(
-                "tracking-widest lg:hover:text-white transition-colors duration-600 ease-in-out",
-                "text-shadow-black-background-black",
-                "group-hover:text-shadow-green-background-black"
+                "relative group flex flex-col items-center project-link cursor-not-allowed opacity-60"
               )}>
-              GitHub Repo
-            </span>
-            <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-full"></span>
-          </a>
+              <span
+                className={clsx(
+                  "tracking-widest",
+                  "text-shadow-black-background-black"
+                )}>
+                Private Repo
+              </span>
+              <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600"></span>
+            </button>
+          ) : (
+            <a
+              href={gitHubRepo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative group flex flex-col items-center project-link">
+              <span
+                className={clsx(
+                  "tracking-widest lg:hover:text-white transition-colors duration-600 ease-in-out",
+                  "text-shadow-black-background-black",
+                  "group-hover:text-shadow-green-background-black"
+                )}>
+                GitHub Repo
+              </span>
+              <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-full"></span>
+            </a>
+          )}
           <a
             href={url}
             target="_blank"
