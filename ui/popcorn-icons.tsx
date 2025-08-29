@@ -525,6 +525,7 @@ import {
 } from "react-icons/ri";
 import { TbBrandTypescript, TbFileTypeSql } from "react-icons/tb";
 import {
+  SiGraphql,
   SiGit,
   SiGithub,
   SiMongodb,
@@ -559,6 +560,7 @@ const ICONS = [
   { component: FigmaIcon, color: "#000000", name: "Figma" },
   { component: NeonIcon, color: "#39ff14", name: "Neon Postgres" },
   { component: SiApollographql, color: "#fff", name: "Apollo GraphQL" },
+  { component: SiGraphql, color: "#e535ab", name: "GraphQL" },
   { component: NextAuthIcon, color: "#000000", name: "NextAuth" },
   { component: ColdFusionIcon, color: "#7badff", name: "ColdFusion" },
   { component: RiHtml5Fill, color: "#e34f26", name: "HTML5" },

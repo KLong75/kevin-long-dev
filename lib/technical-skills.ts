@@ -87,6 +87,7 @@ export const technicalSkills = [
     documentationUrl: "https://www.apollographql.com/docs/",
   },
   { name: "ArcGIS", documentationUrl: "https://www.arcgis.com/" },
+  { name: "ArcGIS SDK for JavaScript", documentationUrl: "https://developers.arcgis.com/javascript/" },
   { name: "bcrypt", documentationUrl: "https://www.npmjs.com/package/bcrypt" },
   { name: "Bootstrap", documentationUrl: "https://getbootstrap.com/docs/" },
   {
