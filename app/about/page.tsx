@@ -85,9 +85,6 @@ export default async function AboutPage() {
           ))}
         </ul>
       </div>
-      <div className="max-w-[90vw]">
-        <GitHubContributionGrid />
-      </div>
       <div className="w-full max-w-7xl mt-6">
         <h3 className="text-shadow-black-background-black text-2xl 3xl:text-3xl font-bold text-center">
           Technical Skills
@@ -101,6 +98,9 @@ export default async function AboutPage() {
             />
           ))}
         </ul>
+      </div>
+      <div className="w-full max-w-7xl my-6">
+        <GitHubContributionGrid />
       </div>
     </div>
   );

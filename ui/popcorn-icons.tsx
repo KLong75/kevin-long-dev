@@ -509,6 +509,7 @@ import { ColdFusionIcon } from "./cold-fusion-icon";
 import { NextAuthIcon } from "./next-auth-icon";
 import { NeonIcon } from "./neon-icon";
 import { FigmaIcon } from "./figma-icon";
+import { IoLogoWebComponent } from "react-icons/io5";
 import {
   RiNextjsLine,
   RiReactjsLine,
@@ -525,6 +526,7 @@ import {
 } from "react-icons/ri";
 import { TbBrandTypescript, TbFileTypeSql } from "react-icons/tb";
 import {
+  // SiSwiper,
   SiGraphql,
   SiGit,
   SiGithub,
@@ -596,6 +598,8 @@ const ICONS = [
   { component: RiGitlabFill, color: "#e24329", name: "GitLab" },
   { component: SiMysql, color: "#4479ff", name: "MySQL" },
   { component: RiWordpressFill, color: "#21759b", name: "WordPress" },
+  // { component: SiSwiper, color: "rgb(80, 168, 255)", name: "Swiper" },
+  { component: IoLogoWebComponent, color: "#000000", name: "Web Components" },
 ];
 
 // const ICON_SIZE = 42;

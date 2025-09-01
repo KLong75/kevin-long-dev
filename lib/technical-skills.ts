@@ -213,11 +213,15 @@ export const technicalSkills = [
       "https://developer.mozilla.org/docs/Web/API/Service_Worker_API",
   },
   { name: "SQL", documentationUrl: "https://www.sqltutorial.org/" },
+  { name: "Swiper", documentationUrl: "https://swiperjs.com/" },
   {
     name: "Test Driven Development",
     documentationUrl: "https://en.wikipedia.org/wiki/Test-driven_development",
   },
   { name: "Vercel", documentationUrl: "https://vercel.com/docs" },
+  { name: "Vercel Analytics", documentationUrl: "https://vercel.com/docs/analytics" },
+  { name: "Visual Studio Code", documentationUrl: "https://code.visualstudio.com/docs" },
+  { name: "Web Components", documentationUrl: "https://developer.mozilla.org/en-US/docs/Web/Web_Components" },
   {
     name: "WordPress",
     documentationUrl: "https://developer.wordpress.org/docs/",
