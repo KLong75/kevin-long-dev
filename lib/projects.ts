@@ -68,6 +68,8 @@ export const projects = [
       { name: "CSS", url: "https://developer.mozilla.org/docs/Web/CSS" },
       { name: "Vercel Analytics", url: "https://vercel.com/docs/analytics" },
       { name: "EmailJS", url: "https://www.emailjs.com/docs/" },
+      { name: "Neon Postgres", url: "https://neon.tech/docs" },
+      { name: "HeroUI", url: "https://www.heroui.com/docs/" }
     ],
     role: ["Sole Developer and Designer"],
     url: "https://thelongemergency.net/",

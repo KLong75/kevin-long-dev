@@ -9,6 +9,7 @@ import "./globals.css";
 // import components
 import Header from "@/ui/header";
 import Footer from "@/ui/footer";
+import ScrollToTopButton from "@/ui/scroll-to-top-button";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.kevinlong.dev"),
@@ -42,6 +43,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1 flex flex-col w-full">
           {children}
+          <ScrollToTopButton />
         </main>
         <Footer />
         <Analytics />
