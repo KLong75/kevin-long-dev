@@ -31,9 +31,10 @@ export const projects = [
     ],
     role: ["Sole Developer"],
     url: "https://mikemartinmedia.com",
-    // gitHubRepo: "https://github.com/KLong75/mike-martin-media",
-    gitHubRepo: "private",
-    repoPrivacyMessage: "This repository is private.",
+    gitHubRepo: "https://github.com/KLong75/mike-martin-media",
+    // gitHubRepo: "private",
+    repoPrivacyMessage:
+      "Thank you for your interest in this project. Mike Martin Media is a client of my company Rhythm Code Studio. In order to respect their privacy, this repository is private. If you have any questions about how it is built, please feel free to reach out. I'd love to tell you all about it.",
     images: {
       mobile: [
         "/images/mmm/mobile/home.jpg",
@@ -69,7 +70,7 @@ export const projects = [
       { name: "Vercel Analytics", url: "https://vercel.com/docs/analytics" },
       { name: "EmailJS", url: "https://www.emailjs.com/docs/" },
       { name: "Neon Postgres", url: "https://neon.tech/docs" },
-      { name: "HeroUI", url: "https://www.heroui.com/docs/" }
+      { name: "HeroUI", url: "https://www.heroui.com/docs/" },
     ],
     role: ["Sole Developer and Designer"],
     url: "https://thelongemergency.net/",
@@ -101,20 +102,33 @@ export const projects = [
     title: "WatchTV",
     type: "Full Stack Application",
     description:
-      "WatchTV serves as a central hub for all of a user's subscription streaming accounts. Search for any TV show or movie and link to where it is available online to stream, rent, or buy. Multiple search methods enable users to find what they want to watch and where they can watch it. Users can search all sources or just the ones they are subscribed to. Save titles to a watchlist for later viewing. The watchlist can be filtered by source, type, and genre.",
+      "Installable Progressive Web Application. WatchTV serves as a central hub for all of a user's subscription streaming accounts. Search for any TV show or movie and link to where it is available online to stream, rent, or buy. Multiple search methods enable users to find what they want to watch and where they can watch it. Users can search all sources or just the ones they are subscribed to. Save titles to a watchlist for later viewing. The watchlist can be filtered by source, type, and genre.",
     technologies: [
       { name: "React", url: "https://react.dev/" },
       { name: "Node", url: "https://nodejs.org/en/docs/" },
       { name: "MongoDB", url: "https://www.mongodb.com/docs/" },
-      { name: "Express", url: "https://expressjs.com/en/starter/installing.html" },
-      { name: "MUI", url: "https://mui.com/material-ui/getting-started/overview/" },
+      {
+        name: "Express",
+        url: "https://expressjs.com/en/starter/installing.html",
+      },
+      {
+        name: "MUI",
+        url: "https://mui.com/material-ui/getting-started/overview/",
+      },
       { name: "Apollo", url: "https://www.apollographql.com/docs/" },
       { name: "GraphQL", url: "https://graphql.org/learn/" },
       { name: "JSON web tokens", url: "https://jwt.io/introduction/" },
       { name: "bcrypt", url: "https://www.npmjs.com/package/bcrypt" },
       { name: "Mongoose", url: "https://mongoosejs.com/docs/guide.html" },
+      {
+        name: "PWA",
+        url: "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps",
+      },
       { name: "Swiperjs", url: "https://swiperjs.com/" },
-      { name: "JavaScript", url: "https://developer.mozilla.org/docs/Web/JavaScript" },
+      {
+        name: "JavaScript",
+        url: "https://developer.mozilla.org/docs/Web/JavaScript",
+      },
       { name: "HTML", url: "https://developer.mozilla.org/docs/Web/HTML" },
       { name: "CSS", url: "https://developer.mozilla.org/docs/Web/CSS" },
     ],
@@ -138,7 +152,6 @@ export const projects = [
         "/images/watch-tv/mobile/settings.jpg",
         "/images/watch-tv/mobile/combo-search.jpg",
         // "/images/watch-tv/mobile/signup.jpg",
-        
       ],
       desktop: [
         // "/images/watch-tv/desktop/feature.png",
@@ -157,20 +170,30 @@ export const projects = [
   {
     title: "Musicology",
     type: "Full Stack Application",
-    description: "A full stack networking application for musicians. Users can sign up, create a profile describing their musical abilities and interests, make posts on the bulletin board, respond to posts made by other users, and connect with other musicians for creative and business purposes.",
+    description:
+      "A full stack networking application for musicians. Users can sign up, create a profile describing their musical abilities and interests, make posts on the bulletin board, respond to posts made by other users, and connect with other musicians for creative and business purposes.",
     technologies: [
       { name: "React", url: "https://react.dev/" },
       { name: "Node", url: "https://nodejs.org/en/docs/" },
       { name: "MongoDB", url: "https://www.mongodb.com/docs/" },
-      { name: "Express", url: "https://expressjs.com/en/starter/installing.html" },
-      { name: "MUI", url: "https://mui.com/material-ui/getting-started/overview/" },
+      {
+        name: "Express",
+        url: "https://expressjs.com/en/starter/installing.html",
+      },
+      {
+        name: "MUI",
+        url: "https://mui.com/material-ui/getting-started/overview/",
+      },
       { name: "React Router", url: "https://reactrouter.com/en/main" },
       { name: "Apollo", url: "https://www.apollographql.com/docs/" },
       { name: "GraphQL", url: "https://graphql.org/learn/" },
       { name: "JSON web tokens", url: "https://jwt.io/introduction/" },
       { name: "bcrypt", url: "https://www.npmjs.com/package/bcrypt" },
       { name: "Mongoose", url: "https://mongoosejs.com/docs/guide.html" },
-      { name: "JavaScript", url: "https://developer.mozilla.org/docs/Web/JavaScript" },
+      {
+        name: "JavaScript",
+        url: "https://developer.mozilla.org/docs/Web/JavaScript",
+      },
       { name: "HTML", url: "https://developer.mozilla.org/docs/Web/HTML" },
       { name: "CSS", url: "https://developer.mozilla.org/docs/Web/CSS" },
     ],
@@ -181,7 +204,6 @@ export const projects = [
       mobile: [
         "/images/musicology/mobile/home.jpg",
         "/images/musicology/mobile/login.jpg",
-       
       ],
       desktop: [
         // "/images/musicology/desktop/home.gif",

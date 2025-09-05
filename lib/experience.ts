@@ -3,6 +3,7 @@ export const experience = [
     role: "Web Development Specialist",
     company: "The City of St. Louis",
     duration: "2024 - Present",
+    url: "https://www.stlouis-mo.gov/",
     // accomplishments: [],
     // responsibilities: [
     //   "Developing web applications using React and Node.js",
@@ -14,6 +15,7 @@ export const experience = [
     role: "Full Stack Developer",
     company: "Rhythm Code Studio",
     duration: "2024 - Present",
+    url: "https://rhythmcodestudio.tech/",
     // accomplishments: [],
     // responsibilities: [
     //   "Building responsive websites using HTML, CSS, and JavaScript",
@@ -23,8 +25,9 @@ export const experience = [
   },
   {
     role: "Web Development Boot Camp Teaching Assistant",
-    company: "2U",
+    company: "edX",
     duration: "2022 - 2024",
+    url: "https://www.edx.org/",
     // accomplishments: [],
     // responsibilities: [
     //   "Assisting in the development of web applications",

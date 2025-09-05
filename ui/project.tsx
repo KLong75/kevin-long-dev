@@ -123,8 +123,8 @@ export default function Project({
                 open={dialogIsOpen}
                 onClose={() => setDialogIsOpen(false)}
                 className="relative z-50">
-                <div className="fixed inset-0 flex w-screen items-center justify-center bg-black/80 p-4">
-                  <DialogPanel className="relative max-w-lg space-y-4 border bg-neutral-900 border-2 border-green-500 rounded-2xl shadow-lg shadow-green-500/50 p-8">
+                <div className="fixed inset-0 flex w-screen items-center justify-center bg-black/80 p-8">
+                  <DialogPanel className="relative max-w-lg space-y-4 border bg-neutral-900 border-2 border-green-500 rounded-2xl shadow-lg shadow-green-500/50 ">
                     <button
                       type="button"
                       onClick={() => setDialogIsOpen(false)}
