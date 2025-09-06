@@ -18,7 +18,6 @@ export default async function Home() {
             React | Next.js | Node.js | TypeScript | JavaScript | Tailwind CSS
           </h3>
           {/* <TechTriangleTextDisplay /> */}
-          
         </div>
       </div>
     </div>
