@@ -25,9 +25,9 @@ export const experience = [
   },
   {
     role: "Web Development Boot Camp Teaching Assistant",
-    company: "edX",
+    company: "2U",
     duration: "2022 - 2024",
-    url: "https://www.edx.org/",
+    url: "https://2u.com/",
     // accomplishments: [],
     // responsibilities: [
     //   "Assisting in the development of web applications",
