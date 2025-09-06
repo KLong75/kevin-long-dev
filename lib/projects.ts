@@ -3,7 +3,7 @@ export const projects = [
     title: "mikemartinmedia.com",
     type: "Business Website",
     description:
-      "Mike Martin Media is an multi media production company based in St Louis, Missouri and working all around the world. They have trusted me with their website since 2023. This is the third iteration of the site I have worked on. Fully responsive and accessible, mikemartinmedia.com features a sortable video and photo gallery, embedded video content, a blog, and a contact form. The website is integrated with Google Analytics and Google Tag Manager for running ads and monitoring site traffic. Cookie consent management is handled with Cookie Yes. The website was designed by Seafoam Media.",
+      "Mike Martin Media is an multi media production company based in St Louis, Missouri and working all around the world. They have trusted me with their website since 2023. This is the third iteration of their site that I have worked on. Fully responsive and accessible, mikemartinmedia.com features a sortable video and photo gallery, embedded video content, a blog, and a contact form. Integrated with Google Tag Manager and Google Analytics for running ads and monitoring site traffic. Cookie consent management is handled with Cookie Yes. The website was designed by Seafoam Media.",
     technologies: [
       { name: "Next.js", url: "https://nextjs.org/" },
       { name: "Vercel", url: "https://vercel.com/docs" },
@@ -34,7 +34,7 @@ export const projects = [
     gitHubRepo: "https://github.com/KLong75/mike-martin-media",
     // gitHubRepo: "private",
     repoPrivacyMessage:
-      "Thank you for your interest in this project. Mike Martin Media is a client of my company Rhythm Code Studio. In order to respect their privacy, this repository is private. If you have any questions about how it is built, please feel free to reach out. I'd love to tell you all about it.",
+      "Thank you for your interest in this project. Mike Martin Media is a client of my company Rhythm Code Studio. In order to respect their privacy, this repository is private. If you have any questions about how the site is built, please feel free to reach out. I'd love to tell you all about it.",
     images: {
       mobile: [
         "/images/mmm/mobile/home.jpg",
@@ -59,7 +59,7 @@ export const projects = [
     title: "thelongemergency.net",
     type: "Band Website",
     description:
-      "The Long Emergency is a rock band in St. Louis, Missouri. Their website features a gig calendar, music player, audio downloads, merch store, blog, and contact form. The website is fully responsive and accessible. It is integrated with Vercel Analytics for monitoring site traffic. The website is built with Next.js and Tailwind CSS.",
+      "The Long Emergency is a rock band in St. Louis, Missouri. Their website features a gig calendar, music player, audio downloads, merch store, blog, and contact form. Fully responsive and accessible. Integrated with Vercel Analytics for monitoring site traffic. Built with Next.js and Tailwind CSS.",
     technologies: [
       { name: "Next.js", url: "https://nextjs.org/docs" },
       { name: "Vercel", url: "https://vercel.com/docs" },
@@ -67,10 +67,11 @@ export const projects = [
       { name: "Tailwind CSS", url: "https://tailwindcss.com/docs" },
       { name: "TypeScript", url: "https://www.typescriptlang.org/docs/" },
       { name: "CSS", url: "https://developer.mozilla.org/docs/Web/CSS" },
-      { name: "Vercel Analytics", url: "https://vercel.com/docs/analytics" },
       { name: "EmailJS", url: "https://www.emailjs.com/docs/" },
-      { name: "Neon Postgres", url: "https://neon.tech/docs" },
+      { name: "Google Search Console", url: "https://support.google.com/webmasters/answer/9128668" },
       { name: "HeroUI", url: "https://www.heroui.com/docs/" },
+      { name: "Neon Postgres", url: "https://neon.tech/docs" },
+      { name: "Vercel Analytics", url: "https://vercel.com/docs/analytics" },
     ],
     role: ["Sole Developer and Designer"],
     url: "https://thelongemergency.net/",
