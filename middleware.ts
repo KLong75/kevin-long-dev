@@ -34,7 +34,7 @@ export function middleware(request: NextRequest) {
     script-src 'self' 'nonce-${nonce}' https://vercel.live/;
     connect-src 'self' https://api.emailjs.com/ https://github-contributions-api.jogruber.de/v4/KLong75;
     style-src 'self' 'unsafe-inline';
-    img-src 'self' blob: data:;
+    img-src 'self' https://vercel.live https://vercel.com data: blob:;
     font-src 'self';
     object-src 'none';
     base-uri 'self';
