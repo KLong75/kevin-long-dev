@@ -1,4 +1,6 @@
 "use client";
+// import from vercel
+import { track } from "@vercel/analytics";
 // import from react
 import { useState } from "react";
 // import from headless ui
@@ -108,7 +110,10 @@ export default function Project({
             <>
               <button
                 className="relative group flex flex-col items-center project-link"
-                onClick={() => setDialogIsOpen(true)}>
+                onClick={() => {
+                  setDialogIsOpen(true);
+                  track("Private GitHub Repo Clicked");
+                }}>
                 <span
                   className={clsx(
                     "tracking-widest lg:hover:text-white transition-colors duration-600 ease-in-out",
@@ -143,7 +148,9 @@ export default function Project({
               href={gitHubRepo}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative group flex flex-col items-center project-link">
+              className="relative group flex flex-col items-center project-link"
+              onClick={() => track("GitHub Repo Clicked")}
+            >
               <span
                 className={clsx(
                   "tracking-widest lg:hover:text-white transition-colors duration-600 ease-in-out",
@@ -159,7 +166,9 @@ export default function Project({
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative group flex flex-col items-center project-link">
+            className="relative group flex flex-col items-center project-link"
+            onClick={() => track("Deployed Project Link Clicked")}
+          >
             <span
               className={clsx(
                 "tracking-widest lg:hover:text-white transition-colors duration-600 ease-in-out",

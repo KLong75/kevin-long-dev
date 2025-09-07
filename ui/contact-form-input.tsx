@@ -7,7 +7,7 @@ export default function ContactFormInput({
   value,
   required,
   autoComplete,
-  // errorMessage,
+  errorMessage,
   handleChange,
   setStateVariable,
 }: {
@@ -19,7 +19,7 @@ export default function ContactFormInput({
   value: any;
   required: boolean;
   autoComplete: string;
-  // errorMessage: string;
+  errorMessage: string;
   handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, setState: React.Dispatch<React.SetStateAction<any>>) => void;
   setStateVariable: React.Dispatch<React.SetStateAction<any>>;
 }) {
@@ -54,7 +54,15 @@ export default function ContactFormInput({
           onChange={(e) => handleChange(e, setStateVariable)}
         />
       )}
-      {/* <p>{errorMessage}</p> */}
+      <p
+        className="text-red-200 text-xs mt-1 ml-2 min-h-[1.25rem] transition-opacity duration-200"
+        style={{
+          visibility: errorMessage ? "visible" : "hidden",
+          opacity: errorMessage ? 1 : 0,
+        }}
+      >
+        {errorMessage || " "}
+      </p>
     </div>
   );
 }

@@ -8,7 +8,9 @@ export function validateName(name: string) {
   return re.test(String(name));
 }
 export function validateMessage(message: string) {
-  return message.trim().length > 0;
+  const trimmed = message.trim();
+  // Must contain at least one alphanumeric character
+  return trimmed.length > 0 && /[a-zA-Z0-9]/.test(trimmed);
 }
 // export function validatePhone(phone: string) {
 //   // Regular expression to match phone number formats

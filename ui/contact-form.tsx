@@ -29,12 +29,12 @@ export default function ContactForm({
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-  const [, setEmailErrorMessage] = useState("");
-  const [, setPhoneErrorMessage] = useState("");
-  const [, setFirstNameErrorMessage] = useState("");
-  const [, setLastNameErrorMessage] = useState("");
-  const [, setMessageErrorMessage] = useState("");
-  const [, setDeliveryErrorMessage] = useState("");
+  const [emailErrorMessage, setEmailErrorMessage] = useState("");
+  const [phoneErrorMessage, setPhoneErrorMessage] = useState("");
+  const [firstNameErrorMessage, setFirstNameErrorMessage] = useState("");
+  const [lastNameErrorMessage, setLastNameErrorMessage] = useState("");
+  const [messageErrorMessage, setMessageErrorMessage] = useState("");
+  const [deliveryErrorMessage, setDeliveryErrorMessage] = useState("");
   const [buttonSubmitted, setButtonSubmitted] = useState(false);
 
   const isFormValid =
@@ -60,21 +60,41 @@ export default function ContactForm({
   ) => {
     const { name, value } = e.target;
     setState(value);
-    // Check if the email is being updated and is valid
-    if (name === "email" && validateEmail(value)) {
-      setEmailErrorMessage("");
+    // Validate and set error messages
+    if (name === "email") {
+      setEmailErrorMessage(
+        value && !validateEmail(value)
+          ? "Please enter a valid email address."
+          : ""
+      );
     }
-    if (name === "first_name" && validateName(value)) {
-      setFirstNameErrorMessage("");
+    if (name === "first_name") {
+      setFirstNameErrorMessage(
+        value && !validateName(value)
+          ? "Name can only contain letters and spaces."
+          : ""
+      );
     }
-    if (name === "last_name" && validateName(value)) {
-      setLastNameErrorMessage("");
+    if (name === "last_name") {
+      setLastNameErrorMessage(
+        value && !validateName(value)
+          ? "Name can only contain letters and spaces."
+          : ""
+      );
     }
-    if (name === "phone" && validatePhone(value)) {
-      setPhoneErrorMessage("");
+    if (name === "phone") {
+      setPhoneErrorMessage(
+        value && !validatePhone(value)
+          ? "Please enter a valid phone number."
+          : ""
+      );
     }
-    if (name === "message" && validateMessage(value)) {
-      setMessageErrorMessage("");
+    if (name === "message") {
+      setMessageErrorMessage(
+        value && !validateMessage(value)
+          ? "Please enter a valid message."
+          : ""
+      );
     }
   };
 
@@ -191,7 +211,7 @@ export default function ContactForm({
           value={firstName}
           required={true}
           autoComplete="given-name"
-          // errorMessage={firstNameErrorMessage}
+          errorMessage={firstNameErrorMessage}
           handleChange={handleChange}
           setStateVariable={setFirstName}
         />
@@ -204,7 +224,7 @@ export default function ContactForm({
           value={lastName}
           required={true}
           autoComplete="family-name"
-          // errorMessage={lastNameErrorMessage}
+          errorMessage={lastNameErrorMessage}
           handleChange={handleChange}
           setStateVariable={setLastName}
         />
@@ -217,7 +237,7 @@ export default function ContactForm({
           value={phone}
           required={true}
           autoComplete="tel"
-          // errorMessage={phoneErrorMessage}
+          errorMessage={phoneErrorMessage}
           handleChange={handleChange}
           setStateVariable={setPhone}
         />
@@ -230,7 +250,7 @@ export default function ContactForm({
           value={email}
           required={true}
           autoComplete="email"
-          // errorMessage={emailErrorMessage}
+          errorMessage={emailErrorMessage}
           handleChange={handleChange}
           setStateVariable={setEmail}
         />
@@ -243,7 +263,7 @@ export default function ContactForm({
           value={message}
           required={true}
           autoComplete="off"
-          // errorMessage={messageErrorMessage}
+          errorMessage={messageErrorMessage}
           handleChange={handleChange}
           setStateVariable={setMessage}
         />
