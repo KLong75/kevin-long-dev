@@ -112,7 +112,7 @@ export default function Project({
                 className="relative group flex flex-col items-center project-link"
                 onClick={() => {
                   setDialogIsOpen(true);
-                  track("Private GitHub Repo Clicked");
+                  track("Private GitHub Repo Clicked", { project: title });
                 }}>
                 <span
                   className={clsx(
@@ -149,7 +149,7 @@ export default function Project({
               target="_blank"
               rel="noopener noreferrer"
               className="relative group flex flex-col items-center project-link"
-              onClick={() => track("GitHub Repo Clicked")}
+              onClick={() => track("GitHub Repo Clicked", { project: title })}
             >
               <span
                 className={clsx(
@@ -167,7 +167,7 @@ export default function Project({
             target="_blank"
             rel="noopener noreferrer"
             className="relative group flex flex-col items-center project-link"
-            onClick={() => track("Deployed Project Link Clicked")}
+            onClick={() => track("Deployed Project Link Clicked", { project: title })}
           >
             <span
               className={clsx(
