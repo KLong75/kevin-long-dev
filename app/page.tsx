@@ -8,7 +8,7 @@ export default async function Home() {
   // await delayPageLoad(6000);
   return (
     <div className="flex flex-1 items-center justify-center w-full text-shadow-black-background-black">
-      <div className="relative w-[80vw] 2xl:w-[40vw] h-[80vh] 2xl:h-[60vh] flex items-center justify-center">
+      <div className="relative w-[80vw] 2xl:w-[60vw] h-[80vh] 2xl:h-[60vh] flex items-center justify-center">
         <PopcornIcons />
         <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
           <h2 className="font-share-tech-mono text-green-500 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-bold text-center">
