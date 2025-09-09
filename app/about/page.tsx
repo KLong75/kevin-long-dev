@@ -80,7 +80,9 @@ export default async function AboutPage() {
               className="font-share-tech-mono text-white text-shadow-black-background-black m-2 text-center rounded-2xl p-4 shadow-lg shadow-green-500/50 border-2 border-green-500">
               <h4 className="text-xl mb-2">{job.role}</h4>
               <a href={job.url} target="_blank" rel="noopener noreferrer">
-                <p className="text-lg mb-1 underline hover:text-green-500 transition-colors duration-600 ease-in-out">{job.company}</p>
+                <p className="text-lg mb-1 underline hover:text-green-500 transition-colors duration-700 ease-in-out">
+                  {job.company}
+                </p>
               </a>
               <p className="italic mb-2">{job.duration}</p>
             </li>

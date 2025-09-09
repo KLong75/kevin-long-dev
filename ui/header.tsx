@@ -22,32 +22,21 @@ export default function Header() {
           <div>
             {isHome ? (
               <div className="text-green-500 cursor-default select-none text-shadow-black-background-black">
-                <h1
-                  className="text-xl md:text-2xl "
-                  aria-current="page">
+                <h1 className="text-xl md:text-2xl " aria-current="page">
                   Kevin Long
                 </h1>
-                <h2 className="text-xs md:text-sm">
-                  Full Stack Developer
-                </h2>
+                <h2 className="text-xs md:text-sm">Full Stack Developer</h2>
               </div>
             ) : (
               <Link href="/" className="relative group block">
                 <div
-                 className={clsx(
-                      "text-green-500 lg:hover:text-white transition-colors duration-600 ease-in-out",
-                      "text-shadow-black-background-black",
-                      "group-hover:text-shadow-green-background-black"
-                    )}
-                >
-                  <h1
-                   className="text-xl md:text-2xl"
-                  >
-                    Kevin Long
-                  </h1>
-                  <h2 className="text-xs md:text-sm">
-                    Full Stack Developer
-                  </h2>
+                  className={clsx(
+                    "text-green-500 lg:hover:text-white transition-colors duration-700 ease-in-out",
+                    "text-shadow-black-background-black",
+                    "group-hover:text-shadow-green-background-black"
+                  )}>
+                  <h1 className="text-xl md:text-2xl">Kevin Long</h1>
+                  <h2 className="text-xs md:text-sm">Full Stack Developer</h2>
                 </div>
               </Link>
             )}

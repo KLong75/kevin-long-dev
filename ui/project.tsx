@@ -116,13 +116,13 @@ export default function Project({
                 }}>
                 <span
                   className={clsx(
-                    "tracking-widest lg:hover:text-white transition-colors duration-600 ease-in-out",
+                    "tracking-widest lg:hover:text-white transition-colors duration-700 ease-in-out",
                     "text-shadow-black-background-black",
                     "group-hover:text-shadow-green-background-black"
                   )}>
                   GitHub Repo
                 </span>
-                <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-full"></span>
+                <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-700 group-hover:w-full"></span>
               </button>
               <Dialog
                 open={dialogIsOpen}
@@ -138,7 +138,11 @@ export default function Project({
                       <RiCloseFill size={28} />
                     </button>
                     {/* <DialogTitle>GitHub Repository</DialogTitle> */}
-                    {repoPrivacyMessage && <p className="p-12 font-share-tech-mono text-shadow-black-background-black">{repoPrivacyMessage}</p>}
+                    {repoPrivacyMessage && (
+                      <p className="p-12 font-share-tech-mono text-shadow-black-background-black">
+                        {repoPrivacyMessage}
+                      </p>
+                    )}
                   </DialogPanel>
                 </div>
               </Dialog>
@@ -149,17 +153,16 @@ export default function Project({
               target="_blank"
               rel="noopener noreferrer"
               className="relative group flex flex-col items-center project-link"
-              onClick={() => track("GitHub Repo Clicked", { project: title })}
-            >
+              onClick={() => track("GitHub Repo Clicked", { project: title })}>
               <span
                 className={clsx(
-                  "tracking-widest lg:hover:text-white transition-colors duration-600 ease-in-out",
+                  "tracking-widest lg:hover:text-white transition-colors duration-700 ease-in-out",
                   "text-shadow-black-background-black",
                   "group-hover:text-shadow-green-background-black"
                 )}>
                 GitHub Repo
               </span>
-              <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-full"></span>
+              <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-700 group-hover:w-full"></span>
             </a>
           )}
           <a
@@ -167,17 +170,18 @@ export default function Project({
             target="_blank"
             rel="noopener noreferrer"
             className="relative group flex flex-col items-center project-link"
-            onClick={() => track("Deployed Project Link Clicked", { project: title })}
-          >
+            onClick={() =>
+              track("Deployed Project Link Clicked", { project: title })
+            }>
             <span
               className={clsx(
-                "tracking-widest lg:hover:text-white transition-colors duration-600 ease-in-out",
+                "tracking-widest lg:hover:text-white transition-colors duration-700 ease-in-out",
                 "text-shadow-black-background-black",
                 "group-hover:text-shadow-green-background-black"
               )}>
               View Project
             </span>
-            <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-full"></span>
+            <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-700 group-hover:w-full"></span>
           </a>
         </div>
         {guestCredentials && (

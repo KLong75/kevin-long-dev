@@ -91,9 +91,7 @@ export default function ContactForm({
     }
     if (name === "message") {
       setMessageErrorMessage(
-        value && !validateMessage(value)
-          ? "Please enter a valid message."
-          : ""
+        value && !validateMessage(value) ? "Please enter a valid message." : ""
       );
     }
   };
@@ -271,7 +269,7 @@ export default function ContactForm({
         <div className="flex justify-center items-center p-6 mt-4">
           <span
             className={clsx(
-              "transition-opacity duration-600",
+              "transition-opacity duration-700",
               isFormValid && !buttonSubmitted ? "opacity-100" : "opacity-60"
             )}>
             <button
@@ -281,7 +279,7 @@ export default function ContactForm({
               disabled={!isFormValid || buttonSubmitted}
               aria-disabled={!isFormValid || buttonSubmitted}
               className={clsx(
-                "text-shadow-black border border-2 rounded-2xl py-1 px-6 transition-colors transition-shadow transition-transform duration-600 ease-in-out font-semibold tracking-widest will-change-transform",
+                "text-shadow-black border border-2 rounded-2xl py-1 px-6 transition-colors transition-shadow transition-transform duration-700 ease-in-out font-semibold tracking-widest will-change-transform",
                 {
                   // enabled styles
                   "bg-neutral-800 text-green-500 border-green-500 hover:border-neutral-800 hover:bg-green-500 hover:text-white cursor-pointer shadow-lg shadow-green-500/50 hover:scale-105 active:scale-95":

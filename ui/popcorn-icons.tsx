@@ -282,7 +282,7 @@
 //           ref={(el) => {
 //             iconRefs.current[i] = el;
 //           }}
-//           className={`absolute transition-opacity duration-300 ${
+//           className={`absolute transition-opacity duration-700 ${
 //             i < visibleCount ? "opacity-100" : "opacity-0"
 //           }`}
 //           style={{
@@ -522,7 +522,7 @@ import {
   RiVercelFill,
   RiNpmjsFill,
   RiGitlabFill,
-  RiWordpressFill
+  RiWordpressFill,
 } from "react-icons/ri";
 import { TbBrandTypescript, TbFileTypeSql } from "react-icons/tb";
 import {

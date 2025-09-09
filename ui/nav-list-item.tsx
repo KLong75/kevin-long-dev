@@ -23,20 +23,19 @@ export default function NavListItem({
       {label === "Contact" ? (
         isActive ? (
           <span
-            className="text-shadow-black border border-2 border-green-500 rounded-2xl py-1 px-6 bg-neutral-800 text-green-500 cursor-default select-none transition-all duration-600 ease-in-out"
-            aria-current="page"
-          >
-            <span className="transition-colors duration-600 ease-in-out">{label}</span>
+            className="text-shadow-black border border-2 border-green-500 rounded-2xl py-1 px-6 bg-neutral-800 text-green-500 cursor-default select-none transition-all duration-700 ease-in-out"
+            aria-current="page">
+            <span className="transition-colors duration-700 ease-in-out">
+              {label}
+            </span>
           </span>
         ) : (
           <Link
             href={href}
-            className="text-shadow-black border border-2 border-green-500 hover:border-neutral-800 rounded-2xl py-1 px-6 bg-neutral-800 hover:bg-green-500 text-green-500 hover:text-white transition-all duration-600 ease-in-out"
-          >
+            className="text-shadow-black border border-2 border-green-500 hover:border-neutral-800 rounded-2xl py-1 px-6 bg-neutral-800 hover:bg-green-500 text-green-500 hover:text-white transition-all duration-700 ease-in-out">
             <span
               onClick={onClick}
-              className="transition-colors duration-600 ease-in-out"
-            >
+              className="transition-colors duration-700 ease-in-out">
               {label}
             </span>
           </Link>
@@ -49,25 +48,23 @@ export default function NavListItem({
         isActive ? (
           <span
             className={clsx(
-              "tracking-widest text-green-500 text-shadow-black-background-black cursor-default select-none transition-colors duration-600 ease-in-out"
+              "tracking-widest text-green-500 text-shadow-black-background-black cursor-default select-none transition-colors duration-700 ease-in-out"
             )}
-            aria-current="page"
-          >
+            aria-current="page">
             {label}
           </span>
         ) : (
           <Link href={href} className="flex items-center relative group">
             <span
               className={clsx(
-                "tracking-widest lg:hover:text-white transition-colors duration-600 ease-in-out",
+                "tracking-widest lg:hover:text-white transition-colors duration-700 ease-in-out",
                 "text-shadow-black-background-black",
                 "group-hover:text-shadow-green-background-black"
               )}
-              onClick={onClick}
-            >
+              onClick={onClick}>
               {label}
             </span>
-            <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-600 group-hover:w-full"></span>
+            <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-700 group-hover:w-full"></span>
           </Link>
         )
       ) : htmlElement === "externalLink" ? (
@@ -75,8 +72,7 @@ export default function NavListItem({
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center"
-        >
+          className="flex items-center">
           <span>{label}</span>
         </a>
       ) : null}
