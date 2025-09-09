@@ -55,7 +55,7 @@ export default function ContactFormInput({
         />
       )}
       <p
-        className="text-red-200 text-xs mt-1 ml-2 min-h-[1.25rem] transition-opacity duration-200"
+        className="text-red-200 text-xs mt-1 ml-2 min-h-[1.25rem] transition-opacity duration-300"
         style={{
           visibility: errorMessage ? "visible" : "hidden",
           opacity: errorMessage ? 1 : 0,

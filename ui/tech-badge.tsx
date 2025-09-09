@@ -11,7 +11,7 @@ export default function TechBadge({
         href={documentationUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="underline hover:text-neutral-600 transition-colors duration-200">
+        className="underline hover:text-neutral-600 transition-colors duration-300">
         {name}
       </a>
     </li>
