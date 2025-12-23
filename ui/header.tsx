@@ -22,7 +22,7 @@ export default function Header() {
           <div>
             {isHome ? (
               <div className="text-green-500 cursor-default select-none text-shadow-black-background-black">
-                <h1 className="text-xl md:text-2xl " aria-current="page">
+                <h1 className="text-xl md:text-2xl" aria-current="page">
                   Kevin Long
                 </h1>
                 <h2 className="text-xs md:text-sm">Full Stack Developer</h2>

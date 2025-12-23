@@ -8,8 +8,6 @@ import { technicalSkills } from "@/lib/technical-skills";
 import TechBadge from "@/ui/tech-badge";
 import DownloadResume from "@/ui/download-resume";
 import GitHubContributionGrid from "@/ui/github-contribution-grid";
-// import GitHubCalendar from "react-github-calendar";
-// import { Tooltip as MuiTooltip } from '@mui/material'
 
 export const metadata = {
   title: "Kevin Long | About",
@@ -20,20 +18,6 @@ export const metadata = {
 };
 
 export default async function AboutPage() {
-  // const today = new Date().toISOString();
-  // const todayFormatted = new Intl.DateTimeFormat("en-US", {
-  //   year: "numeric",
-  //   month: "long",
-  //   day: "numeric",
-  // }).format(new Date());
-  // const oneYearAgo = new Date();
-  // oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
-  // const oneYearAgoFormatted = new Intl.DateTimeFormat("en-US", {
-  //   year: "numeric",
-  //   month: "long",
-  //   day: "numeric",
-  // }).format(oneYearAgo);
-
   await connection();
 
   return (

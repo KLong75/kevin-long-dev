@@ -1,6 +1,6 @@
 import { connection } from "next/server";
 import PopcornIcons from "@/ui/popcorn-icons";
-import TechTriangleTextDisplay from "@/ui/tech-triangle-text-display";
+// import TechTriangleTextDisplay from "@/ui/tech-triangle-text-display";
 // import { delayPageLoad } from "@/utils/utils";
 
 export default async function Home() {
