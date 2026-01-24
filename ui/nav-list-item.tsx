@@ -32,7 +32,7 @@ export default function NavListItem({
         ) : (
           <Link
             href={href}
-            className="text-shadow-black border border-2 border-green-500 hover:border-neutral-800 rounded-2xl py-1 px-6 bg-neutral-800 hover:bg-green-500 text-green-500 hover:text-white transition-all duration-700 ease-in-out">
+            className="text-shadow-black border border-2 border-green-500 hover:border-neutral-800 rounded-2xl py-1 px-6 bg-neutral-800 hover:bg-green-500 text-green-500 hover:text-white hover:shadow-lg hover:shadow-green-500/50 transition-all duration-700 ease-in-out">
             <span
               onClick={onClick}
               className="transition-colors duration-700 ease-in-out">
