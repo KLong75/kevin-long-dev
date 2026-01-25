@@ -94,8 +94,11 @@ export default function GitHubContributionGrid() {
             </MuiTooltip>
           )}
         />
-        <span className="text-sm italic mt-2">
+        {/* <span className="text-sm italic mt-2">
           {dateRange.start} - {dateRange.end}
+        </span> */}
+         <span className="text-sm italic mt-2">
+          {dateRange.end}
         </span>
       </div>
     </div>
