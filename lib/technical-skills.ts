@@ -97,11 +97,11 @@ export const technicalSkills = [
   {
     name: "Command Line",
     documentationUrl:
-      "https://developer.mozilla.org/docs/Glossary/Command_line",
+      "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line",
   },
   {
     name: "CommonSpot",
-    documentationUrl: "https://docs.paperthin.com/commonspot/latest/",
+    documentationUrl: "https://www.paperthin.com/products/commonspot-cms.cfm",
   },
   {
     name: "CookieYes",
