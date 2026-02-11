@@ -224,6 +224,6 @@ export const technicalSkills = [
   { name: "Web Components", documentationUrl: "https://developer.mozilla.org/en-US/docs/Web/Web_Components" },
   {
     name: "WordPress",
-    documentationUrl: "https://developer.wordpress.org/docs/",
+    documentationUrl: "https://developer.wordpress.com/docs/",
   },
 ];
