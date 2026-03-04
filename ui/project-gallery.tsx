@@ -20,7 +20,7 @@ export default function ProjectGallery() {
           repoPrivacyMessage={project.repoPrivacyMessage}
           role={Array.isArray(project.role) ? project.role : [project.role]}
           images={project.images ?? { mobile: [], desktop: [] }}
-          guestCredentials={project.guestCredentials} // Pass guest credentials if available
+          guestCredentials={project.guestCredentials}
         />
       ))}
     </ul>

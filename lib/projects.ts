@@ -54,6 +54,7 @@ export const projects = [
         "/images/mmm/desktop/contact-form.png",
       ],
     },
+    guestCredentials: undefined,
   },
   {
     title: "thelongemergency.net",
@@ -98,6 +99,7 @@ export const projects = [
         "/images/the-long-emergency/desktop/shows-footer.png",
       ],
     },
+    guestCredentials: undefined,
   },
   // {
   //   title: "WatchTV",
@@ -216,6 +218,7 @@ export const projects = [
         "/images/musicology/desktop/signup.png",
       ],
     },
+    guestCredentials: undefined,
   },
   // {
   //   title: "",
