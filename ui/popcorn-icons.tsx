@@ -547,6 +547,7 @@ import {
   SiApollographql,
   SiArcgis,
   SiEsri,
+  SiRollupdotjs,
 } from "react-icons/si";
 import { HiOutlineCommandLine } from "react-icons/hi2";
 
@@ -600,6 +601,7 @@ const ICONS = [
   { component: RiWordpressFill, color: "#21759b", name: "WordPress" },
   // { component: SiSwiper, color: "rgb(80, 168, 255)", name: "Swiper" },
   { component: IoLogoWebComponent, color: "#000000", name: "Web Components" },
+  { component: SiRollupdotjs, color: "#ec4a3f", name: "Rollup" },
 ];
 
 // const ICON_SIZE = 42;

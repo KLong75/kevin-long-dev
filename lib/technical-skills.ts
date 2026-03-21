@@ -206,6 +206,10 @@ export const technicalSkills = [
     documentationUrl:
       "https://developer.mozilla.org/docs/Learn/CSS/CSS_layout/Responsive_Design",
   },
+  {
+    name: "Rollup",
+    documentationUrl: "https://rollupjs.org/introduction/"
+  },
   { name: "Sequelize", documentationUrl: "https://sequelize.org/docs/v6/" },
   {
     name: "Service Workers",
