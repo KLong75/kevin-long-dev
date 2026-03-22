@@ -3,16 +3,27 @@ export const projects = [
     title: "GIS Asset Manager UI",
     type: "Open Source JavaScript Module",
     description:
-    "GIS Asset Manager UI is an open-source JavaScript module that utilizes the ArcGIS Maps SDK for JavaScript to create an interactive map that can be configured with various different graphic layers. Users can select assets contained within the graphic layers by mouse click and/or add new assets using the sketch feature. The module can be configured to fit a specific use case by passing property values to the module's custom elements. GIS Asset Manager UI is intended for use within a parent application. When the asset requirements have been met, a custom event is triggered making the array of chosen assets and/or the array of created assets, available to the parent application. The parent application can then receive and consume the data as needed.",
+    "GIS Asset Manager UI is an open-source JavaScript module that utilizes the ArcGIS Maps SDK for JavaScript to create an interactive map that can be configured with various different graphic layers. Users can select assets contained within the graphic layers by mouse click and/or add new assets using the sketch feature. The module can be configured to fit a specific use case by passing property values to the module's custom elements. GIS Asset Manager UI is intended for use within a parent application. When the asset requirements have been met, a custom event is triggered making the array of chosen assets and/or the array of created assets, available to the parent application. The parent application can then receive and consume the data as needed. I developed this project as part of my job with the City of St. Louis. It is currently used on several permit applications for city residents and businesses. I am proud to have developed the first open source software released by the City of St. Louis.",
+    descriptionLink: {
+    text: "permit applications",
+    url: "https://www.stlouis-mo.gov/government/departments/street/permits-inspections/blocking-application.cfm",
+    beforeText: "GIS Asset Manager UI is an open-source JavaScript module that utilizes the ArcGIS Maps SDK for JavaScript to create an interactive map that can be configured with various different graphic layers. Users can select assets contained within the graphic layers by mouse click and/or add new assets using the sketch feature. The module can be configured to fit a specific use case by passing property values to the module's custom elements. GIS Asset Manager UI is intended for use within a parent application. When the asset requirements have been met, a custom event is triggered making the array of chosen assets and/or the array of created assets, available to the parent application. The parent application can then receive and consume the data as needed. I developed this project as part of my job with the City of St. Louis. It is currently used on several ",
+    afterText: " for city residents and businesses. I am proud to have developed the first open source software released by the City of St. Louis."
+  },
     technologies: [
       {
         name: "JavaScript",
+        url: "https://developer.mozilla.org/docs/Web/JavaScript",
+      },
+       {
+        name: "JavaScript Modules",
         url: "https://developer.mozilla.org/docs/Web/JavaScript",
       },
       {
         name: "Web Components",
         url: "https://developer.mozilla.org/docs/Web/Web_Components",
       },
+      { name: "HTML", url: "https://developer.mozilla.org/docs/Web/HTML" },
       { 
         name: "CSS", 
         url: "https://developer.mozilla.org/docs/Web/CSS"
@@ -29,6 +40,7 @@ export const projects = [
         name: "Rollup",
         url: "https://rollupjs.org/",
       },
+      { name: "GIS", url: "https://www.esri.com/en-us/what-is-gis/overview" },
         // {
       //   name: "",
       //   url: "",
@@ -52,10 +64,14 @@ export const projects = [
     images: {
       mobile: [
         "/images/gis-asset-manager/mobile/select.jpg",
+        "/images/gis-asset-manager/mobile/select-valid.jpg",
         "/images/gis-asset-manager/mobile/sketch.jpg",
-        // "/images/gis-asset-manager/mobile/.jpg",
-        // "/images/gis-asset-manager/mobile/.jpg",
-        // "/images/gis-asset-manager/mobile/.jpg",
+        "/images/gis-asset-manager/mobile/sketch2.jpg",
+        "/images/gis-asset-manager/mobile/sketch3.jpg",
+        "/images/gis-asset-manager/mobile/select-sketch.jpg",
+        "/images/gis-asset-manager/mobile/select-sketch-select.jpg",
+        "/images/gis-asset-manager/mobile/select-sketch-sketch.jpg",
+        
         // "/images/gis-asset-manager/mobile/.jpg",
       ],
       desktop: [
@@ -224,11 +240,11 @@ export const projects = [
     description:
       "The Long Emergency is a rock band in St. Louis, Missouri. Their website features a gig calendar, music player, audio downloads, merch store, blog, and contact form. Fully responsive and accessible. Integrated with Vercel Analytics for monitoring site traffic. Built with Next.js and Tailwind CSS.",
     technologies: [
+       { name: "TypeScript", url: "https://www.typescriptlang.org/docs/" },
       { name: "Next.js", url: "https://nextjs.org/docs" },
-      { name: "Vercel", url: "https://vercel.com/docs" },
       { name: "React", url: "https://react.dev" },
       { name: "Tailwind CSS", url: "https://tailwindcss.com/docs" },
-      { name: "TypeScript", url: "https://www.typescriptlang.org/docs/" },
+      { name: "SQL", url: "https://www.w3schools.com/sql/" },
       { name: "CSS", url: "https://developer.mozilla.org/docs/Web/CSS" },
       { name: "EmailJS", url: "https://www.emailjs.com/docs/" },
       {
@@ -237,6 +253,7 @@ export const projects = [
       },
       { name: "HeroUI", url: "https://www.heroui.com/docs/" },
       { name: "Neon Postgres", url: "https://neon.tech/docs" },
+      { name: "Vercel", url: "https://vercel.com/docs" },
       { name: "Vercel Analytics", url: "https://vercel.com/docs/analytics" },
     ],
     role: ["Sole Developer and Designer"],

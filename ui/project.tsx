@@ -17,6 +17,12 @@ interface ProjectProps {
   title: string;
   type: string;
   description: string;
+  descriptionLink?: {
+    text: string;
+    url: string;
+    beforeText: string;
+    afterText: string;
+  };
   technologies: {
     name: string;
     url: string;
@@ -40,6 +46,7 @@ export default function Project({
   title,
   type,
   description,
+  descriptionLink,
   technologies,
   role,
   url,
@@ -78,8 +85,25 @@ export default function Project({
         </div>
         <div className="text-shadow-black-background-black px-2 ">
           <h4 className="font-bold text-xl text-center mb-6">Description:</h4>
-          <p className="font-share-tech-mono text-white px-4 py-3 rounded-2xl border-4 border-zinc-900 shadow-md shadow-zinc-200/50 bg-neutral-800 h-40 overflow-y-auto custom-scrollbar">
+          {/* <p className="font-share-tech-mono text-white px-4 py-3 rounded-2xl border-4 border-zinc-900 shadow-md shadow-zinc-200/50 bg-neutral-800 h-40 overflow-y-auto custom-scrollbar">
             {description}
+          </p> */}
+          <p className="font-share-tech-mono text-white px-4 py-3 rounded-2xl border-4 border-zinc-900 shadow-md shadow-zinc-200/50 bg-neutral-800 h-40 overflow-y-auto custom-scrollbar">
+            {descriptionLink ? (
+              <>
+                {descriptionLink.beforeText}
+                <a
+                  href={descriptionLink.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-500 underline hover:text-green-400">
+                  {descriptionLink.text}
+                </a>
+                {descriptionLink.afterText}
+              </>
+            ) : (
+              description
+            )}
           </p>
         </div>
         <div className="h-120 xl:h-96 2xl:h-80">
@@ -107,7 +131,7 @@ export default function Project({
         </div>
       </div>
       <div className="text-green-500 text-sm md:text-lg lg:text-xl flex flex-col items-center space-y-6 md:space-y-4 lg:space-y-6 justify-center mb-6 mt-2">
-        <div className="flex flex-row space-x-8 lg:space-x-12">
+        <div className="flex flex-row space-x-6 lg:space-x-12">
           {gitHubRepo === "private" ? (
             <>
               <button
@@ -120,7 +144,7 @@ export default function Project({
                   className={clsx(
                     "tracking-widest lg:hover:text-white transition-colors duration-700 ease-in-out",
                     "text-shadow-black-background-black",
-                    "group-hover:text-shadow-green-background-black"
+                    "group-hover:text-shadow-green-background-black",
                   )}>
                   GitHub Repo
                 </span>
@@ -160,13 +184,35 @@ export default function Project({
                 className={clsx(
                   "tracking-widest lg:hover:text-white transition-colors duration-700 ease-in-out",
                   "text-shadow-black-background-black",
-                  "group-hover:text-shadow-green-background-black"
+                  "group-hover:text-shadow-green-background-black",
                 )}>
                 GitHub Repo
               </span>
               <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-700 group-hover:w-full"></span>
             </a>
           )}
+
+          {npmUrl && (
+            <a
+              href={npmUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative group flex flex-col items-center project-link"
+              onClick={() =>
+                track("NPM Package Link Clicked", { project: title })
+              }>
+              <span
+                className={clsx(
+                  "tracking-widest lg:hover:text-white transition-colors duration-700 ease-in-out",
+                  "text-shadow-black-background-black",
+                  "group-hover:text-shadow-green-background-black",
+                )}>
+                NPM
+              </span>
+              <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-700 group-hover:w-full"></span>
+            </a>
+          )}
+
           <a
             href={url}
             target="_blank"
@@ -179,30 +225,12 @@ export default function Project({
               className={clsx(
                 "tracking-widest lg:hover:text-white transition-colors duration-700 ease-in-out",
                 "text-shadow-black-background-black",
-                "group-hover:text-shadow-green-background-black"
+                "group-hover:text-shadow-green-background-black",
               )}>
               View Project
             </span>
             <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-700 group-hover:w-full"></span>
           </a>
-          {npmUrl && (
-            <a
-              href={npmUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative group flex flex-col items-center project-link"
-              onClick={() => track("NPM Package Link Clicked", { project: title })}>
-              <span
-                className={clsx(
-                  "tracking-widest lg:hover:text-white transition-colors duration-700 ease-in-out",
-                  "text-shadow-black-background-black",
-                  "group-hover:text-shadow-green-background-black"
-                )}>
-                NPM
-              </span>
-              <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-700 group-hover:w-full"></span>
-            </a>
-          )}
         </div>
         {guestCredentials && (
           <div className="flex flex-col text-white text-sm">

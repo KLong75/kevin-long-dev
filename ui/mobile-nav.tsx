@@ -50,7 +50,7 @@ export default function MobileNav({ navListItems }: MobileMenuProps) {
 
         {/* Dialog Content */}
         <div className="fixed inset-0 flex items-center justify-center p-4">
-          <DialogPanel className="relative  border-2 border-green-500 bg-neutral-800 text-black flex flex-col justify-center rounded-lg p-6">
+          <DialogPanel className="relative h-[96vh] w-[90vw] border-2 border-green-500 bg-neutral-800 text-black flex flex-col justify-center rounded-lg p-6">
             {/* Dialog Title */}
             <DialogTitle as="h2" className="">
               <div
