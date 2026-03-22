@@ -61,7 +61,7 @@ export const projects = [
       desktop: [
         "/images/gis-asset-manager/desktop/select.png",
         // "/images/gis-asset-manager/desktop/.png",
-        // "/images/gis-asset-manager/desktop/.png",
+        "/images/gis-asset-manager/desktop/select-sketch.png",
         // "/images/gis-asset-manager/desktop/.png",
         // "/images/gis-asset-manager/desktop/.png",
         // "/images/gis-asset-manager/desktop/.png",
