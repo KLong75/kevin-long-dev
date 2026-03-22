@@ -1,5 +1,154 @@
 export const projects = [
   {
+    title: "GIS Asset Manager UI",
+    type: "Open Source JavaScript Module",
+    description:
+    "GIS Asset Manager UI is an open-source JavaScript module that utilizes the ArcGIS Maps SDK for JavaScript to create an interactive map that can be configured with various different graphic layers. Users can select assets contained within the graphic layers by mouse click and/or add new assets using the sketch feature. The module can be configured to fit a specific use case by passing property values to the module's custom elements. GIS Asset Manager UI is intended for use within a parent application. When the asset requirements have been met, a custom event is triggered making the array of chosen assets and/or the array of created assets, available to the parent application. The parent application can then receive and consume the data as needed.",
+    technologies: [
+      {
+        name: "JavaScript",
+        url: "https://developer.mozilla.org/docs/Web/JavaScript",
+      },
+      {
+        name: "Web Components",
+        url: "https://developer.mozilla.org/docs/Web/Web_Components",
+      },
+      { 
+        name: "CSS", 
+        url: "https://developer.mozilla.org/docs/Web/CSS"
+      },
+      { 
+        name: "ArcGIS Maps SDK",
+        url: "https://developers.arcgis.com/javascript/latest",
+      },
+      {
+        name: "npm",
+        url: "https://www.npmjs.com/",
+      },
+      {
+        name: "Rollup",
+        url: "https://rollupjs.org/",
+      },
+        // {
+      //   name: "",
+      //   url: "",
+      // },
+        // {
+      //   name: "",
+      //   url: "",
+      // },
+        // {
+      //   name: "",
+      //   url: "",
+      // },
+    ],
+    role: ["Lead Developer"],
+    url: "https://city-of-saint-louis.github.io/gis-asset-manager-ui",
+    // gitHubRepo: "private",
+    gitHubRepo: "https://github.com/city-of-saint-louis/gis-asset-manager-ui",
+    npmUrl: "https://www.npmjs.com/package/@cityofstlouis/gis-asset-manager-ui",
+    repoPrivacyMessage:
+      "Thank you for your interest in this project. Indie Stream is a work in progress and not yet ready for public viewing. In order to respect the privacy of the artists who have shared their music on the platform, this repository is private. If you have any questions about how the app is built, please feel free to reach out. I'd love to tell you all about it.",
+    images: {
+      mobile: [
+        "/images/gis-asset-manager/mobile/sketch.jpg",
+        // "/images/gis-asset-manager/mobile/.jpg",
+        // "/images/gis-asset-manager/mobile/.jpg",
+        // "/images/gis-asset-manager/mobile/.jpg",
+        // "/images/gis-asset-manager/mobile/.jpg",
+        // "/images/gis-asset-manager/mobile/.jpg",
+      ],
+      desktop: [
+        "/images/gis-asset-manager/desktop/select.png",
+        // "/images/gis-asset-manager/desktop/.png",
+        // "/images/gis-asset-manager/desktop/.png",
+        // "/images/gis-asset-manager/desktop/.png",
+        // "/images/gis-asset-manager/desktop/.png",
+        // "/images/gis-asset-manager/desktop/.png",
+        // "/images/gis-asset-manager/desktop/.png",
+      ],
+    },
+    guestCredentials: undefined,
+  },
+  {
+    title: "indieStream",
+    type: "Full Stack Application",
+    description:
+      "Installable Progressive Web Application featuring push notifications. Music streaming app for independent artists. Users can sign up to make an account. Discover and listen to music from independent artists. Save artists, songs, and releases for easy access. Create and listen to playlists. Still in development. Not fully functional yet, but the music player is operational. The app is currently populated with music from artists who have shared their work with me for the purpose of testing and development.",
+    technologies: [
+      {
+        name: "TypeScript",
+        url: "https://www.typescriptlang.org/docs/",
+      },
+      { name: "Next.js", url: "https://nextjs.org/" },
+      { name: "React", url: "https://react.dev" },
+      { name: "Tailwind CSS", url: "https://tailwindcss.com/docs" },
+
+      { name: "CSS", url: "https://developer.mozilla.org/docs/Web/CSS" },
+      {
+        name: "SQL",
+        url: "https://www.w3schools.com/sql/",
+      },
+      { name: "Postgres", url: "https://www.postgresql.org/docs/" },
+      { name: "Vercel", url: "https://vercel.com/docs" },
+      {
+        name: "Vercel Analytics",
+        url: "https://vercel.com/docs/analytics",
+      },
+      {
+        name: "Next Auth",
+        url: "https://next-auth.js.org/",
+      },
+
+      {
+        name: "bcrypt",
+        url: "https://www.npmjs.com/package/bcrypt",
+      },
+      {
+        name: "React Icons",
+        url: "https://react-icons.github.io/react-icons/",
+      },
+      // {
+      //   name: "",
+      //   url: "",
+      // },
+    ],
+    role: ["Sole Developer"],
+    url: "https://indie-stream.vercel.app/",
+    // gitHubRepo: "private",
+    gitHubRepo: "https://github.com/KLong75/indie-stream",
+    npmUrl: undefined,
+    repoPrivacyMessage:
+      "Thank you for your interest in this project. Indie Stream is a work in progress and not yet ready for public viewing. In order to respect the privacy of the artists who have shared their music on the platform, this repository is private. If you have any questions about how the app is built, please feel free to reach out. I'd love to tell you all about it.",
+    images: {
+      mobile: [
+        "/images/indie-stream/mobile/home.jpg",
+        // "/images/indie-stream/mobile/login.png",
+        "/images/indie-stream/mobile/welcome-back.jpg",
+        "/images/indie-stream/mobile/last-night.jpg",
+        "/images/indie-stream/mobile/cyberchondria.jpg",
+        "/images/indie-stream/mobile/po-releases.jpg",
+        "/images/indie-stream/mobile/releases.jpg",
+        // "/images/indie-stream/mobile/video-editing.png",
+      ],
+      desktop: [
+        "/images/indie-stream/desktop/home.png",
+        "/images/indie-stream/desktop/login.png",
+        "/images/indie-stream/desktop/welcome-back.png",
+        "/images/indie-stream/desktop/cyberchondria.png",
+        "/images/indie-stream/desktop/last-night.png",
+        "/images/indie-stream/desktop/worthwhile.png",
+        "/images/indie-stream/desktop/artists.png",
+        "/images/indie-stream/desktop/songs.png",
+        "/images/indie-stream/desktop/releases.png",
+      ],
+    },
+    guestCredentials: {
+      email: "guest@example.com",
+      password: "password",
+    },
+  },
+  {
     title: "mikemartinmedia.com",
     type: "Business Website",
     description:
@@ -28,11 +177,24 @@ export const projects = [
         url: "https://support.google.com/webmasters/answer/9128668",
       },
       { name: "Cookie Yes", url: "https://www.cookieyes.com/documentation/" },
+      {
+        name: "Swiper",
+        url: "https://swiperjs.com/",
+      },
+      {
+        name: "Mux Video",
+        url: "https://docs.mux.com/",
+      },
+      // {
+      //   name: "",
+      //   url: "",
+      // },
     ],
     role: ["Sole Developer"],
     url: "https://mikemartinmedia.com",
     // gitHubRepo: "https://github.com/KLong75/mike-martin-media",
     gitHubRepo: "https://github.com/KLong75/mike-martin-media",
+    npmUrl: undefined,
     repoPrivacyMessage:
       "Thank you for your interest in this project. Mike Martin Media is a client of my company Rhythm Code Studio. In order to respect their privacy, this repository is private. If you have any questions about how the site is built, please feel free to reach out. I'd love to tell you all about it.",
     images: {
@@ -69,7 +231,10 @@ export const projects = [
       { name: "TypeScript", url: "https://www.typescriptlang.org/docs/" },
       { name: "CSS", url: "https://developer.mozilla.org/docs/Web/CSS" },
       { name: "EmailJS", url: "https://www.emailjs.com/docs/" },
-      { name: "Google Search Console", url: "https://support.google.com/webmasters/answer/9128668" },
+      {
+        name: "Google Search Console",
+        url: "https://support.google.com/webmasters/answer/9128668",
+      },
       { name: "HeroUI", url: "https://www.heroui.com/docs/" },
       { name: "Neon Postgres", url: "https://neon.tech/docs" },
       { name: "Vercel Analytics", url: "https://vercel.com/docs/analytics" },
@@ -77,6 +242,7 @@ export const projects = [
     role: ["Sole Developer and Designer"],
     url: "https://thelongemergency.net/",
     gitHubRepo: "https://github.com/RhythmCodeStudio/the-long-emergency",
+    npmUrl: undefined,
     images: {
       mobile: [
         "/images/the-long-emergency/mobile/home.jpg",
@@ -138,6 +304,7 @@ export const projects = [
   //   role: "Sole Developer and Designer",
   //   url: "https://streamhub-e4fc2af8fdfc.herokuapp.com/",
   //   gitHubRepo: "https://github.com/KLong75/stream-hub",
+  //   npmUrl: undefined,
   //   guestCredentials: {
   //     email: "guest@email.com",
   //     password: "Guest#1",
@@ -203,6 +370,7 @@ export const projects = [
     role: ["Lead Developer", "Project Manager"],
     url: "https://musicology-umekev.herokuapp.com/",
     gitHubRepo: "https://github.com/KLong75/musician-networking-app",
+    npmUrl: undefined,
     images: {
       mobile: [
         "/images/musicology/mobile/home.jpg",

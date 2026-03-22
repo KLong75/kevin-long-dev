@@ -24,6 +24,7 @@ interface ProjectProps {
   role: string[];
   url: string;
   gitHubRepo: string;
+  npmUrl?: string;
   repoPrivacyMessage?: string;
   images: {
     mobile: string[];
@@ -43,6 +44,7 @@ export default function Project({
   role,
   url,
   gitHubRepo,
+  npmUrl,
   repoPrivacyMessage,
   images,
   guestCredentials,
@@ -183,6 +185,24 @@ export default function Project({
             </span>
             <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-700 group-hover:w-full"></span>
           </a>
+          {npmUrl && (
+            <a
+              href={npmUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative group flex flex-col items-center project-link"
+              onClick={() => track("NPM Package Link Clicked", { project: title })}>
+              <span
+                className={clsx(
+                  "tracking-widest lg:hover:text-white transition-colors duration-700 ease-in-out",
+                  "text-shadow-black-background-black",
+                  "group-hover:text-shadow-green-background-black"
+                )}>
+                NPM
+              </span>
+              <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-700 group-hover:w-full"></span>
+            </a>
+          )}
         </div>
         {guestCredentials && (
           <div className="flex flex-col text-white text-sm">
