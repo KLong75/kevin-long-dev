@@ -3,19 +3,21 @@ export const projects = [
     title: "GIS Asset Manager UI",
     type: "Open Source JavaScript Module",
     description:
-    "GIS Asset Manager UI is an open-source JavaScript module that utilizes the ArcGIS Maps SDK for JavaScript to create an interactive map that can be configured with various different graphic layers. Users can select assets contained within the graphic layers by mouse click and/or add new assets using the sketch feature. The module can be configured to fit a specific use case by passing property values to the module's custom elements. GIS Asset Manager UI is intended for use within a parent application. When the asset requirements have been met, a custom event is triggered making the array of chosen assets and/or the array of created assets, available to the parent application. The parent application can then receive and consume the data as needed. I developed this project as part of my job with the City of St. Louis. It is currently used on several permit applications for city residents and businesses. I am proud to have developed the first open source software released by the City of St. Louis.",
+      "GIS Asset Manager UI is an open-source JavaScript module that utilizes the ArcGIS Maps SDK for JavaScript to create an interactive map that can be configured with various different graphic layers. Users can select assets contained within the graphic layers by mouse click and/or add new assets using the sketch feature. The module can be configured to fit a specific use case by passing property values to the module's custom elements. GIS Asset Manager UI is intended for use within a parent application. When the asset requirements have been met, a custom event is triggered making the array of chosen assets and/or the array of created assets, available to the parent application. The parent application can then receive and consume the data as needed. I developed this project as part of my job with the City of St. Louis. It is currently used on several permit applications for city residents and businesses. I am proud to have developed the first open source software released by the City of St. Louis.",
     descriptionLink: {
-    text: "permit applications",
-    url: "https://www.stlouis-mo.gov/government/departments/street/permits-inspections/blocking-application.cfm",
-    beforeText: "GIS Asset Manager UI is an open-source JavaScript module that utilizes the ArcGIS Maps SDK for JavaScript to create an interactive map that can be configured with various different graphic layers. Users can select assets contained within the graphic layers by mouse click and/or add new assets using the sketch feature. The module can be configured to fit a specific use case by passing property values to the module's custom elements. GIS Asset Manager UI is intended for use within a parent application. When the asset requirements have been met, a custom event is triggered making the array of chosen assets and/or the array of created assets, available to the parent application. The parent application can then receive and consume the data as needed. I developed this project as part of my job with the City of St. Louis. It is currently used on several ",
-    afterText: " for city residents and businesses. I am proud to have developed the first open source software released by the City of St. Louis."
-  },
+      text: "permit applications",
+      url: "https://www.stlouis-mo.gov/government/departments/street/permits-inspections/blocking-application.cfm",
+      beforeText:
+        "GIS Asset Manager UI is an open-source JavaScript module that utilizes the ArcGIS Maps SDK for JavaScript to create an interactive map that can be configured with various different graphic layers. Users can select assets contained within the graphic layers by mouse click and/or add new assets using the sketch feature. The module can be configured to fit a specific use case by passing property values to the module's custom elements. GIS Asset Manager UI is intended for use within a parent application. When the asset requirements have been met, a custom event is triggered making the array of chosen assets and/or the array of created assets, available to the parent application. The parent application can then receive and consume the data as needed. I developed this project as part of my job with the City of St. Louis. It is currently used on several ",
+      afterText:
+        " for city residents and businesses. I am proud to have developed the first open source software released by the City of St. Louis.",
+    },
     technologies: [
       {
         name: "JavaScript",
         url: "https://developer.mozilla.org/docs/Web/JavaScript",
       },
-       {
+      {
         name: "JavaScript Modules",
         url: "https://developer.mozilla.org/docs/Web/JavaScript",
       },
@@ -24,13 +26,17 @@ export const projects = [
         url: "https://developer.mozilla.org/docs/Web/Web_Components",
       },
       { name: "HTML", url: "https://developer.mozilla.org/docs/Web/HTML" },
-      { 
-        name: "CSS", 
-        url: "https://developer.mozilla.org/docs/Web/CSS"
+      {
+        name: "CSS",
+        url: "https://developer.mozilla.org/docs/Web/CSS",
       },
-      { 
+      {
         name: "ArcGIS Maps SDK",
         url: "https://developers.arcgis.com/javascript/latest",
+      },
+      {
+        name: "Node.js",
+        url: "https://nodejs.org/",
       },
       {
         name: "npm",
@@ -41,15 +47,15 @@ export const projects = [
         url: "https://rollupjs.org/",
       },
       { name: "GIS", url: "https://www.esri.com/en-us/what-is-gis/overview" },
-        // {
+      // {
       //   name: "",
       //   url: "",
       // },
-        // {
+      // {
       //   name: "",
       //   url: "",
       // },
-        // {
+      // {
       //   name: "",
       //   url: "",
       // },
@@ -71,7 +77,7 @@ export const projects = [
         "/images/gis-asset-manager/mobile/select-sketch.jpg",
         "/images/gis-asset-manager/mobile/select-sketch-select.jpg",
         "/images/gis-asset-manager/mobile/select-sketch-sketch.jpg",
-        
+
         // "/images/gis-asset-manager/mobile/.jpg",
       ],
       desktop: [
@@ -98,6 +104,10 @@ export const projects = [
       },
       { name: "Next.js", url: "https://nextjs.org/" },
       { name: "React", url: "https://react.dev" },
+      {
+        name: "Node.js",
+        url: "https://nodejs.org/",
+      },
       { name: "Tailwind CSS", url: "https://tailwindcss.com/docs" },
 
       { name: "CSS", url: "https://developer.mozilla.org/docs/Web/CSS" },
@@ -106,16 +116,15 @@ export const projects = [
         url: "https://www.w3schools.com/sql/",
       },
       { name: "Postgres", url: "https://www.postgresql.org/docs/" },
-      { name: "Vercel", url: "https://vercel.com/docs" },
       {
-        name: "Vercel Analytics",
-        url: "https://vercel.com/docs/analytics",
+        name: "PWA",
+        url: "https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps",
       },
+      { name: "Web Push", url: "https://www.npmjs.com/package/web-push" },
       {
         name: "Next Auth",
         url: "https://next-auth.js.org/",
       },
-
       {
         name: "bcrypt",
         url: "https://www.npmjs.com/package/bcrypt",
@@ -124,6 +133,7 @@ export const projects = [
         name: "React Icons",
         url: "https://react-icons.github.io/react-icons/",
       },
+      { name: "Vercel", url: "https://vercel.com/docs" },
       // {
       //   name: "",
       //   url: "",
@@ -170,14 +180,17 @@ export const projects = [
     description:
       "Mike Martin Media is an multi media production company based in St Louis, Missouri and working all around the world. They have trusted me with their website since 2023. This is the third iteration of their site that I have worked on. Fully responsive and accessible, mikemartinmedia.com features a sortable video and photo gallery, embedded video content, a blog, and a contact form. Integrated with Google Tag Manager and Google Analytics for running ads and monitoring site traffic. Cookie consent management is handled with Cookie Yes. The website was designed by Seafoam Media.",
     technologies: [
-      { name: "Next.js", url: "https://nextjs.org/" },
-      { name: "Vercel", url: "https://vercel.com/docs" },
-      { name: "React", url: "https://react.dev" },
-      { name: "Tailwind CSS", url: "https://tailwindcss.com/docs" },
       {
         name: "JavaScript",
         url: "https://developer.mozilla.org/docs/Web/JavaScript",
       },
+      { name: "Next.js", url: "https://nextjs.org/" },
+      { name: "React", url: "https://react.dev" },
+      {
+        name: "Node.js",
+        url: "https://nodejs.org/",
+      },
+      { name: "Tailwind CSS", url: "https://tailwindcss.com/docs" },
       { name: "CSS", url: "https://developer.mozilla.org/docs/Web/CSS" },
       { name: "Headless UI", url: "https://headlessui.com/react" },
       {
@@ -200,6 +213,11 @@ export const projects = [
       {
         name: "Mux Video",
         url: "https://docs.mux.com/",
+      },
+      { name: "Vercel", url: "https://vercel.com/docs" },
+      {
+        name: " Vercel Analytics",
+        url: "https://vercel.com/docs/analytics",
       },
       // {
       //   name: "",
@@ -240,9 +258,13 @@ export const projects = [
     description:
       "The Long Emergency is a rock band in St. Louis, Missouri. Their website features a gig calendar, music player, audio downloads, merch store, blog, and contact form. Fully responsive and accessible. Integrated with Vercel Analytics for monitoring site traffic. Built with Next.js and Tailwind CSS.",
     technologies: [
-       { name: "TypeScript", url: "https://www.typescriptlang.org/docs/" },
+      { name: "TypeScript", url: "https://www.typescriptlang.org/docs/" },
       { name: "Next.js", url: "https://nextjs.org/docs" },
       { name: "React", url: "https://react.dev" },
+      {
+        name: "Node.js",
+        url: "https://nodejs.org/",
+      },
       { name: "Tailwind CSS", url: "https://tailwindcss.com/docs" },
       { name: "SQL", url: "https://www.w3schools.com/sql/" },
       { name: "CSS", url: "https://developer.mozilla.org/docs/Web/CSS" },
@@ -361,7 +383,10 @@ export const projects = [
       "A full stack networking application for musicians. Users can sign up, create a profile describing their musical abilities and interests, make posts on the bulletin board, respond to posts made by other users, and connect with other musicians for creative and business purposes.",
     technologies: [
       { name: "React", url: "https://react.dev/" },
-      { name: "Node", url: "https://nodejs.org/en/docs/" },
+      {
+        name: "Node.js",
+        url: "https://nodejs.org/",
+      },
       { name: "MongoDB", url: "https://www.mongodb.com/docs/" },
       {
         name: "Express",
