@@ -141,7 +141,7 @@ export default function MobileImageCarousel(props: PropType) {
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
         </div>
         <div
-          className="embla__viewport rounded-2xl border-4 border-zinc-900 bg-zinc-800 shadow-md  shadow-zinc-200/50"
+          className="embla__viewport rounded-2xl border-4 border-zinc-900 bg-zinc-800 shadow-md shadow-zinc-200/50"
           ref={emblaRef}>
           <div className="embla__container">
             <div className="embla__controls"></div>
@@ -212,19 +212,21 @@ export default function MobileImageCarousel(props: PropType) {
               <RiCloseFill size={32} />
             </button>
 
-            {/* CHANGED: Full screen image display */}
-            {fullscreenImage && !fullscreenImage.match(/\.(mp4|webm|ogg)$/) && (
-              <Image
-                src={fullscreenImage}
-                alt="Fullscreen view"
-                width={1080}
-                height={1938}
-                className="max-w-full max-h-full object-contain"
-                {...(fullscreenImage.endsWith(".gif")
-                  ? { unoptimized: true }
-                  : {})}
-              />
-            )}
+            {/* CHANGED: Wrapped Image in div with viewport constraints */}
+{fullscreenImage && !fullscreenImage.match(/\.(mp4|webm|ogg)$/) && (
+  <div className="rounded-2xl border-4 border-zinc-900 bg-zinc-800 shadow-md shadow-zinc-200/50 overflow-hidden max-w-[90vw] max-h-[90vh] flex items-center justify-center">
+    <Image
+      src={fullscreenImage}
+      alt="Fullscreen view"
+      width={1080}
+      height={1938}
+      className="w-full h-full object-contain"
+      {...(fullscreenImage.endsWith(".gif")
+        ? { unoptimized: true }
+        : {})}
+    />
+  </div>
+)}
           </DialogPanel>
         </div>
       </Dialog>
