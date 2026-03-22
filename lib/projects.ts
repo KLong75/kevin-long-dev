@@ -51,8 +51,8 @@ export const projects = [
       "Thank you for your interest in this project. Indie Stream is a work in progress and not yet ready for public viewing. In order to respect the privacy of the artists who have shared their music on the platform, this repository is private. If you have any questions about how the app is built, please feel free to reach out. I'd love to tell you all about it.",
     images: {
       mobile: [
+        "/images/gis-asset-manager/mobile/select.jpg",
         "/images/gis-asset-manager/mobile/sketch.jpg",
-        // "/images/gis-asset-manager/mobile/.jpg",
         // "/images/gis-asset-manager/mobile/.jpg",
         // "/images/gis-asset-manager/mobile/.jpg",
         // "/images/gis-asset-manager/mobile/.jpg",
