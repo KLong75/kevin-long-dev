@@ -3,15 +3,15 @@ export const projects = [
     title: "GIS Asset Manager UI",
     type: "Open Source JavaScript Module",
     description:
-      "GIS Asset Manager UI is an open-source JavaScript module that utilizes the ArcGIS Maps SDK for JavaScript to create an interactive map that can be configured with various different graphic layers. Users can select assets contained within the graphic layers by mouse click and/or add new assets using the sketch feature. The module can be configured to fit a specific use case by passing property values to the module's custom elements. GIS Asset Manager UI is intended for use within a parent application. When the asset requirements have been met, a custom event is triggered making the array of chosen assets and/or the array of created assets, available to the parent application. The parent application can then receive and consume the data as needed. I developed this project as part of my job with the City of St. Louis. It is currently used on several permit applications for city residents and businesses. I am proud to have developed the first open source software released by the City of St. Louis.",
-    descriptionLink: {
-      text: "permit applications",
-      url: "https://www.stlouis-mo.gov/government/departments/street/permits-inspections/blocking-application.cfm",
-      beforeText:
-        "GIS Asset Manager UI is an open-source JavaScript module that utilizes the ArcGIS Maps SDK for JavaScript to create an interactive map that can be configured with various different graphic layers. Users can select assets contained within the graphic layers by mouse click and/or add new assets using the sketch feature. The module can be configured to fit a specific use case by passing property values to the module's custom elements. GIS Asset Manager UI is intended for use within a parent application. When the asset requirements have been met, a custom event is triggered making the array of chosen assets and/or the array of created assets, available to the parent application. The parent application can then receive and consume the data as needed. I developed this project as part of my job with the City of St. Louis. It is currently used on several ",
-      afterText:
-        " for city residents and businesses. I am proud to have developed the first open source software released by the City of St. Louis.",
-    },
+      "GIS Asset Manager UI is an open-source JavaScript module that utilizes the ArcGIS Maps SDK for JavaScript to create an interactive map that can be configured with various different graphic layers. Users can select assets contained within the graphic layers by mouse click and/or add new assets using the sketch feature. The module can be configured to fit a specific use case by passing property values to the module's custom elements. GIS Asset Manager UI is intended for use within a parent application. When the asset requirements have been met, a custom event is triggered making the array of chosen assets and/or the array of created assets, available to the parent application. The parent application can then receive and consume the data as needed. I developed this project as part of my job with the City of St. Louis. It is currently used on several permit applications for city residents and businesses with several additional use cases in the works. I am proud to have developed the first open source software released by the City of St. Louis.",
+    // descriptionLink: {
+    //   text: "permit applications",
+    //   url: "https://www.stlouis-mo.gov/government/departments/street/permits-inspections/blocking-application.cfm",
+    //   beforeText:
+    //     "GIS Asset Manager UI is an open-source JavaScript module that utilizes the ArcGIS Maps SDK for JavaScript to create an interactive map that can be configured with various different graphic layers. Users can select assets contained within the graphic layers by mouse click and/or add new assets using the sketch feature. The module can be configured to fit a specific use case by passing property values to the module's custom elements. GIS Asset Manager UI is intended for use within a parent application. When the asset requirements have been met, a custom event is triggered making the array of chosen assets and/or the array of created assets, available to the parent application. The parent application can then receive and consume the data as needed. I developed this project as part of my job with the City of St. Louis. It is currently used on several ",
+    //   afterText:
+    //     " for city residents and businesses. I am proud to have developed the first open source software released by the City of St. Louis.",
+    // },
     technologies: [
       {
         name: "JavaScript",
