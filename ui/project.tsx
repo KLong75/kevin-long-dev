@@ -120,7 +120,6 @@ export default function Project({
             ))}
           </ul>
         </div>
-
         <div className="p-4 mt-8 md:mt-6 lg:mt-0 ">
           <h5 className="text-shadow-black-background-black font-bold text-lg text-center col-span-1 md:col-span-2 2xl:col-span-3 mb-2">
             Role:
@@ -191,7 +190,6 @@ export default function Project({
               <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-700 group-hover:w-full"></span>
             </a>
           )}
-
           {npmUrl && (
             <a
               href={npmUrl}
@@ -212,7 +210,6 @@ export default function Project({
               <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-700 group-hover:w-full"></span>
             </a>
           )}
-
           <a
             href={url}
             target="_blank"
