@@ -13,7 +13,7 @@ export default function ProjectGallery() {
           title={project.title}
           type={project.type}
           description={project.description}
-          descriptionLink={project.descriptionLink}
+          // descriptionLink={project.descriptionLink}
           // image={project.image}
           technologies={project.technologies}
           url={project.url}
