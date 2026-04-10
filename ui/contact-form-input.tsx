@@ -39,11 +39,11 @@ export default function ContactFormInput({
             required
             name="message"
             id="message"
-            className="shadow-md shadow-green-500/50 border-2 border-green-500 p-2 w-full text-black placeholder-neutral-800 rounded-2xl bg-neutral-300 font-share-tech-mono tracking-wide text-shadow-green h-80 resize-none text-lg caret-green-500"
+            className="shadow-md shadow-green-500/50 border-2 border-green-500 p-2 w-full text-black placeholder-neutral-800 rounded-2xl bg-neutral-400 font-share-tech-mono tracking-wide text-shadow-green h-80 resize-none text-lg caret-green-500"
           />
       ) : (
         <input
-          className="shadow-md shadow-green-500/50 border-2 border-green-500 p-2 w-full text-black placeholder-neutral-800 rounded-2xl bg-neutral-300 font-share-tech-mono tracking-wide text-shadow-green text-lg h-10 caret-green-500 caret"
+          className="shadow-md shadow-green-500/50 border-2 border-green-500 p-2 w-full text-black placeholder-neutral-800 rounded-2xl bg-neutral-400 font-share-tech-mono tracking-wide text-shadow-green text-lg h-10 caret-green-500 caret"
           type={type}
           id={name}
           name={name}
