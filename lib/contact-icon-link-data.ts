@@ -4,6 +4,18 @@ import { BsEnvelopeFill } from "react-icons/bs";
 import { MdOutlinePhoneAndroid } from "react-icons/md";
 
 export const contactIconLinkData = [
+   {
+    href: "mailto:kevinlong.dev@gmail.com",
+    icon: BsEnvelopeFill,
+    name: "Email",
+    label: "Send me an email"
+  },
+  {
+    href: "tel:+15129750082",
+    icon: MdOutlinePhoneAndroid,
+    name: "Phone",
+    label: "Call me"
+  },
   {
     href: "https://github.com/KLong75",
     icon: SiGithub,
@@ -15,17 +27,5 @@ export const contactIconLinkData = [
     icon: BsLinkedin,
     name: "LinkedIn",
     label: "Visit my LinkedIn profile"
-  },
-  {
-    href: "mailto:kevinlong.dev@gmail.com",
-    icon: BsEnvelopeFill,
-    name: "Email",
-    label: "Send me an email"
-  },
-  {
-    href: "tel:+15129750082",
-    icon: MdOutlinePhoneAndroid,
-    name: "Phone",
-    label: "Call me"
   },
 ];

@@ -19,7 +19,7 @@ export const projects = [
       },
       {
         name: "JavaScript Modules",
-        url: "https://developer.mozilla.org/docs/Web/JavaScript",
+        url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules",
       },
       {
         name: "Web Components",

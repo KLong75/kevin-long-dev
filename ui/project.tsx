@@ -59,7 +59,7 @@ export default function Project({
   const [dialogIsOpen, setDialogIsOpen] = useState(false);
 
   return (
-    <li className="flex flex-col justify-between h-full min-h-[500px] shadow-lg shadow-green-500/50 border-2 border-green-500 rounded-2xl p-2">
+    <li className="flex flex-col justify-between h-full min-h-125 shadow-lg shadow-green-500/50 border-2 border-green-500 rounded-2xl p-2">
       <div className="flex-1 flex flex-col">
         <h3 className="my-4 text-2xl font-bold text-shadow-black-background-black text-center">
           {title}
@@ -124,9 +124,9 @@ export default function Project({
           <h5 className="text-shadow-black-background-black font-bold text-lg text-center col-span-1 md:col-span-2 2xl:col-span-3 mb-2">
             Role:
           </h5>
-          <p className="font-share-tech-mono text-shadow-black-background-black font-bold text-lg text-center col-span-1 md:col-span-2 2xl:col-span-3">
+          <h5 className="font-share-tech-mono text-shadow-black-background-black font-bold text-lg text-center col-span-1 md:col-span-2 2xl:col-span-3">
             {role.join(", ")}
-          </p>
+          </h5>
         </div>
       </div>
       <div className="text-green-500 text-sm md:text-lg lg:text-xl flex flex-col items-center space-y-6 md:space-y-4 lg:space-y-6 justify-center mb-6 mt-2">
@@ -147,14 +147,14 @@ export default function Project({
                   )}>
                   GitHub Repo
                 </span>
-                <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-700 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 transition-all ease-in-out duration-700 group-hover:w-full"></span>
               </button>
               <Dialog
                 open={dialogIsOpen}
                 onClose={() => setDialogIsOpen(false)}
                 className="relative z-50">
                 <div className="fixed inset-0 flex w-screen items-center justify-center bg-black/80 p-8">
-                  <DialogPanel className="relative max-w-lg space-y-4 border bg-neutral-900 border-2 border-green-500 rounded-2xl shadow-lg shadow-green-500/50 ">
+                  <DialogPanel className="relative max-w-lg space-y-4 bg-neutral-900 border-2 border-green-500 rounded-2xl shadow-lg shadow-green-500/50 ">
                     <button
                       type="button"
                       onClick={() => setDialogIsOpen(false)}
@@ -187,7 +187,7 @@ export default function Project({
                 )}>
                 GitHub Repo
               </span>
-              <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-700 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 transition-all ease-in-out duration-700 group-hover:w-full"></span>
             </a>
           )}
           {npmUrl && (
@@ -207,7 +207,7 @@ export default function Project({
                 )}>
                 NPM
               </span>
-              <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-700 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 transition-all ease-in-out duration-700 group-hover:w-full"></span>
             </a>
           )}
           <a
@@ -226,14 +226,14 @@ export default function Project({
               )}>
               View Project
             </span>
-            <span className="absolute bottom-[-.25rem] left-0 w-0 h-[2px] bg-green-500 transition-all ease-in-out duration-700 group-hover:w-full"></span>
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 transition-all ease-in-out duration-700 group-hover:w-full"></span>
           </a>
         </div>
         {guestCredentials && (
           <div className="flex flex-col text-white text-sm">
-            <h5 className="text-shadow-black-background-black font-bold text-center mb-2">
+            <h6 className="text-shadow-black-background-black font-bold text-center mb-2">
               Guest Credentials:
-            </h5>
+            </h6>
             <p className="text-shadow-black-background-black font-bold text-center">
               email: {guestCredentials?.email}
             </p>
