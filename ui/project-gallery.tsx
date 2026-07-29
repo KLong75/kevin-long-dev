@@ -20,6 +20,7 @@ export default function ProjectGallery() {
           gitHubRepo={project.gitHubRepo}
           npmUrl={project.npmUrl}
           repoPrivacyMessage={project.repoPrivacyMessage}
+          repoPrivacyMessageLink={project.repoPrivacyMessageLink}
           role={Array.isArray(project.role) ? project.role : [project.role]}
           images={project.images ?? { mobile: [], desktop: [] }}
           guestCredentials={project.guestCredentials}

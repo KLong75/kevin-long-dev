@@ -226,11 +226,17 @@ export const projects = [
     ],
     role: ["Sole Developer"],
     url: "https://mikemartinmedia.com",
+    gitHubRepo: "private",
     // gitHubRepo: "https://github.com/KLong75/mike-martin-media",
-    gitHubRepo: "https://github.com/KLong75/mike-martin-media",
     npmUrl: undefined,
-    repoPrivacyMessage:
-      "Thank you for your interest in this project. Mike Martin Media is a client of my company Rhythm Code Studio. In order to respect their privacy, this repository is private. If you have any questions about how the site is built, please feel free to reach out. I'd love to tell you all about it.",
+    repoPrivacyMessageLink: {
+      beforeText:
+        "Thank you for your interest in this project. Mike Martin Media is a client of my company ",
+      text: "Rhythm Code Studio",
+      url: "https://rhythmcodestudio.tech",
+      afterText:
+        ". In order to respect their privacy, this repository is private. If you have any questions about how the site is built, please feel free to reach out. I'd love to tell you all about it.",
+    },
     images: {
       mobile: [
         "/images/mmm/mobile/home.jpg",
@@ -253,7 +259,7 @@ export const projects = [
     guestCredentials: undefined,
   },
   {
-    title: "thelongemergency.net",
+    title: "thelongemergency.com",
     type: "Band Website",
     description:
       "The Long Emergency is a rock band in St. Louis, Missouri. Their website features a gig calendar, music player, audio downloads, merch store, blog, and contact form. Fully responsive and accessible. Integrated with Vercel Analytics for monitoring site traffic. Built with Next.js and Tailwind CSS.",

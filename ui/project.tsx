@@ -32,6 +32,12 @@ interface ProjectProps {
   gitHubRepo: string;
   npmUrl?: string;
   repoPrivacyMessage?: string;
+  repoPrivacyMessageLink?: {
+    beforeText: string;
+    text: string;
+    url: string;
+    afterText: string;
+  };
   images: {
     mobile: string[];
     desktop: string[];
@@ -53,6 +59,7 @@ export default function Project({
   gitHubRepo,
   npmUrl,
   repoPrivacyMessage,
+  repoPrivacyMessageLink,
   images,
   guestCredentials,
 }: ProjectProps) {
@@ -163,10 +170,27 @@ export default function Project({
                       <RiCloseFill size={28} />
                     </button>
                     {/* <DialogTitle>GitHub Repository</DialogTitle> */}
-                    {repoPrivacyMessage && (
+                    {repoPrivacyMessageLink ? (
                       <p className="p-12 font-share-tech-mono text-shadow-black-background-black">
-                        {repoPrivacyMessage}
+                        {" "}
+                        {repoPrivacyMessageLink.beforeText}{" "}
+                        <a
+                          href={repoPrivacyMessageLink.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-green-500 underline hover:text-green-400">
+                          {" "}
+                          {repoPrivacyMessageLink.text}{" "}
+                        </a>{" "}
+                        {repoPrivacyMessageLink.afterText}{" "}
                       </p>
+                    ) : (
+                      repoPrivacyMessage && (
+                        <p className="p-12 font-share-tech-mono text-shadow-black-background-black">
+                          {" "}
+                          {repoPrivacyMessage}{" "}
+                        </p>
+                      )
                     )}
                   </DialogPanel>
                 </div>
